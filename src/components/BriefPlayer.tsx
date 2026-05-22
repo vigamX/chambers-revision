@@ -12,12 +12,13 @@ interface Props {
 }
 
 type StepResult = { correct: boolean; firstTry: boolean };
+type Phase = "answering" | "wrong-nudge" | "revealed";
 
 export function BriefPlayer({ brief, progress, onProgressChange, onExit }: Props) {
   const [stepIdx, setStepIdx] = useState(0);
   const [selectedChoice, setSelectedChoice] = useState<string | null>(null);
   const [selectedAuthorities, setSelectedAuthorities] = useState<string[]>([]);
-  const [revealed, setRevealed] = useState(false);
+  const [phase, setPhase] = useState<Phase>("answering");
   const [attempts, setAttempts] = useState(0);
   const [stepResults, setStepResults] = useState<StepResult[]>([]);
   const [finished, setFinished] = useState(false);
@@ -25,33 +26,27 @@ export function BriefPlayer({ brief, progress, onProgressChange, onExit }: Props
   const step = brief.steps[stepIdx];
   const isLastStep = stepIdx === brief.steps.length - 1;
 
-  function checkAnswer() {
-    if (step.kind === "authorities") {
-      const correctSet = new Set(step.correctAuthorities ?? []);
-      const selSet = new Set(selectedAuthorities);
-      const allCorrect =
-        selSet.size === correctSet.size &&
-        [...selSet].every((id) => correctSet.has(id));
-      setRevealed(true);
-      setAttempts((n) => n + 1);
-      if (allCorrect) {
-        setStepResults((r) => [...r, { correct: true, firstTry: attempts === 0 }]);
-      }
+  function submit() {
+    const correct = isCorrect(step, selectedChoice, selectedAuthorities);
+    const newAttempts = attempts + 1;
+    setAttempts(newAttempts);
+    if (correct) {
+      setStepResults((r) => [...r, { correct: true, firstTry: newAttempts === 1 }]);
+      setPhase("revealed");
     } else {
-      const choice = step.choices?.find((c) => c.id === selectedChoice);
-      if (!choice) return;
-      setRevealed(true);
-      setAttempts((n) => n + 1);
-      if (choice.correct) {
-        setStepResults((r) => [...r, { correct: true, firstTry: attempts === 0 }]);
-      }
+      setPhase("wrong-nudge");
     }
   }
 
   function tryAgain() {
-    setRevealed(false);
+    setPhase("answering");
     setSelectedChoice(null);
     setSelectedAuthorities([]);
+  }
+
+  function giveUp() {
+    setStepResults((r) => [...r, { correct: false, firstTry: false }]);
+    setPhase("revealed");
   }
 
   function nextStep() {
@@ -62,7 +57,7 @@ export function BriefPlayer({ brief, progress, onProgressChange, onExit }: Props
     setStepIdx((i) => i + 1);
     setSelectedChoice(null);
     setSelectedAuthorities([]);
-    setRevealed(false);
+    setPhase("answering");
     setAttempts(0);
   }
 
@@ -72,8 +67,7 @@ export function BriefPlayer({ brief, progress, onProgressChange, onExit }: Props
     for (const id of brief.caseIds) {
       successByCase[id] = { correct: true, firstTry: true };
     }
-    for (let i = 0; i < stepResults.length; i++) {
-      const r = stepResults[i];
+    for (const r of stepResults) {
       for (const id of brief.caseIds) {
         if (!r.correct) successByCase[id].correct = false;
         if (!r.firstTry) successByCase[id].firstTry = false;
@@ -90,7 +84,7 @@ export function BriefPlayer({ brief, progress, onProgressChange, onExit }: Props
   }
 
   if (finished) {
-    const allFirstTry = stepResults.every((r) => r.firstTry);
+    const allFirstTry = stepResults.every((r) => r.firstTry && r.correct);
     return (
       <div className="brief-stage">
         <div className="brief-hero" style={{ background: brief.scene.palette }}>
@@ -116,6 +110,11 @@ export function BriefPlayer({ brief, progress, onProgressChange, onExit }: Props
     );
   }
 
+  const canSubmit =
+    step.kind === "authorities"
+      ? selectedAuthorities.length > 0
+      : selectedChoice !== null;
+
   return (
     <div className="brief-stage">
       <div className="brief-hero" style={{ background: brief.scene.palette }}>
@@ -128,10 +127,11 @@ export function BriefPlayer({ brief, progress, onProgressChange, onExit }: Props
       <div className="brief-body">
         <div className="progress-pill">
           Step {stepIdx + 1} of {brief.steps.length} · {step.kind.toUpperCase()}
+          {attempts > 0 && phase !== "answering" && ` · attempt ${attempts}`}
         </div>
         <StepView
           step={step}
-          revealed={revealed}
+          phase={phase}
           selectedChoice={selectedChoice}
           setSelectedChoice={setSelectedChoice}
           selectedAuthorities={selectedAuthorities}
@@ -139,31 +139,30 @@ export function BriefPlayer({ brief, progress, onProgressChange, onExit }: Props
         />
         <FeedbackView
           step={step}
-          revealed={revealed}
+          phase={phase}
+          attempts={attempts}
           selectedChoice={selectedChoice}
           selectedAuthorities={selectedAuthorities}
         />
         <div className="controls">
           <button onClick={onExit}>Abandon brief</button>
-          {!revealed && (
-            <button
-              className="btn-primary"
-              disabled={
-                step.kind === "authorities"
-                  ? selectedAuthorities.length === 0
-                  : !selectedChoice
-              }
-              onClick={checkAnswer}
-            >
+
+          {phase === "answering" && (
+            <button className="btn-primary" disabled={!canSubmit} onClick={submit}>
               Submit
             </button>
           )}
-          {revealed && !isCorrect(step, selectedChoice, selectedAuthorities) && (
-            <button className="btn-primary" onClick={tryAgain}>
-              Try again
-            </button>
+
+          {phase === "wrong-nudge" && (
+            <div style={{ display: "flex", gap: "0.5rem" }}>
+              <button onClick={giveUp}>Reveal answer</button>
+              <button className="btn-primary" onClick={tryAgain}>
+                Try again
+              </button>
+            </div>
           )}
-          {revealed && isCorrect(step, selectedChoice, selectedAuthorities) && (
+
+          {phase === "revealed" && (
             <button className="btn-primary" onClick={nextStep}>
               {isLastStep ? "Deliver verdict" : "Next"}
             </button>
@@ -193,7 +192,7 @@ function isCorrect(
 
 interface StepViewProps {
   step: BriefStep;
-  revealed: boolean;
+  phase: Phase;
   selectedChoice: string | null;
   setSelectedChoice: (id: string) => void;
   selectedAuthorities: string[];
@@ -202,12 +201,14 @@ interface StepViewProps {
 
 function StepView({
   step,
-  revealed,
+  phase,
   selectedChoice,
   setSelectedChoice,
   selectedAuthorities,
   setSelectedAuthorities,
 }: StepViewProps) {
+  const interactive = phase === "answering";
+
   if (step.kind === "authorities") {
     const correctSet = new Set(step.correctAuthorities ?? []);
     return (
@@ -221,7 +222,7 @@ function StepView({
             const c = CASES_BY_ID[id];
             const isSelected = selectedAuthorities.includes(id);
             let visual: "default" | "selected" | "correct" | "wrong" = "default";
-            if (revealed) {
+            if (phase === "revealed") {
               const isCorrectCase = correctSet.has(id);
               if (isSelected && isCorrectCase) visual = "correct";
               else if (isSelected && !isCorrectCase) visual = "wrong";
@@ -234,9 +235,9 @@ function StepView({
                 key={id}
                 c={c}
                 state={visual}
-                showPrinciple={revealed}
+                showPrinciple={phase === "revealed"}
                 onClick={() => {
-                  if (revealed) return;
+                  if (!interactive) return;
                   const next = isSelected
                     ? selectedAuthorities.filter((x) => x !== id)
                     : [...selectedAuthorities, id];
@@ -256,7 +257,7 @@ function StepView({
       <div className="choice-list">
         {step.choices?.map((c) => {
           let cls = "choice";
-          if (revealed) {
+          if (phase === "revealed") {
             if (c.correct) cls += " correct";
             else if (c.id === selectedChoice) cls += " wrong";
           } else if (c.id === selectedChoice) {
@@ -266,7 +267,7 @@ function StepView({
             <button
               key={c.id}
               className={cls}
-              onClick={() => !revealed && setSelectedChoice(c.id)}
+              onClick={() => interactive && setSelectedChoice(c.id)}
             >
               {c.label}
             </button>
@@ -279,27 +280,50 @@ function StepView({
 
 interface FeedbackProps {
   step: BriefStep;
-  revealed: boolean;
+  phase: Phase;
+  attempts: number;
   selectedChoice: string | null;
   selectedAuthorities: string[];
 }
 
-function FeedbackView({ step, revealed, selectedChoice, selectedAuthorities }: FeedbackProps) {
-  if (!revealed) return null;
-  const correct = isCorrect(step, selectedChoice, selectedAuthorities);
+function FeedbackView({ step, phase, attempts, selectedChoice }: FeedbackProps) {
+  if (phase === "answering") return null;
+
+  if (phase === "wrong-nudge") {
+    if (step.kind === "authorities") {
+      return (
+        <div className="feedback bad">
+          <strong>Not quite.</strong>
+          Your bundle isn't right — some cases don't belong, or some are missing. Have another look.
+        </div>
+      );
+    }
+    const choice = step.choices?.find((c) => c.id === selectedChoice);
+    return (
+      <div className="feedback bad">
+        <strong>Not quite.</strong>
+        {choice?.feedback}
+      </div>
+    );
+  }
+
+  const wasFirstTry = attempts === 1;
   if (step.kind === "authorities") {
     return (
-      <div className={`feedback ${correct ? "good" : "bad"}`}>
-        <strong>{correct ? "Right bundle." : "Not quite."}</strong>
+      <div className={`feedback ${wasFirstTry ? "good" : "bad"}`}>
+        <strong>{wasFirstTry ? "Right bundle." : "Here's the right bundle."}</strong>
         {step.explanation}
       </div>
     );
   }
   const choice = step.choices?.find((c) => c.id === selectedChoice);
+  const choiceWasCorrect = choice?.correct ?? false;
   return (
-    <div className={`feedback ${correct ? "good" : "bad"}`}>
-      <strong>{correct ? "Right." : "Not quite."}</strong>
-      {choice?.feedback}
+    <div className={`feedback ${wasFirstTry && choiceWasCorrect ? "good" : "bad"}`}>
+      <strong>
+        {wasFirstTry && choiceWasCorrect ? "Right." : "Here's the answer."}
+      </strong>
+      {choiceWasCorrect ? choice?.feedback : step.choices?.find((c) => c.correct)?.feedback}
       <div style={{ marginTop: "0.6em", opacity: 0.85 }}>{step.explanation}</div>
     </div>
   );
