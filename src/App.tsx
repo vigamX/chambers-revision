@@ -6,12 +6,14 @@ import { Chambers } from "./components/Chambers";
 import { BriefPlayer } from "./components/BriefPlayer";
 import { RevisionDock } from "./components/RevisionDock";
 import { CaseClash } from "./components/CaseClash";
+import { TopicChecklist } from "./components/TopicChecklist";
 
 type View =
   | { name: "chambers" }
   | { name: "brief"; id: string }
   | { name: "dock" }
-  | { name: "clash" };
+  | { name: "clash" }
+  | { name: "checklist" };
 
 export default function App() {
   const [progress, setProgress] = useState<Progress>(() => loadProgress());
@@ -50,6 +52,7 @@ export default function App() {
           onPick={(id) => setView({ name: "brief", id })}
           onOpenDock={() => setView({ name: "dock" })}
           onStartClash={() => setView({ name: "clash" })}
+          onOpenChecklist={() => setView({ name: "checklist" })}
         />
       )}
 
@@ -75,6 +78,13 @@ export default function App() {
           progress={progress}
           onProgressChange={setProgress}
           onExit={() => setView({ name: "chambers" })}
+        />
+      )}
+
+      {view.name === "checklist" && (
+        <TopicChecklist
+          progress={progress}
+          onBack={() => setView({ name: "chambers" })}
         />
       )}
     </div>

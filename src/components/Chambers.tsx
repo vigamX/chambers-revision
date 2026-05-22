@@ -6,9 +6,10 @@ interface Props {
   onPick: (briefId: string) => void;
   onOpenDock: () => void;
   onStartClash: () => void;
+  onOpenChecklist: () => void;
 }
 
-export function Chambers({ briefs, progress, onPick, onOpenDock, onStartClash }: Props) {
+export function Chambers({ briefs, progress, onPick, onOpenDock, onStartClash, onOpenChecklist }: Props) {
   const completed = progress.completedBriefs.length;
   const total = briefs.length;
   const mastered = Object.values(progress.cards).filter((c) => c.mastery >= 4).length;
@@ -41,6 +42,7 @@ export function Chambers({ briefs, progress, onPick, onOpenDock, onStartClash }:
         </div>
         <div className="controls" style={{ marginTop: "1.2rem", justifyContent: "flex-start" }}>
           <button className="btn-primary" onClick={onStartClash}>⚔️ Start Case Clash</button>
+          <button onClick={onOpenChecklist}>📋 Syllabus checklist</button>
           <button onClick={onOpenDock}>📚 Open revision dock</button>
         </div>
       </section>
