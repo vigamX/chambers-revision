@@ -35,12 +35,12 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
             setFlipped({});
           }}
         >
-          {allRevealed ? "Hide all principles" : "Reveal all principles"}
+          {allRevealed ? "Hide points of law" : "Reveal points of law"}
         </button>
       </div>
       <h2>Revision Dock</h2>
       <p style={{ color: "var(--muted)" }}>
-        Weakest cases first. Tap a card to flip it and reveal its principle — try to recall before you peek.
+        Weakest cases first. Tap a card to flip it and reveal the point of law — try to recall before you peek.
       </p>
       <div className="dock-grid">
         {sorted.map((c) => {

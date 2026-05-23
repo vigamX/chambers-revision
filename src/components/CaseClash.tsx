@@ -114,7 +114,7 @@ export function CaseClash({ progress, onProgressChange, onExit }: Props) {
             {q.round === "name-the-case"
               ? "Name the case"
               : q.round === "recall-principle"
-              ? "Recall the principle"
+              ? "Recall the point of law"
               : "Spot the topic"}
           </h2>
           <p className="scenario">{q.prompt}</p>
