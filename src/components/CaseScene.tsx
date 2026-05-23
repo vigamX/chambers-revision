@@ -2284,6 +2284,443 @@ export const CaseScene: React.FC<CaseSceneProps> = ({ caseId, className }) => {
         </svg>
       );
 
+    case 'r-v-gomez':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="shop-counter-bg">
+            <path d="M0,70 L200,70 L200,120 L0,120 Z" fill="rgba(0,0,0,0.35)" />
+            <rect x="140" y="25" width="40" height="45" rx="3" fill="rgba(0,0,0,0.35)" />
+            <rect x="145" y="30" width="30" height="15" rx="1" fill="rgba(255,255,255,0.08)" />
+          </g>
+          <g data-name="cheques">
+            <path d="M70,80 L120,75 L130,85 L80,90 Z" fill="#f4e9d8" />
+            <path d="M75,83 L125,78 L135,88 L85,93 Z" fill="#f4e9d8" opacity="0.9" />
+            <path d="M80,86 L130,81 L140,91 L90,96 Z" fill="#f4e9d8" filter="url(#soft-glow)" />
+            <line x1="85" y1="88" x2="115" y2="85" stroke="rgba(0,0,0,0.35)" strokeWidth="1" />
+            <line x1="86" y1="91" x2="110" y2="88" stroke="rgba(0,0,0,0.35)" strokeWidth="1" />
+          </g>
+          <g data-name="hands">
+            <path d="M20,95 Q50,90 75,90" fill="none" stroke="#e8b34a" strokeWidth="6" strokeLinecap="round" opacity="0.8" />
+            <path d="M20,95 Q50,90 75,90" fill="none" stroke="#f4e9d8" strokeWidth="2" strokeLinecap="round" />
+            <path d="M180,80 Q150,85 130,85" fill="none" stroke="#e8b34a" strokeWidth="6" strokeLinecap="round" opacity="0.8" />
+            <path d="M180,80 Q150,85 130,85" fill="none" stroke="#f4e9d8" strokeWidth="2" strokeLinecap="round" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-hinks':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="domestic-table">
+            <rect x="30" y="75" width="140" height="45" fill="rgba(0,0,0,0.35)" />
+            <path d="M145,68 C145,85 165,85 165,68 Z" fill="#f4e9d8" />
+            <path d="M165,71 C172,71 172,78 165,78" fill="none" stroke="#f4e9d8" strokeWidth="1.5" />
+          </g>
+          <g data-name="envelope-notes">
+            <path d="M65,82 L115,77 L125,87 L75,92 Z" fill="rgba(255,255,255,0.08)" stroke="#f4e9d8" strokeWidth="1" />
+            <path d="M70,80 L110,76 L115,82 L75,86 Z" fill="#e8b34a" filter="url(#soft-glow)" />
+          </g>
+          <g data-name="hands-overlapping">
+            <path d="M40,95 Q60,85 85,85 M50,105 Q70,95 90,92" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="8" strokeLinecap="round" />
+            <path d="M40,95 Q60,85 85,85 M50,105 Q70,95 90,92" fill="none" stroke="#f4e9d8" strokeWidth="3" strokeLinecap="round" />
+            <path d="M150,90 Q120,85 105,85 M160,100 Q130,95 110,92" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="8" strokeLinecap="round" />
+            <path d="M150,90 Q120,85 105,85 M160,100 Q130,95 110,92" fill="none" stroke="#e8b34a" strokeWidth="3" strokeLinecap="round" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'oxford-v-moss':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="lamp-light">
+            <polygon points="100,20 30,120 170,120" fill="rgba(255,255,255,0.08)" />
+            <path d="M85,25 C85,5 115,5 115,25 Z" fill="#f4e9d8" />
+            <ellipse cx="100" cy="25" rx="15" ry="3" fill="#e8b34a" filter="url(#soft-glow)" />
+            <path d="M100,0 L100,10 M100,10 Q110,15 115,25" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="2" />
+          </g>
+          <g data-name="exam-paper">
+            <path d="M60,90 L130,90 L140,115 L70,115 Z" fill="rgba(0,0,0,0.35)" />
+            <path d="M65,95 L125,95 L130,110 L70,110 Z" fill="#f4e9d8" filter="url(#soft-glow)" />
+            <line x1="75" y1="100" x2="115" y2="100" stroke="rgba(0,0,0,0.35)" strokeWidth="1" opacity="0.5" />
+            <line x1="73" y1="105" x2="110" y2="105" stroke="rgba(0,0,0,0.35)" strokeWidth="1" opacity="0.5" />
+          </g>
+          <g data-name="pencil">
+            <line x1="140" y1="85" x2="155" y2="110" stroke="#e8b34a" strokeWidth="2" />
+            <polygon points="155,110 157,113 153,113" fill="#f4e9d8" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-turner-no-2':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="car-door">
+            <path d="M10,20 L190,20 L190,65 L10,65 Z" fill="rgba(0,0,0,0.35)" />
+            <path d="M10,65 L190,65 L190,120 L10,120 Z" fill="#f4e9d8" opacity="0.2" />
+            <line x1="10" y1="65" x2="190" y2="65" stroke="#f4e9d8" strokeWidth="2" />
+            <circle cx="160" cy="85" r="4" fill="rgba(0,0,0,0.35)" />
+            <circle cx="160" cy="85" r="2" fill="rgba(255,255,255,0.08)" />
+          </g>
+          <g data-name="garage-light">
+            <line x1="20" y1="35" x2="180" y2="50" stroke="#e8b34a" strokeWidth="6" opacity="0.6" filter="url(#soft-glow)" />
+          </g>
+          <g data-name="hand-key">
+            <line x1="168" y1="85" x2="160" y2="85" stroke="#e8b34a" strokeWidth="2" />
+            <path d="M200,95 Q180,85 168,85" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="6" strokeLinecap="round" />
+            <path d="M200,95 Q180,85 168,85" fill="none" stroke="#f4e9d8" strokeWidth="2" strokeLinecap="round" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'ag-ref-no-1-1983':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="desk-surface">
+            <polygon points="0,95 200,75 200,120 0,120" fill="rgba(0,0,0,0.35)" />
+          </g>
+          <g data-name="torn-envelope">
+            <path d="M55,85 L105,80 L115,95 L65,100 Z" fill="rgba(255,255,255,0.08)" />
+            <path d="M55,85 Q65,83 60,82 Q70,78 65,75 L105,80" fill="none" stroke="#f4e9d8" strokeWidth="1" />
+            <path d="M65,100 L115,95 L105,80" fill="none" stroke="#f4e9d8" strokeWidth="1" />
+          </g>
+          <g data-name="banknotes-pen">
+            <rect x="75" y="78" width="30" height="15" transform="rotate(-15 75 78)" fill="#f4e9d8" filter="url(#soft-glow)" />
+            <rect x="80" y="80" width="30" height="15" transform="rotate(-5 80 80)" fill="#e8b34a" />
+            <line x1="45" y1="105" x2="125" y2="110" stroke="#f4e9d8" strokeWidth="2" />
+            <line x1="125" y1="110" x2="130" y2="111" stroke="#e8b34a" strokeWidth="2" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-ghosh':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="desk-bg">
+            <rect x="0" y="55" width="200" height="65" fill="rgba(0,0,0,0.35)" />
+          </g>
+          <g data-name="invoice">
+            <rect x="65" y="60" width="55" height="40" fill="#f4e9d8" />
+            <line x1="70" y1="65" x2="105" y2="65" stroke="rgba(0,0,0,0.35)" strokeWidth="1.5" />
+            <line x1="70" y1="70" x2="95" y2="70" stroke="rgba(0,0,0,0.35)" strokeWidth="1" />
+            <line x1="70" y1="90" x2="115" y2="90" stroke="rgba(0,0,0,0.35)" strokeWidth="1" strokeDasharray="2,2" />
+          </g>
+          <g data-name="stethoscope-pen">
+            <path d="M45,40 C30,70 70,110 100,75" fill="none" stroke="#e8b34a" strokeWidth="2" filter="url(#soft-glow)" />
+            <path d="M45,40 C35,25 55,25 45,40" fill="none" stroke="#f4e9d8" strokeWidth="2" />
+            <circle cx="100" cy="75" r="4" fill="#f4e9d8" />
+            <line x1="130" y1="75" x2="155" y2="85" stroke="#e8b34a" strokeWidth="3" />
+            <polygon points="155,85 160,87 155,89" fill="#f4e9d8" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'ivey-v-genting':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="casino-baize">
+            <path d="M0,120 C80,60 200,120 200,120 Z" fill="rgba(0,0,0,0.35)" />
+          </g>
+          <g data-name="cards">
+            <rect x="50" y="75" width="22" height="32" rx="2" transform="rotate(-20 50 75)" fill="#f4e9d8" />
+            <rect x="75" y="70" width="22" height="32" rx="2" transform="rotate(-10 75 70)" fill="#f4e9d8" />
+            <rect x="130" y="75" width="22" height="32" rx="2" transform="rotate(15 130 75)" fill="#f4e9d8" />
+            <rect x="100" y="70" width="22" height="32" rx="2" transform="rotate(25 100 70)" fill="#e8b34a" filter="url(#soft-glow)" />
+            <circle cx="111" cy="85" r="3" fill="rgba(0,0,0,0.35)" opacity="0.6" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-lloyd':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="projection-bg">
+            <rect x="0" y="90" width="200" height="30" fill="rgba(0,0,0,0.35)" />
+            <path d="M140,20 L180,20 L180,90 L140,90 Z" fill="rgba(0,0,0,0.35)" opacity="0.8" />
+            <circle cx="160" cy="40" r="15" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
+            <polygon points="140,55 120,60 120,70 140,75" fill="rgba(255,255,255,0.08)" />
+          </g>
+          <g data-name="film-reel">
+            <circle cx="60" cy="65" r="25" fill="none" stroke="#f4e9d8" strokeWidth="3" filter="url(#soft-glow)" />
+            <circle cx="60" cy="65" r="8" fill="#f4e9d8" />
+            <line x1="60" y1="40" x2="60" y2="57" stroke="#f4e9d8" strokeWidth="2" />
+            <line x1="60" y1="73" x2="60" y2="90" stroke="#f4e9d8" strokeWidth="2" />
+            <line x1="35" y1="65" x2="52" y2="65" stroke="#f4e9d8" strokeWidth="2" />
+            <line x1="68" y1="65" x2="85" y2="65" stroke="#f4e9d8" strokeWidth="2" />
+            <path d="M60,90 C80,105 100,70 120,80 C140,90 120,110 160,105" fill="none" stroke="#e8b34a" strokeWidth="4" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-velumyl':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="safe-interior">
+            <rect x="40" y="20" width="120" height="80" fill="rgba(0,0,0,0.35)" stroke="#f4e9d8" strokeWidth="4" />
+            <rect x="42" y="22" width="116" height="76" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="2" />
+            <line x1="40" y1="60" x2="160" y2="60" stroke="#f4e9d8" strokeWidth="1" opacity="0.3" />
+          </g>
+          <g data-name="open-door">
+            <polygon points="20,10 40,20 40,100 20,110" fill="#f4e9d8" opacity="0.9" />
+            <polygon points="25,45 35,50 35,70 25,65" fill="rgba(0,0,0,0.35)" />
+          </g>
+          <g data-name="money-and-hand">
+            <rect x="60" y="70" width="35" height="15" fill="#e8b34a" filter="url(#soft-glow)" />
+            <line x1="60" y1="75" x2="95" y2="75" stroke="rgba(0,0,0,0.35)" strokeWidth="1" />
+            <path d="M200,60 Q150,60 100,72 L100,83 Q150,75 200,75 Z" fill="rgba(0,0,0,0.35)" />
+            <path d="M200,60 Q150,60 100,72 L100,83 Q150,75 200,75 Z" fill="none" stroke="#f4e9d8" strokeWidth="1.5" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-hale':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="dresser">
+            <rect x="0" y="85" width="200" height="35" fill="rgba(0,0,0,0.35)" />
+            <line x1="0" y1="85" x2="200" y2="85" stroke="#f4e9d8" strokeWidth="1" opacity="0.3" />
+          </g>
+          <g data-name="jewellery-box">
+            <polygon points="60,85 120,75 140,90 80,100" fill="rgba(255,255,255,0.08)" />
+            <polygon points="60,85 120,75 100,35 40,45" fill="#f4e9d8" opacity="0.9" />
+            <polygon points="50,55 90,45 100,70 60,80" fill="rgba(0,0,0,0.35)" opacity="0.4" />
+          </g>
+          <g data-name="jewels-cord">
+            <circle cx="95" cy="85" r="4" fill="#e8b34a" filter="url(#soft-glow)" />
+            <polygon points="105,90 110,85 115,90 110,95" fill="#e8b34a" />
+            <path d="M125,85 Q160,105 200,75" fill="none" stroke="#f4e9d8" strokeWidth="2.5" strokeLinecap="round" />
+            <path d="M145,96 Q170,110 200,85" fill="none" stroke="#f4e9d8" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-dawson-james':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="streetlamp">
+            <line x1="100" y1="0" x2="100" y2="120" stroke="rgba(255,255,255,0.08)" strokeWidth="40" filter="url(#soft-glow)" />
+            <ellipse cx="100" cy="115" rx="50" ry="10" fill="rgba(255,255,255,0.08)" />
+          </g>
+          <g data-name="figures">
+            <path d="M25,120 C25,70 55,60 55,40 C55,20 35,20 35,40" fill="rgba(0,0,0,0.35)" />
+            <path d="M175,120 C175,70 145,60 145,40 C145,20 165,20 165,40" fill="rgba(0,0,0,0.35)" />
+            <path d="M85,120 L115,70 L105,40 C105,25 125,25 125,40" fill="#f4e9d8" filter="url(#soft-glow)" />
+            <line x1="60" y1="60" x2="75" y2="55" stroke="#e8b34a" strokeWidth="2" strokeLinecap="round" />
+            <line x1="140" y1="60" x2="125" y2="55" stroke="#e8b34a" strokeWidth="2" strokeLinecap="round" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'corcoran-v-anderton':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="pavement">
+            <line x1="0" y1="100" x2="200" y2="100" stroke="rgba(0,0,0,0.35)" strokeWidth="4" />
+            <line x1="0" y1="110" x2="200" y2="110" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
+          </g>
+          <g data-name="handbag-falling">
+            <rect x="70" y="45" width="60" height="35" rx="8" fill="#f4e9d8" />
+            <path d="M80,45 C80,10 120,10 120,45" fill="none" stroke="#e8b34a" strokeWidth="4" filter="url(#soft-glow)" />
+            <rect x="90" y="55" width="20" height="10" rx="2" fill="rgba(0,0,0,0.35)" />
+            <line x1="65" y1="50" x2="55" y2="40" stroke="rgba(255,255,255,0.08)" strokeWidth="2" strokeLinecap="round" />
+            <line x1="135" y1="50" x2="145" y2="40" stroke="rgba(255,255,255,0.08)" strokeWidth="2" strokeLinecap="round" />
+          </g>
+          <g data-name="releasing-fingers">
+            <path d="M100,-5 L100,15 M110,-5 L110,10 M120,-5 L120,5" fill="none" stroke="#f4e9d8" strokeWidth="4" strokeLinecap="round" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-collins':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="wall-window">
+            <rect x="60" y="10" width="80" height="70" fill="rgba(255,255,255,0.08)" stroke="#f4e9d8" strokeWidth="2" />
+            <line x1="60" y1="45" x2="140" y2="45" stroke="#f4e9d8" strokeWidth="1" opacity="0.5" />
+          </g>
+          <g data-name="curtains-blowing">
+            <path d="M60,10 Q40,45 60,80 L70,80 Q50,45 70,10 Z" fill="#e8b34a" filter="url(#soft-glow)" />
+            <path d="M140,10 Q160,45 140,80 L130,80 Q150,45 130,10 Z" fill="#e8b34a" filter="url(#soft-glow)" />
+          </g>
+          <g data-name="ladder">
+            <line x1="90" y1="120" x2="100" y2="70" stroke="#f4e9d8" strokeWidth="3" />
+            <line x1="110" y1="120" x2="120" y2="70" stroke="#f4e9d8" strokeWidth="3" />
+            <line x1="94" y1="100" x2="114" y2="100" stroke="#f4e9d8" strokeWidth="2" />
+            <line x1="97" y1="80" x2="117" y2="80" stroke="#f4e9d8" strokeWidth="2" />
+            <line x1="91" y1="120" x2="111" y2="120" stroke="#f4e9d8" strokeWidth="2" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-brown-1985':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="shop-window">
+            <rect x="20" y="10" width="160" height="100" fill="rgba(255,255,255,0.08)" stroke="rgba(0,0,0,0.35)" strokeWidth="4" />
+            <polygon points="60,40 80,20 110,35 140,25 150,60 120,80 80,75 50,60" fill="#f4e9d8" opacity="0.05" stroke="#f4e9d8" strokeWidth="1.5" />
+            <line x1="80" y1="20" x2="50" y2="10" stroke="#f4e9d8" strokeWidth="1" opacity="0.8" />
+            <line x1="140" y1="25" x2="170" y2="15" stroke="#f4e9d8" strokeWidth="1" opacity="0.8" />
+            <line x1="120" y1="80" x2="130" y2="110" stroke="#f4e9d8" strokeWidth="1" opacity="0.8" />
+          </g>
+          <g data-name="goods-inner">
+            <circle cx="100" cy="50" r="12" fill="#e8b34a" filter="url(#soft-glow)" />
+            <rect x="95" y="65" width="20" height="20" fill="rgba(0,0,0,0.35)" />
+          </g>
+          <g data-name="arm-reaching">
+            <path d="M0,90 C30,85 60,65 80,55 L90,55" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="10" strokeLinecap="round" />
+            <path d="M0,90 C30,85 60,65 80,55 L90,55" fill="none" stroke="#f4e9d8" strokeWidth="4" strokeLinecap="round" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-ryan':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="sash-window">
+            <rect x="70" y="10" width="60" height="100" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="6" />
+            <line x1="70" y1="65" x2="130" y2="65" stroke="#f4e9d8" strokeWidth="3" opacity="0.8" />
+            <line x1="70" y1="50" x2="130" y2="50" stroke="rgba(255,255,255,0.08)" strokeWidth="4" />
+          </g>
+          <g data-name="stuck-body">
+            <path d="M85,65 C85,35 115,35 115,65 Z" fill="#f4e9d8" filter="url(#soft-glow)" />
+            <path d="M85,65 C85,35 115,35 115,65 Z" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="1" />
+          </g>
+          <g data-name="kicking-legs">
+            <path d="M90,75 L65,115 M110,75 L135,115" fill="none" stroke="#e8b34a" strokeWidth="8" strokeLinecap="round" />
+            <path d="M90,75 L65,115 M110,75 L135,115" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="2" strokeLinecap="round" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-walkington':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="counter-gate">
+            <rect x="0" y="60" width="130" height="60" fill="rgba(0,0,0,0.35)" />
+            <path d="M130,60 L180,85 L180,120 L130,120 Z" fill="rgba(255,255,255,0.08)" />
+            <line x1="130" y1="60" x2="180" y2="85" stroke="#f4e9d8" strokeWidth="2" />
+          </g>
+          <g data-name="till-open">
+            <rect x="40" y="40" width="50" height="20" rx="2" fill="#f4e9d8" />
+            <rect x="50" y="50" width="40" height="15" fill="rgba(0,0,0,0.35)" />
+            <rect x="55" y="55" width="10" height="5" fill="#e8b34a" filter="url(#soft-glow)" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'roe-v-kingerlee':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="cell-shadows">
+            <line x1="150" y1="0" x2="150" y2="120" stroke="rgba(0,0,0,0.35)" strokeWidth="30" opacity="0.6" />
+            <line x1="20" y1="0" x2="20" y2="120" stroke="rgba(0,0,0,0.35)" strokeWidth="15" opacity="0.4" />
+          </g>
+          <g data-name="mud-smears">
+            <path d="M60,40 Q70,30 80,50 T60,70 Z" fill="rgba(0,0,0,0.35)" filter="url(#soft-glow)" />
+            <path d="M90,30 Q105,40 95,65 T80,45 Z" fill="rgba(0,0,0,0.35)" opacity="0.8" />
+            <path d="M65,35 L68,25 M75,32 L80,22 M85,38 L92,28 M95,45 L105,40" stroke="rgba(0,0,0,0.35)" strokeWidth="3" strokeLinecap="round" />
+          </g>
+          <g data-name="bucket-brush">
+            <path d="M50,110 L60,90 L80,90 L90,110 Z" fill="#f4e9d8" />
+            <line x1="70" y1="90" x2="100" y2="75" stroke="#e8b34a" strokeWidth="3" strokeLinecap="round" />
+            <polygon points="95,78 105,73 102,70" fill="rgba(0,0,0,0.35)" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-smith-1974':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="floorboards">
+            <line x1="0" y1="70" x2="200" y2="70" stroke="rgba(0,0,0,0.35)" strokeWidth="2" />
+            <line x1="0" y1="90" x2="200" y2="90" stroke="rgba(0,0,0,0.35)" strokeWidth="2" />
+            <line x1="0" y1="110" x2="200" y2="110" stroke="rgba(0,0,0,0.35)" strokeWidth="2" />
+          </g>
+          <g data-name="ripped-gap">
+            <rect x="60" y="70" width="70" height="20" fill="rgba(255,255,255,0.08)" />
+            <path d="M65,75 Q90,85 125,75" fill="none" stroke="#e8b34a" strokeWidth="2" filter="url(#soft-glow)" />
+            <path d="M70,85 Q100,75 120,85" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="1" />
+          </g>
+          <g data-name="pulled-board-hammer">
+            <rect x="135" y="60" width="50" height="15" transform="rotate(-15 135 60)" fill="#f4e9d8" />
+            <line x1="30" y1="100" x2="60" y2="85" stroke="#f4e9d8" strokeWidth="4" strokeLinecap="round" />
+            <path d="M55,88 Q65,80 70,90" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="3" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-steer':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="window-pane">
+            <rect x="15" y="15" width="170" height="90" fill="rgba(255,255,255,0.08)" />
+            <rect x="15" y="15" width="170" height="90" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="6" />
+          </g>
+          <g data-name="bullet-hole">
+            <circle cx="100" cy="55" r="4" fill="#f4e9d8" filter="url(#soft-glow)" />
+            <path d="M100,55 L80,25 M100,55 L130,35 M100,55 L145,75 M100,55 L90,95 M100,55 L55,65 M100,55 L115,15" fill="none" stroke="#e8b34a" strokeWidth="1" />
+            <path d="M100,55 L70,40 M100,55 L115,80 M100,55 L85,75 M100,55 L125,50" fill="none" stroke="rgba(0,0,0,0.35)" strokeWidth="1" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'r-v-hill-hall':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="chain-link-fence" stroke="rgba(255,255,255,0.08)" strokeWidth="1.5">
+            <line x1="0" y1="0" x2="120" y2="120"/><line x1="40" y1="0" x2="160" y2="120"/><line x1="80" y1="0" x2="200" y2="120"/><line x1="120" y1="0" x2="240" y2="120"/><line x1="-40" y1="0" x2="80" y2="120"/>
+            <line x1="120" y1="0" x2="0" y2="120"/><line x1="160" y1="0" x2="40" y2="120"/><line x1="200" y1="0" x2="80" y2="120"/><line x1="240" y1="0" x2="120" y2="120"/><line x1="80" y1="0" x2="-40" y2="120"/>
+          </g>
+          <g data-name="wire-cutters">
+            <path d="M100,55 L85,95 M100,55 L115,95" fill="none" stroke="#f4e9d8" strokeWidth="5" strokeLinecap="round" />
+            <circle cx="100" cy="55" r="3" fill="#e8b34a" />
+            <polygon points="100,50 93,35 107,35" fill="#f4e9d8" filter="url(#soft-glow)" />
+          </g>
+          <g data-name="arm-sleeve">
+            <path d="M70,120 L85,90 L115,90 L130,120 Z" fill="rgba(0,0,0,0.35)" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
     default:
       return (
         <svg {...commonProps}>
