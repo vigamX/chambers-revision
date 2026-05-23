@@ -18,7 +18,7 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "actus-reus",
         label: "Actus reus & omissions",
-        caseIds: ["r-v-miller"],
+        caseIds: ["r-v-miller", "r-v-pittwood", "r-v-stone-dobinson", "r-v-dytham"],
       },
       {
         id: "causation",
@@ -51,7 +51,7 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "vol-mans",
         label: "Voluntary manslaughter (LOC & DR)",
-        caseIds: ["r-v-ahluwalia", "r-v-byrne"],
+        caseIds: ["r-v-ahluwalia", "r-v-byrne", "r-v-clinton", "r-v-golds"],
       },
       {
         id: "invol-mans-uam",
@@ -70,14 +70,24 @@ export const SYLLABUS: SyllabusSection[] = [
     label: "Non-fatal offences against the person",
     topics: [
       {
-        id: "assault-abh",
-        label: "Assault, battery & ABH",
-        caseIds: ["r-v-ireland", "r-v-roberts"],
+        id: "battery",
+        label: "Battery (s.39 CJA 1988)",
+        caseIds: ["collins-v-wilcock"],
       },
       {
-        id: "gbh",
-        label: "GBH (s.20 & s.18)",
-        caseIds: ["dpp-v-smith"],
+        id: "assault-abh",
+        label: "Assault & ABH (s.47 OAPA)",
+        caseIds: ["r-v-ireland", "r-v-roberts", "r-v-chan-fook"],
+      },
+      {
+        id: "gbh-s20",
+        label: "s.20 GBH / wounding",
+        caseIds: ["jcc-v-eisenhower", "r-v-burstow", "dpp-v-smith"],
+      },
+      {
+        id: "gbh-s18",
+        label: "s.18 GBH with intent",
+        caseIds: ["r-v-belfon"],
       },
     ],
   },
@@ -88,7 +98,7 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "insanity",
         label: "Insanity",
-        caseIds: ["mnaghten"],
+        caseIds: ["mnaghten", "r-v-sullivan"],
       },
       {
         id: "automatism",
@@ -98,17 +108,17 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "intoxication",
         label: "Intoxication",
-        caseIds: ["dpp-v-majewski"],
+        caseIds: ["dpp-v-majewski", "r-v-kingston"],
       },
       {
         id: "self-defence",
         label: "Self-defence",
-        caseIds: ["r-v-martin"],
+        caseIds: ["r-v-martin", "r-v-williams-gladstone"],
       },
       {
         id: "consent",
         label: "Consent",
-        caseIds: ["r-v-brown"],
+        caseIds: ["r-v-brown", "r-v-wilson"],
       },
     ],
   },

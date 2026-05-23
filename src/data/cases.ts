@@ -426,6 +426,244 @@ export const CASES: LawCase[] = [
     },
     importance: 3,
   },
+  {
+    id: "r-v-pittwood",
+    name: "R v Pittwood",
+    year: 1902,
+    area: "criminal",
+    topics: ["actus-reus"],
+    facts:
+      "A railway-crossing gatekeeper went to lunch leaving the gate open; a hay-cart was struck and the driver killed.",
+    principle:
+      "A contractual duty to act can found criminal liability for omission.",
+    visual: {
+      emoji: "🚂",
+      scene: "An open level-crossing gate, a distant steam train",
+      palette: "linear-gradient(135deg,#1a2a2a,#3a4a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-stone-dobinson",
+    name: "R v Stone & Dobinson",
+    year: 1977,
+    area: "criminal",
+    topics: ["actus-reus"],
+    facts:
+      "Defendants took in Stone's anorexic sister, made half-hearted attempts to feed her, then let her die in filth in their cottage.",
+    principle:
+      "Voluntary assumption of care for another founds a duty to act; failure constitutes the actus reus.",
+    visual: {
+      emoji: "🛏️",
+      scene: "A dim cottage bedroom, an untouched bowl of broth",
+      palette: "linear-gradient(135deg,#2a1a1a,#4a3a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-dytham",
+    name: "R v Dytham",
+    year: 1979,
+    area: "criminal",
+    topics: ["actus-reus"],
+    facts:
+      "Uniformed police officer stood by and watched a man being kicked to death outside a nightclub, then walked away.",
+    principle:
+      "Public office imposes a duty to act; wilful neglect to perform that duty is a criminal offence.",
+    visual: {
+      emoji: "👮",
+      scene: "A constable's silhouette under a streetlamp, looking away",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a4a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "collins-v-wilcock",
+    name: "Collins v Wilcock",
+    year: 1984,
+    area: "criminal",
+    topics: ["non-fatal-offences"],
+    facts:
+      "Police officer took hold of a woman's arm to detain her for questioning; not arresting her, simply restraining.",
+    principle:
+      "Battery is any unlawful application of force, however slight, to another person; everyday touchings consented to by convention are not battery.",
+    visual: {
+      emoji: "✋",
+      scene: "A gloved hand gripping a forearm in a doorway",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a3a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-chan-fook",
+    name: "R v Chan-Fook",
+    year: 1994,
+    area: "criminal",
+    topics: ["non-fatal-offences"],
+    facts:
+      "Defendant locked the suspected thief of his fiancée's ring in an upstairs room; the man fell from the window trying to escape, sustaining injury and later mental distress.",
+    principle:
+      "Actual bodily harm includes recognised psychiatric injury — but not mere emotions such as fear, distress or panic.",
+    visual: {
+      emoji: "🪟",
+      scene: "An upstairs window, curtains stirring, a turned key",
+      palette: "linear-gradient(135deg,#2a1a3a,#4a2a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "jcc-v-eisenhower",
+    name: "JCC v Eisenhower",
+    year: 1984,
+    area: "criminal",
+    topics: ["non-fatal-offences"],
+    facts:
+      "Defendant fired an air-pistol pellet that struck the victim near the eye, causing severe bruising and bleeding under the skin but no external break.",
+    principle:
+      "A 'wound' under s.20 OAPA requires a break in the continuity of both layers of skin — internal bleeding alone is not a wound.",
+    visual: {
+      emoji: "🎯",
+      scene: "A target with a pellet lodged near the bullseye",
+      palette: "linear-gradient(135deg,#2a1a1a,#5a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-burstow",
+    name: "R v Burstow",
+    year: 1997,
+    area: "criminal",
+    topics: ["non-fatal-offences"],
+    facts:
+      "Defendant stalked a former partner for years with silent calls, hate mail, and surveillance; she developed a severe depressive illness.",
+    principle:
+      "Serious psychiatric injury is 'grievous bodily harm' under s.20 OAPA, and can be 'inflicted' without physical contact.",
+    visual: {
+      emoji: "📬",
+      scene: "A doormat strewn with unmarked envelopes",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-belfon",
+    name: "R v Belfon",
+    year: 1976,
+    area: "criminal",
+    topics: ["non-fatal-offences", "mens-rea"],
+    facts:
+      "Defendant slashed the victim's face and chest with a razor during a robbery, causing severe wounds.",
+    principle:
+      "s.18 GBH with intent is a specific intent offence: nothing less than intent to cause grievous bodily harm (or to resist arrest) will do.",
+    visual: {
+      emoji: "🪒",
+      scene: "A straight razor unfolded on a dark counter",
+      palette: "linear-gradient(135deg,#1a1a1a,#3a2a2a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-clinton",
+    name: "R v Clinton",
+    year: 2012,
+    area: "criminal",
+    topics: ["fatal-offences", "defences"],
+    facts:
+      "Defendant killed his wife after she taunted him about her affair and told him she no longer wanted to live with him and the children.",
+    principle:
+      "Sexual infidelity, while excluded as a stand-alone qualifying trigger, may form part of the surrounding context if other qualifying triggers are present.",
+    visual: {
+      emoji: "💔",
+      scene: "A framed wedding photo face-down on a mantelpiece",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a1a2a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-golds",
+    name: "R v Golds",
+    year: 2016,
+    area: "criminal",
+    topics: ["fatal-offences", "defences"],
+    facts:
+      "Defendant with a history of psychotic illness stabbed his partner to death during an episode.",
+    principle:
+      "For diminished responsibility under the 2009 Act, 'substantial' impairment means more than merely trivial — but the jury must find significant, not just measurable, impairment.",
+    visual: {
+      emoji: "⚖️",
+      scene: "A pair of scales tipped unevenly on a courtroom desk",
+      palette: "linear-gradient(135deg,#2a1a3a,#4a2a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-williams-gladstone",
+    name: "R v Williams (Gladstone)",
+    year: 1987,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant saw a man apparently assaulting a youth in the street; in fact the man was lawfully detaining a mugger. Defendant intervened with force.",
+    principle:
+      "Self-defence is judged on the facts as the defendant honestly believed them to be — even if his belief was mistaken and unreasonable.",
+    visual: {
+      emoji: "🚶",
+      scene: "Two figures grappling on a pavement, a third approaching",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a4a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-wilson",
+    name: "R v Wilson",
+    year: 1996,
+    area: "criminal",
+    topics: ["defences", "non-fatal-offences"],
+    facts:
+      "Husband branded his initials onto his wife's buttocks at her request with a hot knife.",
+    principle:
+      "Consent to bodily harm in a private context analogous to tattooing (here, 'personal adornment between spouses') can be a defence.",
+    visual: {
+      emoji: "🔥",
+      scene: "A red-hot blade resting on a fireplace tile",
+      palette: "linear-gradient(135deg,#2a1a1a,#5a2a1a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-sullivan",
+    name: "R v Sullivan",
+    year: 1984,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant kicked an elderly friend during a psychomotor epileptic seizure, causing actual bodily harm; pleaded automatism.",
+    principle:
+      "Epilepsy is a 'disease of the mind' — an internal cause — so the proper plea is insanity, not automatism, however incongruous.",
+    visual: {
+      emoji: "🧠",
+      scene: "A skull profile with jagged interior lines",
+      palette: "linear-gradient(135deg,#1a1a3a,#3a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-kingston",
+    name: "R v Kingston",
+    year: 1995,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant's coffee was secretly spiked with sedative drugs by a blackmailer; in his disinhibited state he sexually assaulted a sleeping boy.",
+    principle:
+      "Involuntary intoxication is no defence if the defendant still formed the necessary mens rea: 'a drunken intent is still an intent'.",
+    visual: {
+      emoji: "☕",
+      scene: "A coffee cup, a small unmarked vial alongside",
+      palette: "linear-gradient(135deg,#2a1a1a,#4a2a2a)",
+    },
+    importance: 3,
+  },
 ];
 
 export const CASES_BY_ID: Record<string, LawCase> = Object.fromEntries(
