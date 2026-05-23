@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react";
 import type { Progress } from "./types";
 import { BRIEFS, BRIEFS_BY_ID } from "./data/briefs";
+import { TERM_1_BOSS } from "./data/boss";
 import { loadProgress, resetProgress, saveProgress } from "./store";
 import { Chambers } from "./components/Chambers";
 import { BriefPlayer } from "./components/BriefPlayer";
 import { RevisionDock } from "./components/RevisionDock";
 import { CaseClash } from "./components/CaseClash";
 import { TopicChecklist } from "./components/TopicChecklist";
+import { BossFightPlayer } from "./components/BossFightPlayer";
 
 type View =
   | { name: "chambers" }
   | { name: "brief"; id: string }
   | { name: "dock" }
   | { name: "clash" }
-  | { name: "checklist" };
+  | { name: "checklist" }
+  | { name: "boss" };
 
 export default function App() {
   const [progress, setProgress] = useState<Progress>(() => loadProgress());
@@ -49,10 +52,12 @@ export default function App() {
         <Chambers
           briefs={BRIEFS}
           progress={progress}
+          boss={TERM_1_BOSS}
           onPick={(id) => setView({ name: "brief", id })}
           onOpenDock={() => setView({ name: "dock" })}
           onStartClash={() => setView({ name: "clash" })}
           onOpenChecklist={() => setView({ name: "checklist" })}
+          onStartBoss={() => setView({ name: "boss" })}
         />
       )}
 
@@ -85,6 +90,15 @@ export default function App() {
         <TopicChecklist
           progress={progress}
           onBack={() => setView({ name: "chambers" })}
+        />
+      )}
+
+      {view.name === "boss" && (
+        <BossFightPlayer
+          boss={TERM_1_BOSS}
+          progress={progress}
+          onProgressChange={setProgress}
+          onExit={() => setView({ name: "chambers" })}
         />
       )}
     </div>

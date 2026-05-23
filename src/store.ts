@@ -13,6 +13,7 @@ function defaultProgress(): Progress {
     currentTerm: 1,
     totalAnswered: 0,
     totalCorrect: 0,
+    bossResults: {},
   };
 }
 
@@ -24,6 +25,7 @@ export function loadProgress(): Progress {
     for (const c of CASES) {
       if (!parsed.cards[c.id]) parsed.cards[c.id] = newCard(c.id);
     }
+    if (!parsed.bossResults) parsed.bossResults = {};
     return parsed;
   } catch {
     return defaultProgress();

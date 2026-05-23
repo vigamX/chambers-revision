@@ -1,19 +1,35 @@
 import type { Brief, Progress } from "../types";
+import type { BossFight } from "../data/boss";
 
 interface Props {
   briefs: Brief[];
   progress: Progress;
+  boss: BossFight;
   onPick: (briefId: string) => void;
   onOpenDock: () => void;
   onStartClash: () => void;
   onOpenChecklist: () => void;
+  onStartBoss: () => void;
 }
 
-export function Chambers({ briefs, progress, onPick, onOpenDock, onStartClash, onOpenChecklist }: Props) {
+const BOSS_UNLOCK_BRIEFS = 6;
+
+export function Chambers({
+  briefs,
+  progress,
+  boss,
+  onPick,
+  onOpenDock,
+  onStartClash,
+  onOpenChecklist,
+  onStartBoss,
+}: Props) {
   const completed = progress.completedBriefs.length;
   const total = briefs.length;
   const mastered = Object.values(progress.cards).filter((c) => c.mastery >= 4).length;
   const totalCases = Object.keys(progress.cards).length;
+  const bossUnlocked = completed >= BOSS_UNLOCK_BRIEFS;
+  const bossBest = progress.bossResults[boss.id];
 
   return (
     <div>
@@ -66,6 +82,33 @@ export function Chambers({ briefs, progress, onPick, onOpenDock, onStartClash, o
             </div>
           );
         })}
+      </section>
+
+      <section
+        className={`boss-tile ${bossUnlocked ? "" : "locked"}`}
+        onClick={() => bossUnlocked && onStartBoss()}
+      >
+        <div className="boss-tile-label">End-of-Term Examination</div>
+        <h3>{boss.title}</h3>
+        <div className="boss-tile-desc">
+          One fact pattern. No retry. {boss.steps.length} questions, {boss.steps.reduce((s, st) => s + st.marks, 0)} marks. Graded A* to U.
+        </div>
+        <div className="boss-tile-meta">
+          {bossUnlocked ? (
+            <>
+              <span>{completed}/{total} briefs filed — unlocked</span>
+              {bossBest && (
+                <span className="boss-tile-best">
+                  Best: {bossBest.marksScored}/{bossBest.marksAvailable} ({bossBest.band})
+                </span>
+              )}
+            </>
+          ) : (
+            <span>
+              🔒 Locked — file {BOSS_UNLOCK_BRIEFS - completed} more brief{BOSS_UNLOCK_BRIEFS - completed === 1 ? "" : "s"} to sit the exam
+            </span>
+          )}
+        </div>
       </section>
 
       <section style={{ marginTop: "2rem", opacity: 0.5 }}>

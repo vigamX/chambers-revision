@@ -61,10 +61,19 @@ export interface CardState {
   mastery: 0 | 1 | 2 | 3 | 4 | 5;
 }
 
+export interface BossResult {
+  bossId: string;
+  marksScored: number;
+  marksAvailable: number;
+  band: "A*" | "A" | "B" | "C" | "U";
+  completedAt: number;
+}
+
 export interface Progress {
   cards: Record<string, CardState>;
   completedBriefs: string[];
   currentTerm: 1 | 2 | 3 | 4;
   totalAnswered: number;
   totalCorrect: number;
+  bossResults: Record<string, BossResult>;
 }
