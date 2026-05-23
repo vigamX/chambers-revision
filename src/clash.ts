@@ -39,6 +39,7 @@ const TOPIC_LABEL: Record<CriminalTopic, string> = {
   "causation": "Causation",
   "non-fatal-offences": "Non-fatal offences",
   "fatal-offences": "Fatal offences",
+  "property-offences": "Property offences",
   "defences": "Defences",
   "attempts": "Attempts",
 };

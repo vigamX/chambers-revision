@@ -1429,6 +1429,346 @@ export const CASES: LawCase[] = [
     },
     importance: 3,
   },
+  {
+    id: "r-v-gomez",
+    name: "R v Gomez",
+    year: 1993,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Shop assistant persuaded his manager to accept stolen cheques in payment for electrical goods; the manager consented to the transfer.",
+    principle:
+      "Appropriation under s.3 includes acts done with the owner's consent, where that consent was procured by deception.",
+    visual: {
+      emoji: "🧾",
+      scene: "A bundle of cheques being passed across a shop counter",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a3a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-hinks",
+    name: "R v Hinks",
+    year: 2000,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendant befriended a man of limited intelligence and persuaded him to give her almost his entire savings of £60,000 as 'gifts'.",
+    principle:
+      "Appropriation can occur even where the property is transferred as an indefeasible gift; what makes it theft is the dishonesty.",
+    visual: {
+      emoji: "💷",
+      scene: "An open envelope of banknotes held in two hands across a kitchen table",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a4a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "oxford-v-moss",
+    name: "Oxford v Moss",
+    year: 1979,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Engineering student obtained an unseen exam paper, read its contents, and returned the physical paper.",
+    principle:
+      "Confidential information is not 'property' within s.4 of the Theft Act 1968 — only the paper itself could have been stolen, and it was returned.",
+    visual: {
+      emoji: "📄",
+      scene: "An exam paper being slipped back into a folder under a desk lamp",
+      palette: "linear-gradient(135deg,#2a1a2a,#4a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-turner-no-2",
+    name: "R v Turner (No 2)",
+    year: 1971,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendant took his own car back from a garage where it was being repaired, without paying the bill, using a spare key.",
+    principle:
+      "Property 'belongs to' anyone in possession or control of it; the legal owner can be guilty of stealing his own property from such a person.",
+    visual: {
+      emoji: "🔑",
+      scene: "A spare key turning in a car door under a garage's striplight",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "ag-ref-no-1-1983",
+    name: "A-G's Reference (No 1 of 1983)",
+    year: 1985,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Police officer overpaid in error by £74; she noticed but kept the money.",
+    principle:
+      "Where property is received by mistake, s.5(4) deems it still to belong to the original transferor — failure to restore it can be theft.",
+    visual: {
+      emoji: "💼",
+      scene: "A small stack of banknotes on a desk beside an opened pay envelope",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a3a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-ghosh",
+    name: "R v Ghosh",
+    year: 1982,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Surgeon claimed fees for operations he had not personally performed.",
+    principle:
+      "(Historic) two-stage test for dishonesty: (i) was the conduct objectively dishonest, and (ii) did the defendant realise reasonable people would so regard it? Replaced by Ivey.",
+    visual: {
+      emoji: "🩺",
+      scene: "A stethoscope coiled atop an unsigned invoice on a desk",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a3a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "ivey-v-genting",
+    name: "Ivey v Genting Casinos",
+    year: 2017,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Professional gambler used 'edge-sorting' at baccarat to win £7.7m; the casino refused to pay, alleging cheating.",
+    principle:
+      "Current test for dishonesty is purely objective: (i) what was the defendant's genuine belief as to the facts; (ii) was the conduct dishonest by the standards of ordinary decent people?",
+    visual: {
+      emoji: "🎴",
+      scene: "Playing cards arranged on a baize table, one card slightly turned",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a4a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-lloyd",
+    name: "R v Lloyd",
+    year: 1985,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Cinema projectionist took films home overnight to copy them, returning the originals in time for the next showing.",
+    principle:
+      "Borrowing amounts to intention permanently to deprive only if 'all the goodness, the virtue and the practical value' of the property has gone — here, the films retained their value.",
+    visual: {
+      emoji: "🎞️",
+      scene: "A film reel half-unspooled across a projection-room bench",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-velumyl",
+    name: "R v Velumyl",
+    year: 1989,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Company manager took £1,050 from the office safe intending to repay it after the weekend.",
+    principle:
+      "Intention to return an equivalent sum is not enough; the defendant intended to deprive his employer permanently of the specific banknotes he took.",
+    visual: {
+      emoji: "🔓",
+      scene: "An open office safe, a small stack of notes pulled out",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a2a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-hale",
+    name: "R v Hale",
+    year: 1979,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Two defendants forced their way into a house; one tied up the occupant upstairs while the other took her jewellery box.",
+    principle:
+      "Appropriation in robbery is a continuing act — force used at any time while the appropriation is still in progress turns the theft into robbery.",
+    visual: {
+      emoji: "💎",
+      scene: "An open jewellery box on a dresser, a length of cord trailing",
+      palette: "linear-gradient(135deg,#2a1a3a,#4a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-dawson-james",
+    name: "R v Dawson and James",
+    year: 1976,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendants nudged the victim off-balance so an accomplice could remove his wallet.",
+    principle:
+      "Even very minor force on the person is sufficient for robbery; 'force' is a question of fact for the jury.",
+    visual: {
+      emoji: "👤",
+      scene: "Two figures jostling a third on a pavement at night",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "corcoran-v-anderton",
+    name: "Corcoran v Anderton",
+    year: 1980,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendant tugged a woman's handbag from her grasp; she let go in shock and the bag fell to the ground before he ran off.",
+    principle:
+      "Robbery is complete the moment appropriation occurs with force; the defendant need not have made off with the property.",
+    visual: {
+      emoji: "👜",
+      scene: "A handbag mid-fall on a pavement, fingers releasing the strap",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-collins",
+    name: "R v Collins",
+    year: 1973,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendant, naked but for his socks, climbed up to a young woman's window with intent to rape; she invited him in believing him to be her boyfriend.",
+    principle:
+      "Burglary requires entry (1) as a trespasser, (2) knowing or being reckless as to that trespass. Once invited in, he was no longer a trespasser at the moment of substantial entry.",
+    visual: {
+      emoji: "🪜",
+      scene: "A ladder leaning to an open bedroom window",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-brown-1985",
+    name: "R v Brown",
+    year: 1985,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendant leaned through a smashed shop window, with feet still on the pavement outside, to take goods from the display.",
+    principle:
+      "Entry need only be 'effective' — partial entry of the body, sufficient to commit the ulterior offence, will do.",
+    visual: {
+      emoji: "🪟",
+      scene: "Broken shop-window shards around a hand reaching inside",
+      palette: "linear-gradient(135deg,#1a2a2a,#3a3a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-ryan",
+    name: "R v Ryan",
+    year: 1996,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendant, attempting to burgle an elderly man's house, became stuck halfway through a small window — only head and one arm inside.",
+    principle:
+      "Entry need not be 'effective' to commit the ulterior offence; even partial and ineffectual entry is enough for burglary.",
+    visual: {
+      emoji: "🚪",
+      scene: "A narrow window with shoulders wedged in the frame",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-walkington",
+    name: "R v Walkington",
+    year: 1979,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendant in a department store stepped behind a counter intending to steal from the till.",
+    principle:
+      "Burglary can be committed by entering any 'part of a building' as a trespasser; an area to which customers are not invited counts as such a part.",
+    visual: {
+      emoji: "🏬",
+      scene: "A till counter with a low swing-gate ajar, an empty drawer",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a3a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "roe-v-kingerlee",
+    name: "Roe v Kingerlee",
+    year: 1986,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendant smeared mud on a police-cell wall; it cost £7 to clean off.",
+    principle:
+      "'Damage' need not be permanent — temporary impairment of value or usefulness requiring expense to remedy will suffice.",
+    visual: {
+      emoji: "🧱",
+      scene: "A bare cell wall with smeared darker patches and a bucket beside it",
+      palette: "linear-gradient(135deg,#1a1a1a,#3a2a2a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-smith-1974",
+    name: "R v Smith",
+    year: 1974,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Tenant ripped out wiring, soundproofing and floorboards he had installed in his rented flat to retrieve them at the end of the tenancy.",
+    principle:
+      "A genuine but mistaken belief that property belongs to the defendant negates the mens rea of criminal damage, even if that belief is unreasonable.",
+    visual: {
+      emoji: "🪚",
+      scene: "A torn-up section of floorboard exposing cables beneath",
+      palette: "linear-gradient(135deg,#2a1a1a,#4a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-steer",
+    name: "R v Steer",
+    year: 1988,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendant fired a rifle through the windows of a bungalow; no-one was hit, but glass and a wall were damaged.",
+    principle:
+      "For aggravated criminal damage endangering life (s.1(2)), the danger must arise from the DAMAGE itself — not from the act causing the damage (here, the bullet).",
+    visual: {
+      emoji: "🔫",
+      scene: "A starred bullet hole in a window pane against a dark interior",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-hill-hall",
+    name: "R v Hill and Hall",
+    year: 1989,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendants, found with hacksaw blades near a US naval base, intended to cut the perimeter fence in protest against nuclear weapons.",
+    principle:
+      "Lawful excuse under s.5 Criminal Damage Act 1971 requires (i) honest belief that the property in need of protection was in immediate need of protection, and (ii) honest belief that the means were reasonable; political belief alone is not enough.",
+    visual: {
+      emoji: "🚧",
+      scene: "Wire-cutter blades resting against a chain-link fence at dusk",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a3a3a)",
+    },
+    importance: 3,
+  },
 ];
 
 export const CASES_BY_ID: Record<string, LawCase> = Object.fromEntries(

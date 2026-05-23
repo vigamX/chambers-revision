@@ -6,6 +6,7 @@ export type CriminalTopic =
   | "causation"
   | "non-fatal-offences"
   | "fatal-offences"
+  | "property-offences"
   | "defences"
   | "attempts";
 

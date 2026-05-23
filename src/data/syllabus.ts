@@ -157,6 +157,59 @@ export const SYLLABUS: SyllabusSection[] = [
     ],
   },
   {
+    id: "property",
+    label: "Offences against property",
+    chapter: 9,
+    topics: [
+      {
+        id: "theft-appropriation",
+        label: "Theft: appropriation (s.3)",
+        caseIds: ["r-v-gomez", "r-v-hinks"],
+      },
+      {
+        id: "theft-property",
+        label: "Theft: property (s.4)",
+        caseIds: ["oxford-v-moss"],
+      },
+      {
+        id: "theft-belonging",
+        label: "Theft: belonging to another (s.5)",
+        caseIds: ["r-v-turner-no-2", "ag-ref-no-1-1983"],
+      },
+      {
+        id: "theft-dishonesty",
+        label: "Theft: dishonesty (s.2)",
+        caseIds: ["r-v-ghosh", "ivey-v-genting"],
+      },
+      {
+        id: "theft-intent-deprive",
+        label: "Theft: intent permanently to deprive (s.6)",
+        caseIds: ["r-v-lloyd", "r-v-velumyl"],
+      },
+      {
+        id: "robbery",
+        label: "Robbery (s.8)",
+        caseIds: ["r-v-hale", "r-v-dawson-james", "corcoran-v-anderton"],
+      },
+      {
+        id: "burglary",
+        label: "Burglary (s.9)",
+        caseIds: ["r-v-collins", "r-v-brown-1985", "r-v-ryan", "r-v-walkington"],
+      },
+      {
+        id: "criminal-damage",
+        label: "Criminal damage (CDA 1971)",
+        caseIds: [
+          "roe-v-kingerlee",
+          "r-v-smith-1974",
+          "r-v-g",
+          "r-v-steer",
+          "r-v-hill-hall",
+        ],
+      },
+    ],
+  },
+  {
     id: "mental-capacity-defences",
     label: "Mental capacity defences",
     chapter: 10,
@@ -251,9 +304,10 @@ export const CHAPTER_LABELS: Record<number, string> = {
   6: "Chapter 6 — General elements",
   7: "Chapter 7 — Fatal offences",
   8: "Chapter 8 — Non-fatal offences",
+  9: "Chapter 9 — Offences against property",
   10: "Chapter 10 — Mental capacity defences",
   11: "Chapter 11 — General defences",
   12: "Chapter 12 — Attempts",
 };
 
-export const CHAPTERS_ORDERED: number[] = [6, 7, 8, 10, 11, 12];
+export const CHAPTERS_ORDERED: number[] = [6, 7, 8, 9, 10, 11, 12];
