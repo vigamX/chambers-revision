@@ -20,7 +20,16 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "actus-reus",
         label: "Actus reus & omissions",
-        caseIds: ["r-v-miller", "r-v-pittwood", "r-v-stone-dobinson", "r-v-dytham"],
+        caseIds: [
+          "r-v-miller",
+          "r-v-pittwood",
+          "r-v-stone-dobinson",
+          "r-v-dytham",
+          "r-v-gibbins-proctor",
+          "r-v-evans",
+          "fagan-v-mpc",
+          "dpp-v-santa-bermudez",
+        ],
       },
       {
         id: "causation",
@@ -30,14 +39,26 @@ export const SYLLABUS: SyllabusSection[] = [
           "r-v-pagett",
           "r-v-smith",
           "r-v-jordan",
+          "r-v-cheshire",
           "r-v-blaue",
           "r-v-roberts",
+          "r-v-kennedy-no-2",
         ],
       },
       {
         id: "mens-rea",
-        label: "Mens rea: intention & recklessness",
-        caseIds: ["r-v-mohan", "r-v-woollin", "r-v-cunningham"],
+        label: "Mens rea: intention",
+        caseIds: ["r-v-mohan", "r-v-moloney", "r-v-woollin", "r-v-matthews-alleyne"],
+      },
+      {
+        id: "recklessness",
+        label: "Recklessness",
+        caseIds: ["r-v-cunningham", "r-v-g"],
+      },
+      {
+        id: "transferred-malice",
+        label: "Transferred malice",
+        caseIds: ["r-v-latimer"],
       },
     ],
   },
@@ -49,17 +70,28 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "murder",
         label: "Murder (express & implied malice)",
-        caseIds: ["r-v-vickers", "r-v-mohan", "r-v-woollin"],
+        caseIds: ["r-v-vickers", "r-v-mohan", "r-v-woollin", "r-v-matthews-alleyne"],
       },
       {
-        id: "vol-mans",
-        label: "Voluntary manslaughter (LOC & DR)",
-        caseIds: ["r-v-ahluwalia", "r-v-byrne", "r-v-clinton", "r-v-golds"],
+        id: "vol-mans-loc",
+        label: "Voluntary manslaughter: loss of control",
+        caseIds: ["r-v-ahluwalia", "r-v-clinton", "r-v-jewell"],
+      },
+      {
+        id: "vol-mans-dr",
+        label: "Voluntary manslaughter: diminished responsibility",
+        caseIds: ["r-v-byrne", "r-v-golds", "r-v-dietschmann"],
       },
       {
         id: "invol-mans-uam",
         label: "Unlawful act manslaughter",
-        caseIds: ["r-v-church", "r-v-mitchell"],
+        caseIds: [
+          "r-v-church",
+          "r-v-mitchell",
+          "dpp-v-newbury-jones",
+          "r-v-lamb",
+          "r-v-dawson",
+        ],
       },
       {
         id: "invol-mans-gnm",
@@ -74,19 +106,35 @@ export const SYLLABUS: SyllabusSection[] = [
     chapter: 8,
     topics: [
       {
-        id: "battery",
-        label: "Battery (s.39 CJA 1988)",
-        caseIds: ["collins-v-wilcock"],
+        id: "assault",
+        label: "Assault (s.39 CJA 1988)",
+        caseIds: [
+          "r-v-ireland",
+          "r-v-constanza",
+          "tuberville-v-savage",
+          "smith-v-cs-woking",
+        ],
       },
       {
-        id: "assault-abh",
-        label: "Assault & ABH (s.47 OAPA)",
-        caseIds: ["r-v-ireland", "r-v-roberts", "r-v-chan-fook"],
+        id: "battery",
+        label: "Battery (s.39 CJA 1988)",
+        caseIds: ["collins-v-wilcock", "fagan-v-mpc"],
+      },
+      {
+        id: "abh",
+        label: "ABH (s.47 OAPA)",
+        caseIds: ["r-v-roberts", "r-v-chan-fook", "dpp-v-santa-bermudez"],
       },
       {
         id: "gbh-s20",
         label: "s.20 GBH / wounding",
-        caseIds: ["jcc-v-eisenhower", "r-v-burstow", "dpp-v-smith"],
+        caseIds: [
+          "jcc-v-eisenhower",
+          "r-v-burstow",
+          "dpp-v-smith",
+          "r-v-parmenter",
+          "r-v-mowatt",
+        ],
       },
       {
         id: "gbh-s18",
@@ -103,17 +151,17 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "insanity",
         label: "Insanity",
-        caseIds: ["mnaghten", "r-v-sullivan"],
+        caseIds: ["mnaghten", "r-v-sullivan", "r-v-hennessy"],
       },
       {
         id: "automatism",
         label: "Automatism",
-        caseIds: ["hill-v-baxter"],
+        caseIds: ["hill-v-baxter", "r-v-quick", "bratty-v-ag-ni"],
       },
       {
         id: "intoxication",
         label: "Intoxication",
-        caseIds: ["dpp-v-majewski", "r-v-kingston"],
+        caseIds: ["dpp-v-majewski", "r-v-kingston", "r-v-hardie", "r-v-lipman"],
       },
     ],
   },
@@ -125,12 +173,17 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "self-defence",
         label: "Self-defence",
-        caseIds: ["r-v-martin", "r-v-williams-gladstone"],
+        caseIds: ["r-v-martin", "r-v-williams-gladstone", "r-v-bird"],
       },
       {
         id: "consent",
         label: "Consent",
-        caseIds: ["r-v-brown", "r-v-wilson"],
+        caseIds: ["r-v-brown", "r-v-wilson", "ag-ref-no-6-1980"],
+      },
+      {
+        id: "necessity",
+        label: "Necessity",
+        caseIds: ["r-v-dudley-stephens"],
       },
     ],
   },
@@ -142,7 +195,7 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "attempts",
         label: "Attempts (s.1 Criminal Attempts Act 1981)",
-        caseIds: ["r-v-gullefer", "r-v-geddes"],
+        caseIds: ["r-v-gullefer", "r-v-geddes", "r-v-jones-1990", "r-v-tosti"],
       },
     ],
   },

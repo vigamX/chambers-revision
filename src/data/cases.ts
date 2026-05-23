@@ -664,6 +664,516 @@ export const CASES: LawCase[] = [
     },
     importance: 3,
   },
+  {
+    id: "r-v-g",
+    name: "R v G and Another",
+    year: 2003,
+    area: "criminal",
+    topics: ["mens-rea"],
+    facts:
+      "Two boys, aged 11 and 12, set fire to newspapers under a wheelie bin behind a Co-op; the fire spread and caused £1m of damage.",
+    principle:
+      "Recklessness in criminal damage is subjective: the defendant must himself have foreseen the risk. Caldwell's objective test is overruled.",
+    visual: {
+      emoji: "🗞️",
+      scene: "Newspapers smouldering beneath a tipped wheelie bin",
+      palette: "linear-gradient(135deg,#2a1a1a,#5a3a1a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-cheshire",
+    name: "R v Cheshire",
+    year: 1991,
+    area: "criminal",
+    topics: ["causation"],
+    facts:
+      "Defendant shot the victim, who developed rare breathing complications after a tracheotomy and died despite the wounds having largely healed.",
+    principle:
+      "Negligent medical treatment breaks the chain of causation only if it is so independent and so potent that the defendant's act is rendered insignificant.",
+    visual: {
+      emoji: "🔬",
+      scene: "A surgical light over an empty operating table",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a4a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-kennedy-no-2",
+    name: "R v Kennedy (No 2)",
+    year: 2007,
+    area: "criminal",
+    topics: ["causation"],
+    facts:
+      "Defendant prepared a syringe of heroin and handed it to the victim, who self-injected and died.",
+    principle:
+      "A free, deliberate and informed act of an adult victim breaks the chain of causation between supply and death.",
+    visual: {
+      emoji: "💉",
+      scene: "A syringe lying on a bedsit floor, a doorway half-shut",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "fagan-v-mpc",
+    name: "Fagan v MPC",
+    year: 1968,
+    area: "criminal",
+    topics: ["actus-reus", "mens-rea"],
+    facts:
+      "Defendant accidentally drove onto a police officer's foot and then refused to move when asked.",
+    principle:
+      "Where an act is a continuing one, mens rea formed at any point during it can coincide with the actus reus to found liability.",
+    visual: {
+      emoji: "🚓",
+      scene: "A car tyre resting on a polished black boot",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "dpp-v-santa-bermudez",
+    name: "DPP v Santa-Bermudez",
+    year: 2003,
+    area: "criminal",
+    topics: ["actus-reus", "non-fatal-offences"],
+    facts:
+      "Defendant assured a police officer searching him that he had no needles in his pocket; she was pricked by a hypodermic during the search.",
+    principle:
+      "Creating a danger and failing to warn of it can constitute the actus reus of an offence against the person.",
+    visual: {
+      emoji: "🪡",
+      scene: "A gloved hand recoiling from a pocket, needle exposed",
+      palette: "linear-gradient(135deg,#2a1a2a,#4a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-gibbins-proctor",
+    name: "R v Gibbins and Proctor",
+    year: 1918,
+    area: "criminal",
+    topics: ["actus-reus", "fatal-offences"],
+    facts:
+      "Father and his partner deliberately starved his seven-year-old daughter to death while feeding her siblings.",
+    principle:
+      "A parent owes a duty of care to a child arising from the relationship; failure to feed founds liability for murder.",
+    visual: {
+      emoji: "🍽️",
+      scene: "A child-sized empty plate beside a full one",
+      palette: "linear-gradient(135deg,#2a1a1a,#4a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-matthews-alleyne",
+    name: "R v Matthews and Alleyne",
+    year: 2003,
+    area: "criminal",
+    topics: ["mens-rea", "fatal-offences"],
+    facts:
+      "Defendants threw the victim, who said he could not swim, off a bridge into a river. He drowned.",
+    principle:
+      "Foresight of virtual certainty is evidence from which the jury MAY find intention — it is not, of itself, intention.",
+    visual: {
+      emoji: "🌉",
+      scene: "A bridge railing, two silhouettes leaning over",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a4a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-latimer",
+    name: "R v Latimer",
+    year: 1886,
+    area: "criminal",
+    topics: ["mens-rea"],
+    facts:
+      "Defendant struck at a man with his belt; the buckle glanced off and seriously wounded a woman standing nearby.",
+    principle:
+      "Transferred malice: mens rea aimed at one victim transfers to an unintended victim of the same kind of offence.",
+    visual: {
+      emoji: "➰",
+      scene: "A swinging leather belt mid-arc, a glint of buckle",
+      palette: "linear-gradient(135deg,#2a1a1a,#5a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-moloney",
+    name: "R v Moloney",
+    year: 1985,
+    area: "criminal",
+    topics: ["mens-rea", "fatal-offences"],
+    facts:
+      "Defendant and his stepfather, drunk, had a contest to see who could load and fire a shotgun fastest. Defendant pulled the trigger; his stepfather died.",
+    principle:
+      "Foresight of consequences is evidence of intention, not intention itself. The jury should be directed in straightforward cases simply on 'intent'.",
+    visual: {
+      emoji: "🔫",
+      scene: "A broken shotgun on a kitchen table, two glasses",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-evans",
+    name: "R v Evans",
+    year: 2009,
+    area: "criminal",
+    topics: ["actus-reus", "fatal-offences"],
+    facts:
+      "Defendant supplied her half-sister with heroin; the sister overdosed in front of her, and the defendant put her to bed rather than calling for help.",
+    principle:
+      "Where the defendant contributes to creating a life-threatening situation, a duty arises to take reasonable steps to summon help.",
+    visual: {
+      emoji: "📞",
+      scene: "A telephone untouched on a bedroom floor",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-jewell",
+    name: "R v Jewell",
+    year: 2014,
+    area: "criminal",
+    topics: ["fatal-offences", "defences"],
+    facts:
+      "Defendant shot a colleague after months of perceived bullying; arrived at the scene with a packed bag of weapons.",
+    principle:
+      "Loss of self-control under the 2009 Act requires a loss of the ability to maintain one's actions in accordance with considered judgement; pre-planning is fatal to the defence.",
+    visual: {
+      emoji: "🎒",
+      scene: "A duffel bag unzipped, dark shapes within",
+      palette: "linear-gradient(135deg,#1a1a1a,#3a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "dpp-v-newbury-jones",
+    name: "DPP v Newbury and Jones",
+    year: 1976,
+    area: "criminal",
+    topics: ["fatal-offences"],
+    facts:
+      "Two teenagers pushed a paving stone off a railway bridge onto a train below, killing the guard.",
+    principle:
+      "Unlawful act manslaughter requires only that the act be objectively dangerous; the defendant need not foresee any harm.",
+    visual: {
+      emoji: "🧱",
+      scene: "A paving stone tumbling toward rails below",
+      palette: "linear-gradient(135deg,#2a1a1a,#4a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-lamb",
+    name: "R v Lamb",
+    year: 1967,
+    area: "criminal",
+    topics: ["fatal-offences"],
+    facts:
+      "Defendant pointed a revolver at his friend in jest, neither understanding the rotation of the chambers; he pulled the trigger and shot his friend dead.",
+    principle:
+      "Unlawful act manslaughter requires an act that is criminally unlawful — not merely dangerous. With no assault (friend was not in fear), there was no unlawful act.",
+    visual: {
+      emoji: "🎯",
+      scene: "A revolver cylinder, two figures in silhouette grinning",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-dawson",
+    name: "R v Dawson",
+    year: 1985,
+    area: "criminal",
+    topics: ["fatal-offences"],
+    facts:
+      "Defendants robbed a petrol station with a fake gun; the elderly attendant suffered a fatal heart attack from the shock.",
+    principle:
+      "An act is 'dangerous' for UAM if a sober and reasonable person would foresee the risk of SOME physical harm — knowledge of the victim's frailty is required only if the reasonable person would have it.",
+    visual: {
+      emoji: "⛽",
+      scene: "A petrol-station counter, a fallen cash drawer",
+      palette: "linear-gradient(135deg,#2a1a1a,#4a3a2a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-dietschmann",
+    name: "R v Dietschmann",
+    year: 2003,
+    area: "criminal",
+    topics: ["fatal-offences", "defences"],
+    facts:
+      "Defendant, suffering from an adjustment disorder following bereavement, killed a man while heavily intoxicated.",
+    principle:
+      "Diminished responsibility is available even where the defendant is intoxicated, provided the abnormality of mental functioning (ignoring the drink) substantially impaired responsibility.",
+    visual: {
+      emoji: "🥀",
+      scene: "A wilted flower in a tumbler beside a half-empty bottle",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "tuberville-v-savage",
+    name: "Tuberville v Savage",
+    year: 1669,
+    area: "criminal",
+    topics: ["non-fatal-offences"],
+    facts:
+      "Defendant placed his hand on his sword and said: 'If it were not assize-time, I would not take such language from you.'",
+    principle:
+      "Words can negate what would otherwise be an assault. Conditional words showing no immediate intent to harm prevent the apprehension of immediate unlawful violence.",
+    visual: {
+      emoji: "⚔️",
+      scene: "A hand resting on a sheathed sword hilt",
+      palette: "linear-gradient(135deg,#2a1a2a,#4a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-constanza",
+    name: "R v Constanza",
+    year: 1997,
+    area: "criminal",
+    topics: ["non-fatal-offences"],
+    facts:
+      "Defendant stalked his victim and sent her around 800 threatening letters; the last two she interpreted as a clear threat from someone she knew lived nearby.",
+    principle:
+      "Words alone — including written words — can constitute an assault, provided they cause apprehension of immediate (in the sense of imminent) unlawful violence.",
+    visual: {
+      emoji: "✉️",
+      scene: "A stack of opened letters beside a curtain edge",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-parmenter",
+    name: "R v Parmenter",
+    year: 1991,
+    area: "criminal",
+    topics: ["non-fatal-offences", "mens-rea"],
+    facts:
+      "Father caused serious injuries to his three-month-old son by handling him too roughly, not realising his strength.",
+    principle:
+      "For s.20 GBH, the defendant need only foresee SOME physical harm — not harm of the gravity actually caused. The Cunningham recklessness test applies.",
+    visual: {
+      emoji: "🧸",
+      scene: "A toddler's teddy on an empty changing mat",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-mowatt",
+    name: "R v Mowatt",
+    year: 1968,
+    area: "criminal",
+    topics: ["non-fatal-offences", "mens-rea"],
+    facts:
+      "Defendant punched the victim repeatedly in a street fight, causing serious injury.",
+    principle:
+      "For s.20, the word 'maliciously' requires foresight that some physical harm — albeit minor — might result; foresight of the actual GBH is unnecessary.",
+    visual: {
+      emoji: "👊",
+      scene: "A closed fist mid-swing under a streetlamp",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "smith-v-cs-woking",
+    name: "Smith v CS Woking Police",
+    year: 1983,
+    area: "criminal",
+    topics: ["non-fatal-offences"],
+    facts:
+      "Defendant trespassed in a garden and stared at the female occupant through her bedroom window at night.",
+    principle:
+      "Apprehension of immediate unlawful violence does not require physical proximity; 'immediate' means imminent, even where a window or door separates the parties.",
+    visual: {
+      emoji: "🪟",
+      scene: "A face dimly visible through a curtain gap",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a4a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-quick",
+    name: "R v Quick",
+    year: 1973,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Diabetic nurse took his insulin, drank alcohol and ate little; he then assaulted a patient while hypoglycaemic and remembered nothing.",
+    principle:
+      "Where the loss of control is caused by an EXTERNAL factor (here, insulin), the proper plea is automatism — not insanity.",
+    visual: {
+      emoji: "🧪",
+      scene: "An insulin vial and syringe on a stainless tray",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a4a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-hennessy",
+    name: "R v Hennessy",
+    year: 1989,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant, a diabetic in a hyperglycaemic state because he had not taken insulin, drove off in a stolen car with no memory of doing so.",
+    principle:
+      "Where the loss of control is caused by an INTERNAL factor — here, the diabetes itself — the proper plea is insanity, not automatism.",
+    visual: {
+      emoji: "🍬",
+      scene: "An untouched insulin pen on a bedside table",
+      palette: "linear-gradient(135deg,#1a1a3a,#3a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-hardie",
+    name: "R v Hardie",
+    year: 1985,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant took several Valium tablets to calm down after a row, then set fire to a wardrobe in the flat where his ex-partner and her daughter were.",
+    principle:
+      "Voluntary intoxication by a non-dangerous (soporific or sedative) drug is treated like involuntary intoxication: it can negate the mens rea even of basic-intent offences.",
+    visual: {
+      emoji: "💊",
+      scene: "A scattered blister pack of pills beside a glass of water",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a3a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-lipman",
+    name: "R v Lipman",
+    year: 1970,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant on an LSD trip believed he was being attacked by snakes; he killed his girlfriend by stuffing a sheet into her mouth.",
+    principle:
+      "Voluntary intoxication is no defence to crimes of basic intent (here, manslaughter); the recklessness in becoming intoxicated supplies the mens rea.",
+    visual: {
+      emoji: "🌀",
+      scene: "A swirling fabric pattern, indistinct figures within",
+      palette: "linear-gradient(135deg,#2a1a3a,#4a2a4a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "bratty-v-ag-ni",
+    name: "Bratty v AG for Northern Ireland",
+    year: 1963,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant strangled a girl and pleaded he had been in a state of automatism due to an underlying neurological condition.",
+    principle:
+      "Automatism is an act done by the muscles without any control by the mind, or done by a person unconscious of what he is doing. Mere impairment is not enough.",
+    visual: {
+      emoji: "🌫️",
+      scene: "A silhouette dissolving at the edges in heavy mist",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a4a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "ag-ref-no-6-1980",
+    name: "A-G's Reference (No 6 of 1980)",
+    year: 1981,
+    area: "criminal",
+    topics: ["defences", "non-fatal-offences"],
+    facts:
+      "Two youths agreed to settle a dispute by fighting in a public street; one suffered a bloody nose and bruising.",
+    principle:
+      "It is not in the public interest that consent should be a defence to actual bodily harm inflicted in a fight; consent is not available outside recognised exceptions.",
+    visual: {
+      emoji: "👥",
+      scene: "Two silhouettes squaring up on tarmac under a streetlamp",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-bird",
+    name: "R v Bird",
+    year: 1985,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant, attacked at her birthday party by an ex-boyfriend, struck out with a glass still in her hand, losing him an eye.",
+    principle:
+      "A defendant pleading self-defence is not required to retreat first; a willingness to fight on does not, in itself, defeat the plea.",
+    visual: {
+      emoji: "🥂",
+      scene: "A shattered cocktail glass on a tiled floor",
+      palette: "linear-gradient(135deg,#2a1a2a,#4a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-dudley-stephens",
+    name: "R v Dudley and Stephens",
+    year: 1884,
+    area: "criminal",
+    topics: ["defences", "fatal-offences"],
+    facts:
+      "Shipwrecked sailors, starving in a lifeboat, killed and ate the cabin boy. Rescued days later, the survivors were charged with murder.",
+    principle:
+      "Necessity is no defence to murder. The taking of an innocent life cannot be justified by the desire to preserve one's own.",
+    visual: {
+      emoji: "⛵",
+      scene: "A small lifeboat adrift on a vast empty sea",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a4a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-jones-1990",
+    name: "R v Jones",
+    year: 1990,
+    area: "criminal",
+    topics: ["attempts"],
+    facts:
+      "Defendant climbed into the back of his estranged partner's new lover's car wearing a crash-helmet and carrying a loaded sawn-off shotgun; the victim grabbed the gun and escaped.",
+    principle:
+      "An act is 'more than merely preparatory' once the defendant has 'embarked on the crime proper'; getting into the car with a loaded weapon crossed that line.",
+    visual: {
+      emoji: "🪖",
+      scene: "A crash helmet on a passenger seat, sawn-off barrel beside",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-tosti",
+    name: "R v Tosti and White",
+    year: 1997,
+    area: "criminal",
+    topics: ["attempts"],
+    facts:
+      "Defendants drove to a barn at night with oxyacetylene equipment hidden in a hedge; they were examining the barn's padlock when disturbed.",
+    principle:
+      "Examining the means of entry, equipment to hand, is more than merely preparatory — the defendants had 'tried to commit the offence'.",
+    visual: {
+      emoji: "🔒",
+      scene: "A padlock examined under a torch beam at night",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a4a3a)",
+    },
+    importance: 3,
+  },
 ];
 
 export const CASES_BY_ID: Record<string, LawCase> = Object.fromEntries(
