@@ -483,3 +483,63 @@ button:disabled { opacity: 0.5; cursor: not-allowed; }
   color: var(--accent);
   white-space: nowrap;
 }
+
+.dock-sortbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.6rem 0 1rem;
+  padding: 0.4rem 0.6rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.dock-sortbar-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-right: 0.3rem;
+}
+.dock-sortbar-count {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.dock-sort-btn {
+  padding: 0.35em 0.85em;
+  font-size: 0.88rem;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+  border-radius: 8px;
+}
+.dock-sort-btn:hover { background: rgba(255,255,255,0.05); color: var(--ink); }
+.dock-sort-btn.active {
+  background: rgba(255,137,6,0.15);
+  border-color: rgba(255,137,6,0.4);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.dock-chapter {
+  margin-top: 1.5rem;
+}
+.dock-chapter:first-of-type { margin-top: 0.5rem; }
+.dock-chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+.dock-chapter-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+.dock-chapter-count {
+  color: var(--muted);
+  font-size: 0.85rem;
+}

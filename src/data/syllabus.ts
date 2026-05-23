@@ -7,13 +7,15 @@ export interface SyllabusTopic {
 export interface SyllabusSection {
   id: string;
   label: string;
+  chapter: number;
   topics: SyllabusTopic[];
 }
 
 export const SYLLABUS: SyllabusSection[] = [
   {
     id: "rules",
-    label: "Rules of criminal liability",
+    label: "General elements of criminal liability",
+    chapter: 6,
     topics: [
       {
         id: "actus-reus",
@@ -42,6 +44,7 @@ export const SYLLABUS: SyllabusSection[] = [
   {
     id: "fatal",
     label: "Fatal offences against the person",
+    chapter: 7,
     topics: [
       {
         id: "murder",
@@ -68,6 +71,7 @@ export const SYLLABUS: SyllabusSection[] = [
   {
     id: "non-fatal",
     label: "Non-fatal offences against the person",
+    chapter: 8,
     topics: [
       {
         id: "battery",
@@ -92,8 +96,9 @@ export const SYLLABUS: SyllabusSection[] = [
     ],
   },
   {
-    id: "defences",
-    label: "General defences",
+    id: "mental-capacity-defences",
+    label: "Mental capacity defences",
+    chapter: 10,
     topics: [
       {
         id: "insanity",
@@ -110,6 +115,13 @@ export const SYLLABUS: SyllabusSection[] = [
         label: "Intoxication",
         caseIds: ["dpp-v-majewski", "r-v-kingston"],
       },
+    ],
+  },
+  {
+    id: "general-defences",
+    label: "General defences",
+    chapter: 11,
+    topics: [
       {
         id: "self-defence",
         label: "Self-defence",
@@ -124,7 +136,8 @@ export const SYLLABUS: SyllabusSection[] = [
   },
   {
     id: "preliminary",
-    label: "Preliminary offences",
+    label: "Preliminary offences: attempts",
+    chapter: 12,
     topics: [
       {
         id: "attempts",
@@ -134,3 +147,30 @@ export const SYLLABUS: SyllabusSection[] = [
     ],
   },
 ];
+
+const CHAPTER_BY_CASE: Record<string, number> = (() => {
+  const m: Record<string, number> = {};
+  for (const section of SYLLABUS) {
+    for (const topic of section.topics) {
+      for (const id of topic.caseIds) {
+        if (!(id in m)) m[id] = section.chapter;
+      }
+    }
+  }
+  return m;
+})();
+
+export function chapterForCase(caseId: string): number | null {
+  return CHAPTER_BY_CASE[caseId] ?? null;
+}
+
+export const CHAPTER_LABELS: Record<number, string> = {
+  6: "Chapter 6 — General elements",
+  7: "Chapter 7 — Fatal offences",
+  8: "Chapter 8 — Non-fatal offences",
+  10: "Chapter 10 — Mental capacity defences",
+  11: "Chapter 11 — General defences",
+  12: "Chapter 12 — Attempts",
+};
+
+export const CHAPTERS_ORDERED: number[] = [6, 7, 8, 10, 11, 12];
