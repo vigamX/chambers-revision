@@ -1174,6 +1174,261 @@ export const CASES: LawCase[] = [
     },
     importance: 3,
   },
+  {
+    id: "sweet-v-parsley",
+    name: "Sweet v Parsley",
+    year: 1970,
+    area: "criminal",
+    topics: ["mens-rea"],
+    facts:
+      "Schoolteacher sub-let a farmhouse to students who used it for cannabis; she had no knowledge of the drugs.",
+    principle:
+      "There is a presumption that mens rea is required for every offence; clear statutory words are needed to displace it.",
+    visual: {
+      emoji: "🏡",
+      scene: "A farmhouse window glowing in fog, smoke from the chimney",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a4a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "gammon-v-ag-hk",
+    name: "Gammon (HK) v A-G of Hong Kong",
+    year: 1985,
+    area: "criminal",
+    topics: ["mens-rea"],
+    facts:
+      "Building contractors charged with deviating from approved plans in a manner likely to cause structural collapse, without knowing of the deviation.",
+    principle:
+      "The presumption of mens rea can be displaced only where the statute concerns an issue of social concern and strict liability would promote greater vigilance.",
+    visual: {
+      emoji: "🏗️",
+      scene: "Scaffolding rising against a clouded city skyline",
+      palette: "linear-gradient(135deg,#1a2a3a,#3a3a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "alphacell-v-woodward",
+    name: "Alphacell v Woodward",
+    year: 1972,
+    area: "criminal",
+    topics: ["mens-rea"],
+    facts:
+      "Paper-manufacturing company's filtration system failed and polluted a nearby river; the company had no knowledge of the failure.",
+    principle:
+      "Strict liability applies to public welfare offences such as pollution: there is no requirement to prove knowledge or fault.",
+    visual: {
+      emoji: "🏭",
+      scene: "A factory outflow pipe staining a river dark below",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a4a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "callow-v-tillstone",
+    name: "Callow v Tillstone",
+    year: 1900,
+    area: "criminal",
+    topics: ["mens-rea"],
+    facts:
+      "Butcher had meat inspected and certified fit by a vet before sale; it was nevertheless unsound, and he was convicted.",
+    principle:
+      "Strict liability offences leave no room for a 'due diligence' defence — even reasonable precautions do not absolve the defendant.",
+    visual: {
+      emoji: "🥩",
+      scene: "A butcher's hook and a single sealed certificate beneath",
+      palette: "linear-gradient(135deg,#2a1a1a,#4a2a2a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "cundy-v-le-cocq",
+    name: "Cundy v Le Cocq",
+    year: 1884,
+    area: "criminal",
+    topics: ["mens-rea"],
+    facts:
+      "Licensee sold alcohol to a man who appeared sober but was in fact drunk; conviction upheld.",
+    principle:
+      "Where the statute is silent on mens rea, strict liability may be imposed if the purpose of the legislation requires it.",
+    visual: {
+      emoji: "🍺",
+      scene: "A foaming tankard on a bar counter, a hand reaching for it",
+      palette: "linear-gradient(135deg,#2a1a1a,#5a2a1a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "harrow-v-shah",
+    name: "Harrow LBC v Shah and Shah",
+    year: 1999,
+    area: "criminal",
+    topics: ["mens-rea"],
+    facts:
+      "Newsagents sold a National Lottery ticket to a 13-year-old; staff had been instructed to check ID, but the boy looked older.",
+    principle:
+      "Strict liability applies where the offence is regulatory in character and promotes the protection of a vulnerable class — even reasonable belief is no defence.",
+    visual: {
+      emoji: "🎟️",
+      scene: "A lottery ticket on a shop counter beside an unopened ID",
+      palette: "linear-gradient(135deg,#2a1a3a,#4a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "pharm-soc-v-storkwain",
+    name: "Pharmaceutical Society v Storkwain",
+    year: 1986,
+    area: "criminal",
+    topics: ["mens-rea"],
+    facts:
+      "Pharmacist dispensed medicines on the basis of forged prescriptions, without knowing they were fakes.",
+    principle:
+      "Strict liability may be imposed even in the absence of express statutory wording, where Parliament's intention to do so is clear from context.",
+    visual: {
+      emoji: "💊",
+      scene: "A prescription pad and a counterfeit stamp on a pharmacy bench",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a3a4a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-hasan",
+    name: "R v Hasan",
+    year: 2005,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant, associated with a violent criminal, committed an aggravated burglary on his instruction, claiming duress.",
+    principle:
+      "Duress is not available where the defendant voluntarily associates with people he knew or ought to have known might subject him to compulsion to commit offences.",
+    visual: {
+      emoji: "🔪",
+      scene: "A shadowed figure in a doorway, knife glinting at his side",
+      palette: "linear-gradient(135deg,#1a1a1a,#3a1a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-graham",
+    name: "R v Graham",
+    year: 1982,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant assisted his violent lover in strangling his wife, claiming he acted under threat.",
+    principle:
+      "Two-stage test for duress: (i) was the defendant compelled by reasonable belief of imminent death/serious harm; (ii) would a sober person of reasonable firmness have responded the same way?",
+    visual: {
+      emoji: "🪢",
+      scene: "A taut rope cast across a kitchen floor, two shadows behind",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-howe",
+    name: "R v Howe",
+    year: 1987,
+    area: "criminal",
+    topics: ["defences", "fatal-offences"],
+    facts:
+      "Defendants tortured and killed two victims on the orders of a violent gang leader; pleaded duress.",
+    principle:
+      "Duress is no defence to murder, whether the defendant is principal or accessory: the law expects ordinary courage in the face of threats, not the sacrifice of an innocent life.",
+    visual: {
+      emoji: "⛓️",
+      scene: "Heavy chains coiled at the base of a doorway, a long shadow falling across",
+      palette: "linear-gradient(135deg,#1a1a1a,#2a1a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-hudson-taylor",
+    name: "R v Hudson and Taylor",
+    year: 1971,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Two teenage girls perjured themselves at a violent assailant's trial, having been threatened with reprisal afterwards.",
+    principle:
+      "Duress requires a threat 'effective' at the time of the offence; threats of future harm can suffice if the defendant could not reasonably seek police protection.",
+    visual: {
+      emoji: "🏛️",
+      scene: "A witness stand in shadow, a folded oath card on the rail",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a3a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-bowen",
+    name: "R v Bowen",
+    year: 1996,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant of low IQ obtained electrical goods by deception, claiming two men had threatened to petrol-bomb his family.",
+    principle:
+      "When applying the Graham objective limb, the jury considers age, sex and recognised characteristics affecting gravity of the threat — but not low IQ, mere timidity, or self-induced incapacity.",
+    visual: {
+      emoji: "📺",
+      scene: "A delivery cart of boxed appliances outside a darkened terraced house",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-valderrama-vega",
+    name: "R v Valderrama-Vega",
+    year: 1985,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant smuggled cocaine in fear of a Mafia death threat against his family, plus financial ruin and exposure of his homosexuality.",
+    principle:
+      "The jury may consider all threats cumulatively; provided a threat of death or serious harm forms part of the picture, lesser threats can add to its force.",
+    visual: {
+      emoji: "🛄",
+      scene: "An open suitcase, white packets nestled among folded clothes",
+      palette: "linear-gradient(135deg,#1a1a3a,#3a2a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "r-v-conway",
+    name: "R v Conway",
+    year: 1988,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant drove off recklessly with a passenger who, days earlier, had been shot at; he believed approaching men in plain clothes were renewed attackers (they were police).",
+    principle:
+      "Duress of circumstances is available where the defendant acts reasonably and proportionately to avoid threatened death or serious harm — even where the threat comes from external circumstances rather than a person.",
+    visual: {
+      emoji: "🚗",
+      scene: "A car's tail-lights veering off across a rain-slick road",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "re-a-conjoined-twins",
+    name: "Re A (Conjoined Twins)",
+    year: 2000,
+    area: "criminal",
+    topics: ["defences", "fatal-offences"],
+    facts:
+      "Surgeons sought a declaration that separating conjoined twins — which would inevitably kill the weaker — would be lawful, in order to save the stronger.",
+    principle:
+      "Necessity may be a defence to murder in exceptional circumstances where (i) the act is needed to avoid inevitable and irreparable evil, (ii) no more is done than is reasonably necessary, (iii) the evil inflicted is proportionate.",
+    visual: {
+      emoji: "🕊️",
+      scene: "Two intertwined ribbons divided by a single line of light",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a3a4a)",
+    },
+    importance: 3,
+  },
 ];
 
 export const CASES_BY_ID: Record<string, LawCase> = Object.fromEntries(

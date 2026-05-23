@@ -60,6 +60,19 @@ export const SYLLABUS: SyllabusSection[] = [
         label: "Transferred malice",
         caseIds: ["r-v-latimer"],
       },
+      {
+        id: "strict-liability",
+        label: "Strict liability",
+        caseIds: [
+          "sweet-v-parsley",
+          "gammon-v-ag-hk",
+          "alphacell-v-woodward",
+          "callow-v-tillstone",
+          "cundy-v-le-cocq",
+          "harrow-v-shah",
+          "pharm-soc-v-storkwain",
+        ],
+      },
     ],
   },
   {
@@ -181,9 +194,26 @@ export const SYLLABUS: SyllabusSection[] = [
         caseIds: ["r-v-brown", "r-v-wilson", "ag-ref-no-6-1980"],
       },
       {
+        id: "duress",
+        label: "Duress by threats",
+        caseIds: [
+          "r-v-hasan",
+          "r-v-graham",
+          "r-v-howe",
+          "r-v-hudson-taylor",
+          "r-v-bowen",
+          "r-v-valderrama-vega",
+        ],
+      },
+      {
+        id: "duress-circumstances",
+        label: "Duress of circumstances",
+        caseIds: ["r-v-conway"],
+      },
+      {
         id: "necessity",
         label: "Necessity",
-        caseIds: ["r-v-dudley-stephens"],
+        caseIds: ["r-v-dudley-stephens", "re-a-conjoined-twins"],
       },
     ],
   },
