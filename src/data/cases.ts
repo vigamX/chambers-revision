@@ -21,7 +21,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-mohan",
     name: "R v Mohan",
-    year: 1976,
+    year: 1975,
     area: "criminal",
     topics: ["mens-rea", "attempts"],
     facts:
@@ -38,7 +38,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-woollin",
     name: "R v Woollin",
-    year: 1999,
+    year: 1998,
     area: "criminal",
     topics: ["mens-rea", "fatal-offences"],
     facts:
@@ -259,7 +259,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-church",
     name: "R v Church",
-    year: 1966,
+    year: 1965,
     area: "criminal",
     topics: ["fatal-offences"],
     facts:
@@ -293,7 +293,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-adomako",
     name: "R v Adomako",
-    year: 1995,
+    year: 1994,
     area: "criminal",
     topics: ["fatal-offences"],
     facts:
@@ -310,7 +310,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-martin",
     name: "R v Martin (Anthony)",
-    year: 2001,
+    year: 2002,
     area: "criminal",
     topics: ["defences", "fatal-offences"],
     facts:
@@ -395,7 +395,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-gullefer",
     name: "R v Gullefer",
-    year: 1990,
+    year: 1987,
     area: "criminal",
     topics: ["attempts"],
     facts:
@@ -599,7 +599,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-williams-gladstone",
     name: "R v Williams (Gladstone)",
-    year: 1987,
+    year: 1983,
     area: "criminal",
     topics: ["defences"],
     facts:
@@ -650,7 +650,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-kingston",
     name: "R v Kingston",
-    year: 1995,
+    year: 1994,
     area: "criminal",
     topics: ["defences"],
     facts:
@@ -1041,7 +1041,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-hardie",
     name: "R v Hardie",
-    year: 1985,
+    year: 1984,
     area: "criminal",
     topics: ["defences"],
     facts:
@@ -1109,7 +1109,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-bird",
     name: "R v Bird",
-    year: 1985,
+    year: 1986,
     area: "criminal",
     topics: ["defences"],
     facts:
@@ -1177,7 +1177,7 @@ export const CASES: LawCase[] = [
   {
     id: "sweet-v-parsley",
     name: "Sweet v Parsley",
-    year: 1970,
+    year: 1969,
     area: "criminal",
     topics: ["mens-rea"],
     facts:
@@ -1636,7 +1636,7 @@ export const CASES: LawCase[] = [
   {
     id: "r-v-collins",
     name: "R v Collins",
-    year: 1973,
+    year: 1972,
     area: "criminal",
     topics: ["property-offences"],
     facts:
