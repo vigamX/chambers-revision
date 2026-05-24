@@ -29,6 +29,7 @@ export const SYLLABUS: SyllabusSection[] = [
           "r-v-evans",
           "fagan-v-mpc",
           "dpp-v-santa-bermudez",
+          "r-v-larsonneur",
         ],
       },
       {
@@ -42,6 +43,7 @@ export const SYLLABUS: SyllabusSection[] = [
           "r-v-cheshire",
           "r-v-blaue",
           "r-v-roberts",
+          "r-v-williams-1992",
           "r-v-kennedy-no-2",
         ],
       },
@@ -58,7 +60,7 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "transferred-malice",
         label: "Transferred malice",
-        caseIds: ["r-v-latimer"],
+        caseIds: ["r-v-latimer", "r-v-pembliton"],
       },
       {
         id: "strict-liability",
@@ -93,7 +95,7 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "vol-mans-dr",
         label: "Voluntary manslaughter: diminished responsibility",
-        caseIds: ["r-v-byrne", "r-v-golds", "r-v-dietschmann"],
+        caseIds: ["r-v-byrne", "r-v-golds", "r-v-dietschmann", "r-v-tandy"],
       },
       {
         id: "invol-mans-uam",
@@ -104,12 +106,15 @@ export const SYLLABUS: SyllabusSection[] = [
           "dpp-v-newbury-jones",
           "r-v-lamb",
           "r-v-dawson",
+          "r-v-larkin",
+          "r-v-lowe",
+          "r-v-goodfellow",
         ],
       },
       {
         id: "invol-mans-gnm",
         label: "Gross negligence manslaughter",
-        caseIds: ["r-v-adomako"],
+        caseIds: ["r-v-adomako", "r-v-wacker"],
       },
     ],
   },
@@ -126,12 +131,13 @@ export const SYLLABUS: SyllabusSection[] = [
           "r-v-constanza",
           "tuberville-v-savage",
           "smith-v-cs-woking",
+          "pegram-v-dpp",
         ],
       },
       {
         id: "battery",
         label: "Battery (s.39 CJA 1988)",
-        caseIds: ["collins-v-wilcock", "fagan-v-mpc"],
+        caseIds: ["collins-v-wilcock", "fagan-v-mpc", "dpp-v-k"],
       },
       {
         id: "abh",
@@ -147,6 +153,8 @@ export const SYLLABUS: SyllabusSection[] = [
           "dpp-v-smith",
           "r-v-parmenter",
           "r-v-mowatt",
+          "r-v-bollom",
+          "r-v-dica",
         ],
       },
       {
@@ -164,7 +172,13 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "theft-appropriation",
         label: "Theft: appropriation (s.3)",
-        caseIds: ["r-v-gomez", "r-v-hinks"],
+        caseIds: [
+          "r-v-gomez",
+          "r-v-hinks",
+          "lawrence-v-mpc",
+          "r-v-morris",
+          "r-v-pitham-hehl",
+        ],
       },
       {
         id: "theft-property",
@@ -174,7 +188,7 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "theft-belonging",
         label: "Theft: belonging to another (s.5)",
-        caseIds: ["r-v-turner-no-2", "ag-ref-no-1-1983"],
+        caseIds: ["r-v-turner-no-2", "ag-ref-no-1-1983", "r-v-hall"],
       },
       {
         id: "theft-dishonesty",
@@ -184,7 +198,7 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "theft-intent-deprive",
         label: "Theft: intent permanently to deprive (s.6)",
-        caseIds: ["r-v-lloyd", "r-v-velumyl"],
+        caseIds: ["r-v-lloyd", "r-v-velumyl", "r-v-easom"],
       },
       {
         id: "robbery",
@@ -217,17 +231,23 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "insanity",
         label: "Insanity",
-        caseIds: ["mnaghten", "r-v-sullivan", "r-v-hennessy"],
+        caseIds: ["mnaghten", "r-v-sullivan", "r-v-hennessy", "r-v-kemp", "r-v-burgess"],
       },
       {
         id: "automatism",
         label: "Automatism",
-        caseIds: ["hill-v-baxter", "r-v-quick", "bratty-v-ag-ni"],
+        caseIds: ["hill-v-baxter", "r-v-quick", "bratty-v-ag-ni", "r-v-coley"],
       },
       {
         id: "intoxication",
         label: "Intoxication",
-        caseIds: ["dpp-v-majewski", "r-v-kingston", "r-v-hardie", "r-v-lipman"],
+        caseIds: [
+          "dpp-v-majewski",
+          "r-v-kingston",
+          "r-v-hardie",
+          "r-v-lipman",
+          "r-v-hatton",
+        ],
       },
     ],
   },
@@ -244,7 +264,7 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "consent",
         label: "Consent",
-        caseIds: ["r-v-brown", "r-v-wilson", "ag-ref-no-6-1980"],
+        caseIds: ["r-v-brown", "r-v-wilson", "ag-ref-no-6-1980", "r-v-donovan", "r-v-dica"],
       },
       {
         id: "duress",
@@ -253,6 +273,7 @@ export const SYLLABUS: SyllabusSection[] = [
           "r-v-hasan",
           "r-v-graham",
           "r-v-howe",
+          "r-v-gotts",
           "r-v-hudson-taylor",
           "r-v-bowen",
           "r-v-valderrama-vega",
@@ -278,7 +299,15 @@ export const SYLLABUS: SyllabusSection[] = [
       {
         id: "attempts",
         label: "Attempts (s.1 Criminal Attempts Act 1981)",
-        caseIds: ["r-v-gullefer", "r-v-geddes", "r-v-jones-1990", "r-v-tosti"],
+        caseIds: [
+          "r-v-gullefer",
+          "r-v-geddes",
+          "r-v-jones-1990",
+          "r-v-tosti",
+          "r-v-whybrow",
+          "r-v-shivpuri",
+          "r-v-easom",
+        ],
       },
     ],
   },

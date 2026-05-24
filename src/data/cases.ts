@@ -1769,6 +1769,431 @@ export const CASES: LawCase[] = [
     },
     importance: 3,
   },
+  {
+    id: "r-v-larsonneur",
+    name: "R v Larsonneur",
+    year: 1933,
+    area: "criminal",
+    topics: ["actus-reus"],
+    facts:
+      "French woman ordered to leave the UK was deported from Ireland and brought back to England against her will by the Irish police, where she was immediately arrested as an illegal immigrant.",
+    principle:
+      "A 'state of affairs' offence can be committed even where the defendant's presence is involuntary; the actus reus need not be a positive voluntary act.",
+    visual: {
+      emoji: "🛂",
+      scene: "A passport stamp and an empty quay at dawn",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-williams-1992",
+    name: "R v Williams",
+    year: 1992,
+    area: "criminal",
+    topics: ["causation"],
+    facts:
+      "Hitch-hiker jumped from the defendant's car travelling at 30 mph and died from head injuries; prosecution alleged he jumped because Williams was trying to steal his wallet.",
+    principle:
+      "A victim's escape only breaks the chain of causation if the act is not reasonably foreseeable, or is disproportionate to the threat — 'daft' acts break the chain.",
+    visual: {
+      emoji: "🛣️",
+      scene: "An open car door swinging on a country road, a tumbling silhouette",
+      palette: "linear-gradient(135deg,#2a2a1a,#4a3a1a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-pembliton",
+    name: "R v Pembliton",
+    year: 1874,
+    area: "criminal",
+    topics: ["mens-rea"],
+    facts:
+      "Defendant threw a stone at people he had been fighting; it missed and shattered a nearby window.",
+    principle:
+      "Transferred malice does not apply where the mens rea is for a completely different type of offence (intent to assault a person cannot transfer to criminal damage of property).",
+    visual: {
+      emoji: "🪟",
+      scene: "A stone arcing past brawling silhouettes toward a glass pane",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-larkin",
+    name: "R v Larkin",
+    year: 1943,
+    area: "criminal",
+    topics: ["fatal-offences"],
+    facts:
+      "Defendant brandished an open cut-throat razor to frighten another man; the other man's drunk mistress lurched onto the blade and was killed.",
+    principle:
+      "Unlawful act manslaughter requires (i) an unlawful act (here, technical assault) and (ii) that act being objectively dangerous — likely to cause some harm.",
+    visual: {
+      emoji: "🪒",
+      scene: "An unfolded cut-throat razor catching candlelight, a fallen tumbler nearby",
+      palette: "linear-gradient(135deg,#1a1a1a,#3a1a1a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-lowe",
+    name: "R v Lowe",
+    year: 1973,
+    area: "criminal",
+    topics: ["fatal-offences", "actus-reus"],
+    facts:
+      "Defendant was convicted of wilfully neglecting his baby son, who died as a result.",
+    principle:
+      "Unlawful act manslaughter requires an unlawful ACT — an omission, even one amounting to wilful neglect, cannot support UAM.",
+    visual: {
+      emoji: "🍼",
+      scene: "An untouched feeding bottle on a cold radiator shelf",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-goodfellow",
+    name: "R v Goodfellow",
+    year: 1986,
+    area: "criminal",
+    topics: ["fatal-offences"],
+    facts:
+      "Defendant set fire to his council house to be re-housed; his wife, son and son's girlfriend died in the blaze.",
+    principle:
+      "The unlawful act for UAM need not be aimed at the eventual victim — an act aimed at property suffices if it is objectively dangerous to others.",
+    visual: {
+      emoji: "🔥",
+      scene: "A council-flat door silhouetted against orange flames",
+      palette: "linear-gradient(135deg,#2a1a1a,#5a2a1a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-wacker",
+    name: "R v Wacker",
+    year: 2002,
+    area: "criminal",
+    topics: ["fatal-offences"],
+    facts:
+      "Defendant transported 60 illegal immigrants in the back of his lorry; he closed the only air vent for the cross-Channel crossing. 58 of them died.",
+    principle:
+      "A duty of care for gross negligence manslaughter can arise even where defendant and victims are parties to a joint illegal enterprise — the ex turpi causa bar does not apply.",
+    visual: {
+      emoji: "🚛",
+      scene: "A lorry container in port shadow, a single vent shut tight",
+      palette: "linear-gradient(135deg,#1a1a1a,#2a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-tandy",
+    name: "R v Tandy",
+    year: 1989,
+    area: "criminal",
+    topics: ["fatal-offences", "defences"],
+    facts:
+      "Long-term alcoholic drank nearly a bottle of vodka, then strangled her 11-year-old daughter after the child disclosed sexual abuse by Tandy's husband.",
+    principle:
+      "Alcohol Dependency Syndrome can found diminished responsibility only if the drinking was involuntary in the sense that the defendant could not resist the first drink of the day.",
+    visual: {
+      emoji: "🥃",
+      scene: "An almost-empty vodka bottle on a draining board, a single chair toppled",
+      palette: "linear-gradient(135deg,#2a1a1a,#4a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "dpp-v-k",
+    name: "DPP v K",
+    year: 1990,
+    area: "criminal",
+    topics: ["non-fatal-offences"],
+    facts:
+      "Schoolboy hid acid stolen from a science lab inside a school hand-dryer, intending to retrieve it; another pupil used the dryer and was scarred by the acid.",
+    principle:
+      "Common assault can be committed by an INDIRECT act — the actus reus need not involve direct application of force by the defendant's body.",
+    visual: {
+      emoji: "🚻",
+      scene: "A school washroom hand-dryer, a hidden vial silhouetted within",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a4a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-bollom",
+    name: "R v Bollom",
+    year: 2004,
+    area: "criminal",
+    topics: ["non-fatal-offences"],
+    facts:
+      "Defendant inflicted bruising to the abdomen, both arms and a leg of a 17-month-old child.",
+    principle:
+      "The severity of an injury is to be assessed by reference to the particular victim's age, health and circumstances — bruising on an infant may be GBH where the same on an adult would not.",
+    visual: {
+      emoji: "🧸",
+      scene: "A baby's cot with rumpled blanket and small abandoned toy",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-dica",
+    name: "R v Dica",
+    year: 2004,
+    area: "criminal",
+    topics: ["non-fatal-offences", "defences"],
+    facts:
+      "HIV-positive defendant had unprotected consensual sex with two women without disclosing his status; both contracted HIV.",
+    principle:
+      "Consent to sexual activity does not equal consent to the risk of a known but undisclosed infection; transmitting GBH (HIV) without informed consent is an offence under s.20 OAPA.",
+    visual: {
+      emoji: "🧬",
+      scene: "A bedside lamp casting a long shadow across a single unopened envelope",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "pegram-v-dpp",
+    name: "Pegram v DPP",
+    year: 2019,
+    area: "criminal",
+    topics: ["non-fatal-offences"],
+    facts:
+      "Police officer took hold of Pegram's arm with light force to warn him he was about to commit a public order offence; he was charged with assaulting a constable.",
+    principle:
+      "Moderate, generally acceptable physical contact made to attract a person's attention is not a battery — even when made by a police officer not effecting arrest.",
+    visual: {
+      emoji: "👮",
+      scene: "A police officer's hand resting lightly on a sleeve, side-on",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a4a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "lawrence-v-mpc",
+    name: "Lawrence v MPC",
+    year: 1972,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Taxi driver took £7 from the open wallet of a foreign student who spoke little English, having said the fare for a journey was much more than it was; the student let him take it.",
+    principle:
+      "Appropriation can occur even where the owner CONSENTS to the taking — consent is not a bar to the actus reus of theft.",
+    visual: {
+      emoji: "🚕",
+      scene: "An open wallet on a taxi back seat, hand reaching in",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a3a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-morris",
+    name: "R v Morris",
+    year: 1983,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendant switched the price labels of supermarket items, putting the cheaper-labelled item in his basket; arrested before the checkout.",
+    principle:
+      "Appropriation requires the assumption of ANY of the rights of an owner — not necessarily all of them. Switching price labels assumes one such right.",
+    visual: {
+      emoji: "🏷️",
+      scene: "Two price tags peeled and crossed on a supermarket shelf-edge",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a3a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-hall",
+    name: "R v Hall",
+    year: 1972,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Travel agent took clients' deposits for flights to America, paid them into the firm's general account, organised nothing and could not refund.",
+    principle:
+      "Money is held under a duty 'to retain and deal with' it (s.5(3)) only where there is a clear obligation to use it in a particular way — absent which, paying it into a general account is not theft.",
+    visual: {
+      emoji: "🧳",
+      scene: "A travel-agency desk, brochures fanned, an open empty ledger",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a3a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-easom",
+    name: "R v Easom",
+    year: 1971,
+    area: "criminal",
+    topics: ["property-offences", "attempts"],
+    facts:
+      "Defendant picked up a handbag in a cinema, rummaged through it, then put it back with nothing taken.",
+    principle:
+      "Conditional intent — intent to steal only if the property is worth taking — is not enough for theft; without intent permanently to deprive of specific property, the offence is not made out (but may found a conviction for attempted theft).",
+    visual: {
+      emoji: "👜",
+      scene: "A handbag set down on a cinema seat in projector glow",
+      palette: "linear-gradient(135deg,#2a1a2a,#4a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-pitham-hehl",
+    name: "R v Pitham and Hehl",
+    year: 1977,
+    area: "criminal",
+    topics: ["property-offences"],
+    facts:
+      "Defendants offered to sell furniture in a third party's house to a buyer, knowing it did not belong to them; the buyer agreed but had not yet removed it.",
+    principle:
+      "Offering to sell another person's goods is itself an assumption of the owner's rights — appropriation, complete at the moment of the offer.",
+    visual: {
+      emoji: "🛋️",
+      scene: "A living-room sofa with a 'For sale' tag pinned to the arm",
+      palette: "linear-gradient(135deg,#1a2a2a,#3a3a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-kemp",
+    name: "R v Kemp",
+    year: 1956,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant, suffering from arteriosclerosis (hardening of the arteries) causing brief losses of consciousness, attacked his wife with a hammer during one such episode.",
+    principle:
+      "'Disease of the mind' under M'Naghten is a legal concept, not a medical one: any internal physical illness that affects the mental faculties of reason, memory and understanding qualifies — including arteriosclerosis.",
+    visual: {
+      emoji: "🩻",
+      scene: "A clinical X-ray viewed through frosted glass under fluorescent light",
+      palette: "linear-gradient(135deg,#1a2a3a,#2a3a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-burgess",
+    name: "R v Burgess",
+    year: 1991,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant, asleep while watching videos with his girlfriend, attacked her in his sleep; expert evidence showed it was a sleep disorder with no external cause.",
+    principle:
+      "Sleepwalking caused by an internal sleep disorder is a 'disease of the mind' — insanity, not automatism.",
+    visual: {
+      emoji: "🌙",
+      scene: "A flickering television illuminating a sleeping figure on a sofa",
+      palette: "linear-gradient(135deg,#1a1a3a,#2a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-coley",
+    name: "R v Coley",
+    year: 2013,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Regular cannabis user, after smoking and playing a violent video game, attacked his neighbours believing he was 'in the game'.",
+    principle:
+      "Voluntary intoxication causing a transient psychotic episode is governed by intoxication rules, not automatism — the defence of automatism requires a complete loss of voluntary control from an external cause.",
+    visual: {
+      emoji: "🎮",
+      scene: "A games controller fallen on a rug, a TV's bright glow on the wall",
+      palette: "linear-gradient(135deg,#1a1a3a,#3a2a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-hatton",
+    name: "R v Hatton",
+    year: 2005,
+    area: "criminal",
+    topics: ["defences"],
+    facts:
+      "Defendant, having drunk over 20 pints of beer, killed a man with a sledgehammer in his flat; claimed he believed the victim had attacked him with a stick.",
+    principle:
+      "A drunken mistake about the need for or amount of force in self-defence is no defence — even to a specific intent offence like murder.",
+    visual: {
+      emoji: "🍺",
+      scene: "An empty pint glass beside a heavy hammer in dim morning light",
+      palette: "linear-gradient(135deg,#1a1a1a,#3a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-donovan",
+    name: "R v Donovan",
+    year: 1934,
+    area: "criminal",
+    topics: ["defences", "non-fatal-offences"],
+    facts:
+      "Defendant caned a 17-year-old girl for sexual gratification, causing bruising, with her consent.",
+    principle:
+      "Consent is no defence to bodily harm inflicted for no good reason: the act must be unlawful even where the victim agreed to it.",
+    visual: {
+      emoji: "🚪",
+      scene: "A panelled door ajar, a single cane leaning against the jamb",
+      palette: "linear-gradient(135deg,#1a1a1a,#2a1a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-gotts",
+    name: "R v Gotts",
+    year: 1992,
+    area: "criminal",
+    topics: ["defences", "attempts"],
+    facts:
+      "16-year-old, threatened by his father to be shot if he did not, stabbed his mother causing serious injuries; she survived.",
+    principle:
+      "Duress is no defence to attempted murder, just as it is no defence to murder (extending the rule in Howe).",
+    visual: {
+      emoji: "🗡️",
+      scene: "A kitchen knife lying on a tiled floor, a doorway shadow looming",
+      palette: "linear-gradient(135deg,#1a1a1a,#3a1a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-whybrow",
+    name: "R v Whybrow",
+    year: 1951,
+    area: "criminal",
+    topics: ["attempts", "mens-rea"],
+    facts:
+      "Defendant wired up his wife's bath and gave her an electric shock; she survived. Charged with attempted murder.",
+    principle:
+      "Attempted murder requires intention to KILL only — intention to cause GBH is not enough, even though it would suffice for murder if the victim had died.",
+    visual: {
+      emoji: "⚡",
+      scene: "A bathtub with frayed wiring trailing over the rim",
+      palette: "linear-gradient(135deg,#1a1a2a,#2a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "r-v-shivpuri",
+    name: "R v Shivpuri",
+    year: 1986,
+    area: "criminal",
+    topics: ["attempts"],
+    facts:
+      "Defendant agreed to receive what he believed was a suitcase of illegal drugs; the case actually contained harmless vegetable matter.",
+    principle:
+      "A defendant can be guilty of attempt even where the offence is factually impossible — what matters is the intent and the act, judged on the facts as he believed them to be.",
+    visual: {
+      emoji: "🧳",
+      scene: "An open suitcase on a station platform, dried leaves inside",
+      palette: "linear-gradient(135deg,#1a2a2a,#2a3a3a)",
+    },
+    importance: 3,
+  },
 ];
 
 export const CASES_BY_ID: Record<string, LawCase> = Object.fromEntries(
