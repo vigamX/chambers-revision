@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+name: chambers-revision
+metadata:
+  template: chambers-revision@1.0.0
+services:
+  web:
+    project: .
+    dist: dist
+    host: staticwebapp
+    language: ts
+hooks:
+  predeploy:
+    shell: sh
+    run: npm install && npm run build
