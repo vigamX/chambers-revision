@@ -97,15 +97,36 @@ No RBAC role assignments in this plan (the SPA makes no Azure API calls) so the 
 
 ## 11 — How the user runs the deploy
 
+The `StaticSitesClient` binary used by both `azd deploy` and `swa deploy` is **x86_64-only** (no Linux ARM64 or Apple Silicon build). Two paths depending on the deploy machine architecture:
+
+### Path A — GitHub Actions (works from any architecture, including ARM64)
+
+1. **Provision** (one-time, runs on any arch via `az`):
+
+   ```bash
+   az login
+   az deployment sub create \
+     --name chambers-init \
+     --location westeurope \
+     --template-file infra/main.bicep \
+     --parameters environmentName=chambers location=westeurope
+   ```
+
+2. **Fetch the deployment token**:
+
+   ```bash
+   RG=$(az deployment sub show --name chambers-init --query "properties.outputs.AZURE_RESOURCE_GROUP.value" -o tsv)
+   APP=$(az staticwebapp list --resource-group "$RG" --query "[0].name" -o tsv)
+   az staticwebapp secrets list --name "$APP" --resource-group "$RG" --query "properties.apiKey" -o tsv
+   ```
+
+3. **Push the repo to GitHub**; add the token as repo secret `AZURE_STATIC_WEB_APPS_API_TOKEN`. The workflow at `.github/workflows/azure-static-web-apps.yml` does the rest on every push to `main`.
+
+### Path B — `azd up` (only on x86_64 Linux / Intel macOS / Windows)
+
 ```bash
-az login                           # interactive browser login
-azd auth login                     # azd's own auth
-azd up                             # creates RG, SWA, builds, uploads dist/
+azd auth login
+azd up
 ```
 
-`azd up` will prompt for:
-- environment name (free choice, e.g. `chambers-prod`)
-- subscription (pick from your list)
-- location — type `westeurope`
-
-Output ends with the SWA URL (e.g. `https://<random>.azurestaticapps.net`).
+`azd up` provisions and deploys in one go. Will fail with "Exec format error" on ARM64.

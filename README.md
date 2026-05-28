@@ -46,31 +46,54 @@ Wrong answers can be retried; the answer is hidden until you either succeed or e
 
 ## Deploying to Azure
 
-Hosted on **Azure Static Web Apps Free tier** (£0/month forever). Infrastructure is Bicep, deploy via `azd`.
+Hosted on **Azure Static Web Apps Free tier** (£0/month forever). Infrastructure is Bicep.
 
-### One-time setup
+### Provision the SWA (one-time, any architecture including ARM64)
+
 ```bash
-# Install Azure Developer CLI if you don't have it
-curl -fsSL https://aka.ms/install-azd.sh | bash
-
-# Login
 az login
-azd auth login
+az deployment sub create \
+  --name chambers-init \
+  --location westeurope \
+  --template-file infra/main.bicep \
+  --parameters environmentName=chambers location=westeurope
 ```
 
-### Deploy
+This creates the resource group and Static Web App. No app content yet.
+
+### Get the deployment token
+
 ```bash
+RG=$(az deployment sub show --name chambers-init --query "properties.outputs.AZURE_RESOURCE_GROUP.value" -o tsv)
+APP=$(az staticwebapp list --resource-group "$RG" --query "[0].name" -o tsv)
+az staticwebapp secrets list --name "$APP" --resource-group "$RG" --query "properties.apiKey" -o tsv
+```
+
+Copy the token.
+
+### Deploy via GitHub Actions (recommended)
+
+The `StaticSitesClient` binary that `azd deploy` and `swa deploy` download is **x86_64-only** — there is no Linux ARM64 or Apple Silicon binary. From an ARM64 machine, deploy via GitHub Actions instead (Microsoft's runners are x86_64).
+
+1. Push this repo to a GitHub repository.
+2. In the repo Settings → Secrets and variables → Actions, add a secret:
+   - Name: `AZURE_STATIC_WEB_APPS_API_TOKEN`
+   - Value: the deployment token from above
+3. The workflow at `.github/workflows/azure-static-web-apps.yml` will run on every push to `main` and deploy automatically.
+
+The Static Web App's URL is in the Azure portal, or run:
+```bash
+az staticwebapp show --name "$APP" --resource-group "$RG" --query "defaultHostname" -o tsv
+```
+
+### Deploy via `azd` (if on x86_64)
+
+```bash
+azd auth login
 azd up
 ```
 
-You'll be prompted for environment name (e.g. `chambers-prod`), subscription, and location — pick `westeurope`. The output ends with your live URL.
-
-### What gets provisioned
-- A resource group `rg-<env>`
-- A Static Web App on the Free tier
-- Built `dist/` is uploaded automatically (predeploy hook runs `npm install && npm run build`)
-
-That's it. Nothing else. Cost: £0.
+Skip the provisioning step above — `azd up` does provision + deploy in one. This path uses the same Bicep but is **only viable on x86_64 Linux, x86_64 macOS, or Windows** because of the SWA CLI binary.
 
 ## Roadmap
 
