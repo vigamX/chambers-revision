@@ -5,11 +5,12 @@ interface Props {
   c: LawCase;
   state?: "default" | "selected" | "correct" | "wrong";
   onClick?: () => void;
+  onInfo?: () => void;
   showPrinciple?: boolean;
   hideCaption?: boolean;
 }
 
-export function CaseCard({ c, state = "default", onClick, showPrinciple, hideCaption }: Props) {
+export function CaseCard({ c, state = "default", onClick, onInfo, showPrinciple, hideCaption }: Props) {
   return (
     <div
       className={`case-card ${state}`}
@@ -17,6 +18,18 @@ export function CaseCard({ c, state = "default", onClick, showPrinciple, hideCap
       onClick={onClick}
       role={onClick ? "button" : undefined}
     >
+      {onInfo && (
+        <button
+          className="case-card-info"
+          aria-label={`Details for ${c.name}`}
+          onClick={(e) => {
+            e.stopPropagation();
+            onInfo();
+          }}
+        >
+          ⓘ
+        </button>
+      )}
       <div className="case-scene-wrap">
         <CaseScene caseId={c.id} />
       </div>

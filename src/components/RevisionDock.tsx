@@ -1,12 +1,13 @@
 import { useMemo, useState } from "react";
 import type { Progress, LawCase } from "../types";
-import { CASES } from "../data/cases";
+import { CASES, CASES_BY_ID } from "../data/cases";
 import {
   chapterForCase,
   CHAPTER_LABELS,
   CHAPTERS_ORDERED,
 } from "../data/syllabus";
 import { CaseCard } from "./CaseCard";
+import { CaseDetails } from "./CaseDetails";
 
 interface Props {
   progress: Progress;
@@ -20,6 +21,7 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
   const [flipped, setFlipped] = useState<Record<string, boolean>>({});
   const [allRevealed, setAllRevealed] = useState(false);
   const [sortMode, setSortMode] = useState<SortMode>("weakest");
+  const [detailsId, setDetailsId] = useState<string | null>(null);
 
   function toggle(id: string) {
     setFlipped((f) => ({ ...f, [id]: !f[id] }));
@@ -62,6 +64,8 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
     return { groups, unmapped };
   }, []);
 
+  const openDetails = (id: string) => setDetailsId(id);
+
   return (
     <div>
       <div className="controls" style={{ marginBottom: "1rem" }}>
@@ -81,8 +85,8 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
 
       <h2>Revision Dock</h2>
       <p style={{ color: "var(--muted)" }}>
-        Tap a card to flip it and reveal the point of law — try to recall before
-        you peek.
+        Tap a card to flip it and reveal the point of law — or tap the ⓘ to read
+        the case facts.
       </p>
 
       <div className="dock-sortbar">
@@ -120,6 +124,7 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
                 flipped={flipped}
                 allRevealed={allRevealed}
                 onToggle={toggle}
+                onInfo={openDetails}
               />
             ),
           )}
@@ -131,16 +136,22 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
               flipped={flipped}
               allRevealed={allRevealed}
               onToggle={toggle}
+              onInfo={openDetails}
             />
           )}
         </>
       ) : (
         <div className="dock-grid">
           {(sortMode === "weakest" ? weakestSorted : azSorted).map((c) =>
-            renderCase(c, progress, flipped, allRevealed, toggle),
+            renderCase(c, progress, flipped, allRevealed, toggle, openDetails),
           )}
         </div>
       )}
+
+      <CaseDetails
+        c={detailsId ? CASES_BY_ID[detailsId] ?? null : null}
+        onClose={() => setDetailsId(null)}
+      />
     </div>
   );
 }
@@ -152,6 +163,7 @@ function ChapterGroup({
   flipped,
   allRevealed,
   onToggle,
+  onInfo,
 }: {
   heading: string;
   cases: LawCase[];
@@ -159,6 +171,7 @@ function ChapterGroup({
   flipped: Record<string, boolean>;
   allRevealed: boolean;
   onToggle: (id: string) => void;
+  onInfo: (id: string) => void;
 }) {
   const mastered = cases.filter(
     (c) => (progress.cards[c.id]?.mastery ?? 0) >= 4,
@@ -173,7 +186,7 @@ function ChapterGroup({
       </header>
       <div className="dock-grid">
         {cases.map((c) =>
-          renderCase(c, progress, flipped, allRevealed, onToggle),
+          renderCase(c, progress, flipped, allRevealed, onToggle, onInfo),
         )}
       </div>
     </section>
@@ -186,13 +199,19 @@ function renderCase(
   flipped: Record<string, boolean>,
   allRevealed: boolean,
   onToggle: (id: string) => void,
+  onInfo: (id: string) => void,
 ) {
   const state = progress.cards[c.id];
   const mastery = state?.mastery ?? 0;
   const show = allRevealed || !!flipped[c.id];
   return (
     <div key={c.id}>
-      <CaseCard c={c} showPrinciple={show} onClick={() => onToggle(c.id)} />
+      <CaseCard
+        c={c}
+        showPrinciple={show}
+        onClick={() => onToggle(c.id)}
+        onInfo={() => onInfo(c.id)}
+      />
       <div className="mastery-bar">
         <div style={{ width: `${(mastery / 5) * 100}%` }} />
       </div>
