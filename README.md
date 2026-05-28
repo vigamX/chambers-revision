@@ -79,7 +79,9 @@ The `StaticSitesClient` binary that `azd deploy` and `swa deploy` download is **
 2. In the repo Settings → Secrets and variables → Actions, add a secret:
    - Name: `AZURE_STATIC_WEB_APPS_API_TOKEN`
    - Value: the deployment token from above
-3. The workflow at `.github/workflows/azure-static-web-apps.yml` will run on every push to `main` and deploy automatically.
+3. The workflow at `.github/workflows/deploy.yml` will run on every push to `main` and deploy automatically.
+
+The workflow pre-builds with `npm ci && npm run build`, then calls the deploy action with `app_location: dist` + `skip_app_build: true` so the action just uploads the pre-built `dist/` without re-invoking Oryx.
 
 The Static Web App's URL is in the Azure portal, or run:
 ```bash
@@ -93,7 +95,7 @@ azd auth login
 azd up
 ```
 
-Skip the provisioning step above — `azd up` does provision + deploy in one. This path uses the same Bicep but is **only viable on x86_64 Linux, x86_64 macOS, or Windows** because of the SWA CLI binary.
+Skip the provisioning step above — `azd up` does provision + deploy in one. This path is **only viable on x86_64 Linux, x86_64 macOS, or Windows** because of the SWA CLI binary.
 
 ## Roadmap
 
