@@ -337,6 +337,81 @@ export const CHAPTER_LABELS: Record<number, string> = {
   10: "Chapter 10 — Mental capacity defences",
   11: "Chapter 11 — General defences",
   12: "Chapter 12 — Attempts",
+  20: "Chapter 20 — Rules & theory of tort",
+  21: "Chapter 21 — Liability in negligence",
+  22: "Chapter 22 — Occupiers' liability",
+  23: "Chapter 23 — Torts connected to land",
+  24: "Chapter 24 — Vicarious liability",
+  25: "Chapter 25 — Defences",
+  26: "Chapter 26 — Remedies",
+  27: "Chapter 27 — Evaluation",
 };
 
 export const CHAPTERS_ORDERED: number[] = [6, 7, 8, 9, 10, 11, 12];
+export const TORT_CHAPTERS_ORDERED: number[] = [20, 21, 22, 23, 24, 25, 26, 27];
+
+export const TORT_SYLLABUS: SyllabusSection[] = [
+  {
+    id: "tort-negligence",
+    label: "Liability in negligence",
+    chapter: 21,
+    topics: [
+      {
+        id: "duty-of-care",
+        label: "Duty of care (Donoghue → Caparo → Robinson)",
+        caseIds: [
+          "donoghue-v-stevenson",
+          "caparo-v-dickman",
+          "robinson-v-ccwy",
+          "hill-v-cc-west-yorkshire",
+          "kent-v-griffiths",
+        ],
+      },
+      {
+        id: "breach-of-duty",
+        label: "Breach of duty: standard of care & risk factors",
+        caseIds: [
+          "bolam-v-friern-barnet",
+          "bolitho-v-city-and-hackney",
+          "nettleship-v-weston",
+          "bolton-v-stone",
+          "latimer-v-aec",
+        ],
+      },
+      {
+        id: "causation-tort",
+        label: "Factual causation (the 'but for' test)",
+        caseIds: ["barnett-v-chelsea"],
+      },
+      {
+        id: "remoteness",
+        label: "Remoteness of damage (reasonably foreseeable)",
+        caseIds: ["wagon-mound-no-1", "hughes-v-lord-advocate"],
+      },
+    ],
+  },
+];
+
+const TORT_CHAPTER_BY_CASE: Record<string, number> = (() => {
+  const m: Record<string, number> = {};
+  for (const section of TORT_SYLLABUS) {
+    for (const topic of section.topics) {
+      for (const id of topic.caseIds) {
+        if (!(id in m)) m[id] = section.chapter;
+      }
+    }
+  }
+  return m;
+})();
+
+export function chapterForCaseAnyTerm(caseId: string): number | null {
+  return CHAPTER_BY_CASE[caseId] ?? TORT_CHAPTER_BY_CASE[caseId] ?? null;
+}
+
+export function syllabusForArea(area: "criminal" | "tort"): SyllabusSection[] {
+  return area === "criminal" ? SYLLABUS : TORT_SYLLABUS;
+}
+
+export function chaptersForArea(area: "criminal" | "tort"): number[] {
+  return area === "criminal" ? CHAPTERS_ORDERED : TORT_CHAPTERS_ORDERED;
+}

@@ -3321,6 +3321,395 @@ export const CaseScene: React.FC<CaseSceneProps> = ({ caseId, className }) => {
         </svg>
       );
 
+
+    /* Term 2 — Tort · Chapter 21 negligence */
+    case 'donoghue-v-stevenson':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="cafe-table">
+            <ellipse cx="100" cy="110" rx="80" ry="20" fill="rgba(0,0,0,0.35)" />
+            <path d="M 20 110 L 20 120 L 180 120 L 180 110 Z" fill="rgba(0,0,0,0.5)" />
+          </g>
+          <g data-name="opaque-bottle">
+            <path d="M 90 40 L 90 20 L 110 20 L 110 40 L 120 60 L 120 100 L 80 100 L 80 60 Z" fill="rgba(0,0,0,0.8)" />
+            <rect x="90" y="10" width="20" height="10" rx="2" fill="rgba(0,0,0,0.9)" />
+            <rect x="85" y="70" width="30" height="15" fill="#f4e9d8" opacity="0.8" />
+            <line x1="85" y1="75" x2="115" y2="75" stroke="rgba(0,0,0,0.5)" strokeWidth="1" />
+          </g>
+          <g data-name="snail-silhouette">
+            <path d="M 130 95 C 130 85 145 85 145 95 Z" fill="rgba(0,0,0,0.7)" />
+            <path d="M 125 100 Q 140 90 150 100 L 155 98 L 155 100 L 125 100 Z" fill="rgba(0,0,0,0.8)" />
+            <line x1="150" y1="98" x2="155" y2="92" stroke="rgba(0,0,0,0.8)" strokeWidth="1" />
+            <line x1="152" y1="98" x2="158" y2="95" stroke="rgba(0,0,0,0.8)" strokeWidth="1" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'caparo-v-dickman':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="boardroom-table">
+            <polygon points="0,70 200,50 200,120 0,120" fill="rgba(0,0,0,0.35)" />
+            <line x1="0" y1="70" x2="200" y2="50" stroke="#f4e9d8" strokeWidth="2" opacity="0.3" />
+          </g>
+          <g data-name="ledger-shadow">
+            <polygon points="50,85 140,75 190,120 30,120" fill="rgba(0,0,0,0.5)" />
+          </g>
+          <g data-name="auditors-ledger" transform="translate(60, 65) rotate(-10)">
+            <rect x="0" y="0" width="60" height="40" rx="2" fill="#f4e9d8" opacity="0.9" />
+            <rect x="5" y="0" width="50" height="40" fill="rgba(255,255,255,0.8)" />
+            <line x1="2" y1="5" x2="2" y2="35" stroke="#e8b34a" strokeWidth="1" />
+            <path d="M 10 10 L 50 10 M 10 15 L 45 15 M 10 20 L 50 20 M 10 25 L 40 25 M 10 30 L 50 30" stroke="rgba(0,0,0,0.2)" strokeWidth="1.5" />
+            <line x1="30" y1="5" x2="30" y2="35" stroke="rgba(0,0,0,0.1)" strokeWidth="1" />
+          </g>
+          <g data-name="pen">
+            <polygon points="120,70 123,72 135,55 132,53" fill="rgba(0,0,0,0.8)" />
+            <polygon points="120,70 123,72 118,75" fill="#e8b34a" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'robinson-v-ccwy':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <rect data-name="pavement" x="0" y="100" width="200" height="20" fill="rgba(0,0,0,0.3)" />
+          <g data-name="struggle">
+            <path d="M 110 40 C 115 35 125 35 130 45 C 130 55 125 65 115 70 L 115 100 L 105 100 L 105 70 Z" fill="rgba(0,0,0,0.8)" />
+            <path d="M 90 45 C 95 40 105 45 105 55 L 120 65 L 110 75 L 90 75 L 85 100 L 75 100 Z" fill="rgba(0,0,0,0.9)" />
+            <circle cx="95" cy="35" r="8" fill="rgba(0,0,0,0.9)" />
+            <path d="M 85 30 Q 95 25 105 30 L 105 32 Q 95 35 85 32 Z" fill="rgba(0,0,0,0.9)" />
+            <path d="M 140 45 C 135 40 125 45 125 55 L 110 65 L 120 75 L 140 75 L 145 100 L 155 100 Z" fill="rgba(0,0,0,0.9)" />
+            <circle cx="145" cy="35" r="8" fill="rgba(0,0,0,0.9)" />
+            <path d="M 135 30 Q 145 25 155 30 L 155 32 Q 145 35 135 32 Z" fill="rgba(0,0,0,0.9)" />
+          </g>
+          <g data-name="elderly-falling">
+            <path d="M 60 55 C 55 50 45 50 40 60 C 35 70 45 80 50 80 L 50 100 L 60 100 Z" fill="rgba(0,0,0,0.6)" transform="rotate(-30 50 80)" />
+            <circle cx="55" cy="45" r="7" fill="rgba(0,0,0,0.6)" transform="rotate(-30 50 80)" />
+            <line x1="30" y1="70" x2="10" y2="60" stroke="rgba(0,0,0,0.6)" strokeWidth="3" strokeLinecap="round" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'hill-v-cc-west-yorkshire':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="window-frame">
+            <rect x="0" y="0" width="20" height="100" fill="rgba(0,0,0,0.8)" />
+            <rect x="180" y="0" width="20" height="100" fill="rgba(0,0,0,0.8)" />
+            <rect x="0" y="100" width="200" height="20" fill="rgba(0,0,0,0.9)" />
+            <rect x="20" y="90" width="160" height="10" fill="rgba(0,0,0,0.7)" />
+            <line x1="100" y1="0" x2="100" y2="90" stroke="rgba(0,0,0,0.8)" strokeWidth="6" />
+            <line x1="20" y1="45" x2="180" y2="45" stroke="rgba(0,0,0,0.8)" strokeWidth="6" />
+          </g>
+          <g data-name="candle">
+            <rect x="130" y="60" width="16" height="30" fill="#f4e9d8" opacity="0.9" />
+            <path d="M 130 90 L 146 90 L 148 95 L 128 95 Z" fill="rgba(0,0,0,0.5)" />
+            <path d="M 138 52 Q 135 56 138 60 Q 141 56 138 52 Z" fill="#e8b34a" filter="url(#soft-glow)" />
+            <circle cx="138" cy="56" r="15" fill="#e8b34a" opacity="0.15" filter="url(#soft-glow)" />
+          </g>
+          <g data-name="poster">
+            <polygon points="50,92 80,88 95,95 55,98" fill="#f4e9d8" opacity="0.8" />
+            <polygon points="50,92 65,85 80,88" fill="rgba(0,0,0,0.2)" />
+            <rect x="60" y="88" width="15" height="4" fill="rgba(0,0,0,0.4)" transform="rotate(-5 60 88)" />
+            <rect x="62" y="94" width="25" height="2" fill="rgba(0,0,0,0.2)" transform="rotate(-5 62 94)" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'kent-v-griffiths':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="kitchen-tiles">
+            <path d="M 0 60 L 200 60 M 0 90 L 200 90 M 0 120 L 200 120" stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
+            <path d="M 40 40 L 0 120 M 100 40 L 100 120 M 160 40 L 200 120" stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
+          </g>
+          <g data-name="telephone-base" transform="translate(130, 20)">
+            <path d="M 0 20 C 10 10 40 10 50 20 L 55 40 L -5 40 Z" fill="rgba(0,0,0,0.5)" />
+            <circle cx="25" cy="25" r="8" fill="rgba(255,255,255,0.1)" />
+          </g>
+          <path data-name="phone-cord" d="M 125 35 C 100 40 120 70 80 80 C 60 85 70 100 50 95" fill="none" stroke="rgba(0,0,0,0.6)" strokeWidth="3" strokeDasharray="2 2" />
+          <g data-name="handset" transform="translate(30, 85) rotate(-30)">
+            <rect x="0" y="0" width="40" height="12" rx="6" fill="rgba(0,0,0,0.8)" />
+            <circle cx="6" cy="6" r="8" fill="rgba(0,0,0,0.9)" />
+            <circle cx="34" cy="6" r="8" fill="rgba(0,0,0,0.9)" />
+          </g>
+          <g data-name="inhaler" transform="translate(110, 80) rotate(15)">
+            <path d="M 0 0 L 12 0 L 12 25 L 0 25 Z" fill="#f4e9d8" opacity="0.9" />
+            <path d="M -5 15 L 12 15 L 12 25 L -5 25 Z" fill="#e8b34a" opacity="0.8" />
+            <rect x="2" y="-10" width="8" height="15" rx="4" fill="rgba(255,255,255,0.5)" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'bolam-v-friern-barnet':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="hospital-wall">
+            <rect x="0" y="0" width="200" height="70" fill="rgba(255,255,255,0.05)" />
+            <line x1="0" y1="70" x2="200" y2="70" stroke="rgba(0,0,0,0.5)" strokeWidth="2" />
+          </g>
+          <g data-name="gurney">
+            <rect x="20" y="60" width="140" height="12" rx="4" fill="#f4e9d8" opacity="0.8" />
+            <rect x="25" y="72" width="130" height="4" fill="rgba(0,0,0,0.3)" />
+            <rect x="35" y="76" width="6" height="44" fill="rgba(0,0,0,0.4)" />
+            <rect x="135" y="76" width="6" height="44" fill="rgba(0,0,0,0.4)" />
+            <circle cx="38" cy="115" r="6" fill="rgba(0,0,0,0.8)" />
+            <circle cx="138" cy="115" r="6" fill="rgba(0,0,0,0.8)" />
+          </g>
+          <g data-name="unfastened-straps">
+            <path d="M 60 72 C 60 90 40 100 50 110" fill="none" stroke="rgba(0,0,0,0.6)" strokeWidth="4" />
+            <path d="M 100 72 C 100 85 120 90 110 105" fill="none" stroke="rgba(0,0,0,0.6)" strokeWidth="4" />
+            <rect x="47" y="105" width="6" height="8" fill="#e8b34a" />
+          </g>
+          <g data-name="ect-machine" transform="translate(160, 40)">
+            <rect x="0" y="0" width="30" height="40" rx="2" fill="rgba(0,0,0,0.6)" />
+            <circle cx="15" cy="10" r="4" fill="#f4e9d8" opacity="0.5" />
+            <line x1="5" y1="25" x2="25" y2="25" stroke="rgba(255,255,255,0.2)" strokeWidth="2" />
+          </g>
+          <path data-name="ect-cap" d="M 150 72 C 145 60 160 55 165 65 C 160 70 155 75 150 72 Z" fill="rgba(0,0,0,0.7)" />
+          <path data-name="wires" d="M 158 68 C 160 80 165 80 170 70" fill="none" stroke="rgba(0,0,0,0.8)" strokeWidth="1.5" />
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'bolitho-v-city-and-hackney':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="ward-background">
+            <path d="M 0 50 L 200 50" stroke="rgba(255,255,255,0.05)" strokeWidth="10" />
+            <circle cx="150" cy="30" r="15" fill="#f4e9d8" opacity="0.1" filter="url(#soft-glow)" />
+          </g>
+          <g data-name="cot-rails">
+            <rect x="20" y="40" width="160" height="6" rx="3" fill="#f4e9d8" opacity="0.7" />
+            <rect x="20" y="90" width="160" height="8" rx="4" fill="#f4e9d8" opacity="0.6" />
+            {Array.from({ length: 7 }).map((_, i) => (
+              <rect key={i} x={35 + i * 22} y="46" width="4" height="44" fill="rgba(255,255,255,0.3)" />
+            ))}
+          </g>
+          <g data-name="mattress">
+            <rect x="10" y="95" width="180" height="25" rx="5" fill="rgba(255,255,255,0.15)" />
+            <path d="M 20 95 L 40 85 L 60 95 Z" fill="rgba(0,0,0,0.2)" />
+          </g>
+          <g data-name="stethoscope" transform="translate(115, 35)">
+            <path d="M 0 0 C -10 -15 -20 0 -10 10 C 0 20 0 40 -15 50" fill="none" stroke="rgba(0,0,0,0.8)" strokeWidth="3" />
+            <path d="M -10 10 C -5 20 -25 30 -15 50" fill="none" stroke="rgba(0,0,0,0.8)" strokeWidth="3" />
+            <circle cx="-16" cy="52" r="5" fill="#e8b34a" />
+            <rect x="-1" y="-2" width="4" height="6" fill="#f4e9d8" />
+            <rect x="-17" y="-2" width="4" height="6" fill="#f4e9d8" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'nettleship-v-weston':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="street-scene">
+            <polygon points="0,90 200,80 200,120 0,120" fill="rgba(0,0,0,0.2)" />
+            <polygon points="0,95 200,85 200,120 0,120" fill="rgba(0,0,0,0.3)" />
+          </g>
+          <g data-name="buckled-lamp-post">
+            <path d="M 140 0 L 140 60 C 140 70 150 75 145 85 L 145 90 L 135 90 L 135 85 C 135 75 130 70 130 60 L 130 0 Z" fill="rgba(0,0,0,0.6)" />
+            <rect x="130" y="85" width="20" height="5" fill="rgba(0,0,0,0.8)" />
+            <path d="M 125 0 L 145 0 L 145 5 L 125 5 Z" fill="rgba(0,0,0,0.7)" />
+          </g>
+          <g data-name="l-plate" transform="translate(70, 95) rotate(-15)">
+            <rect x="0" y="0" width="30" height="30" fill="#f4e9d8" opacity="0.9" />
+            <polygon points="5,5 12,5 12,20 25,20 25,25 5,25" fill="#e8b34a" opacity="0.9" />
+            <circle cx="3" cy="3" r="1" fill="rgba(0,0,0,0.5)" />
+            <circle cx="27" cy="3" r="1" fill="rgba(0,0,0,0.5)" />
+            <circle cx="3" cy="27" r="1" fill="rgba(0,0,0,0.5)" />
+            <circle cx="27" cy="27" r="1" fill="rgba(0,0,0,0.5)" />
+          </g>
+          <g data-name="debris">
+            <polygon points="120,95 125,92 128,96" fill="rgba(0,0,0,0.5)" />
+            <polygon points="155,90 160,88 162,91" fill="rgba(0,0,0,0.5)" />
+            <circle cx="115" cy="100" r="1" fill="rgba(255,255,255,0.2)" />
+            <circle cx="150" cy="95" r="1" fill="rgba(255,255,255,0.2)" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'bolton-v-stone':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="sky-and-trees">
+            <path d="M 0 70 Q 30 40 60 60 T 120 50 T 200 65 L 200 120 L 0 120 Z" fill="rgba(0,0,0,0.2)" />
+            <path d="M 0 80 Q 40 50 80 70 T 150 60 T 200 80 L 200 120 L 0 120 Z" fill="rgba(0,0,0,0.3)" />
+          </g>
+          <g data-name="tall-fence">
+            <rect x="0" y="80" width="200" height="40" fill="rgba(0,0,0,0.6)" />
+            {Array.from({ length: 21 }).map((_, i) => (
+              <line key={i} x1={i * 10} y1="80" x2={i * 10} y2="120" stroke="rgba(0,0,0,0.4)" strokeWidth="2" />
+            ))}
+            <line x1="0" y1="90" x2="200" y2="90" stroke="rgba(0,0,0,0.4)" strokeWidth="2" />
+            <line x1="0" y1="110" x2="200" y2="110" stroke="rgba(0,0,0,0.4)" strokeWidth="2" />
+          </g>
+          <g data-name="cricket-ball-arc">
+            <path d="M 20 120 Q 80 10 160 40" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="1" strokeDasharray="4 4" />
+            <circle cx="160" cy="40" r="4" fill="#e8b34a" />
+            <path d="M 158 37 Q 160 40 162 43" fill="none" stroke="#f4e9d8" strokeWidth="1" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'latimer-v-aec':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="factory-floor">
+            <polygon points="0,50 200,50 200,120 0,120" fill="rgba(0,0,0,0.2)" />
+            <line x1="40" y1="50" x2="0" y2="120" stroke="rgba(0,0,0,0.1)" strokeWidth="2" />
+            <line x1="100" y1="50" x2="100" y2="120" stroke="rgba(0,0,0,0.1)" strokeWidth="2" />
+            <line x1="160" y1="50" x2="200" y2="120" stroke="rgba(0,0,0,0.1)" strokeWidth="2" />
+          </g>
+          <g data-name="factory-pillars">
+            <rect x="20" y="0" width="15" height="60" fill="rgba(0,0,0,0.4)" />
+            <rect x="160" y="0" width="20" height="70" fill="rgba(0,0,0,0.5)" />
+          </g>
+          <g data-name="oil-slicks">
+            <path d="M 60 80 Q 90 70 120 85 T 150 90 Q 110 100 80 95 T 60 80 Z" fill="rgba(0,0,0,0.6)" filter="url(#soft-glow)" />
+            <path d="M 20 95 Q 40 90 50 100 T 25 110 Z" fill="rgba(0,0,0,0.5)" />
+          </g>
+          <g data-name="sawdust">
+            <circle cx="85" cy="82" r="1.5" fill="#e8b34a" opacity="0.8" />
+            <circle cx="95" cy="85" r="1" fill="#e8b34a" opacity="0.9" />
+            <circle cx="110" cy="80" r="1.5" fill="#e8b34a" opacity="0.7" />
+            <circle cx="105" cy="90" r="1" fill="#e8b34a" opacity="0.8" />
+            <circle cx="130" cy="87" r="1.5" fill="#e8b34a" opacity="0.9" />
+            <circle cx="125" cy="92" r="1" fill="#e8b34a" opacity="0.8" />
+            <circle cx="70" cy="88" r="1" fill="#e8b34a" opacity="0.7" />
+            <circle cx="35" cy="100" r="1.5" fill="#e8b34a" opacity="0.8" />
+            <circle cx="45" cy="98" r="1" fill="#e8b34a" opacity="0.7" />
+            <path d="M 80 85 L 100 82 M 110 88 L 130 85 M 95 92 L 120 90" stroke="#f4e9d8" strokeWidth="1" opacity="0.5" strokeDasharray="1 3" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'barnett-v-chelsea':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="hospital-corridor">
+            <rect x="0" y="0" width="200" height="80" fill="rgba(0,0,0,0.1)" />
+            <rect x="0" y="80" width="200" height="40" fill="rgba(0,0,0,0.2)" />
+            <line x1="0" y1="80" x2="200" y2="80" stroke="rgba(0,0,0,0.3)" strokeWidth="2" />
+          </g>
+          <g data-name="flickering-sign" transform="translate(70, 10)">
+            <rect x="0" y="0" width="60" height="25" rx="2" fill="rgba(0,0,0,0.8)" />
+            <rect x="2" y="2" width="56" height="21" rx="1" fill="#f4e9d8" opacity="0.15" filter="url(#soft-glow)" />
+            <path d="M 15 17 L 20 8 L 25 17 M 18 14 L 22 14" stroke="#e8b34a" strokeWidth="2" fill="none" opacity="0.8" filter="url(#soft-glow)" />
+            <path d="M 35 15 L 32 17 Q 28 15 32 10 Q 36 10 38 12 M 30 11 L 37 17 M 35 8 C 38 6 42 10 38 13" stroke="#e8b34a" strokeWidth="1.5" fill="none" opacity="0.5" />
+            <path d="M 45 8 L 45 17 M 45 8 L 52 8 M 45 12 L 50 12 M 45 17 L 52 17" stroke="#e8b34a" strokeWidth="2" fill="none" opacity="0.8" filter="url(#soft-glow)" />
+          </g>
+          <g data-name="bench">
+            <rect x="20" y="65" width="160" height="5" rx="1" fill="rgba(0,0,0,0.5)" />
+            <rect x="20" y="70" width="160" height="15" rx="2" fill="rgba(0,0,0,0.4)" />
+            <rect x="30" y="85" width="5" height="35" fill="rgba(0,0,0,0.6)" />
+            <rect x="165" y="85" width="5" height="35" fill="rgba(0,0,0,0.6)" />
+            <line x1="25" y1="75" x2="175" y2="75" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
+            <line x1="25" y1="80" x2="175" y2="80" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
+          </g>
+          <g data-name="three-teacups">
+            <path d="M 80 65 C 80 70 90 70 90 65 Z" fill="#f4e9d8" opacity="0.9" />
+            <path d="M 90 66 C 93 66 93 68 90 68" fill="none" stroke="#f4e9d8" strokeWidth="1" />
+            <path d="M 95 65 C 95 70 105 70 105 65 Z" fill="#f4e9d8" opacity="0.9" />
+            <path d="M 105 66 C 108 66 108 68 105 68" fill="none" stroke="#f4e9d8" strokeWidth="1" />
+            <path d="M 115 68 C 112 65 118 60 122 65 Z" fill="#f4e9d8" opacity="0.8" />
+            <path d="M 119 62 C 122 61 124 63 121 64" fill="none" stroke="#f4e9d8" strokeWidth="1" />
+            <path d="M 110 68 Q 120 72 130 68" fill="none" stroke="#e8b34a" strokeWidth="2" opacity="0.6" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'wagon-mound-no-1':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="harbour-water">
+            <rect x="0" y="60" width="200" height="60" fill="rgba(0,0,0,0.2)" />
+            <path d="M 0 70 Q 50 65 100 70 T 200 70 M 0 85 Q 50 80 100 85 T 200 85" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
+          </g>
+          <g data-name="oil-slick">
+            <path d="M 30 90 C 70 80 120 100 160 85 C 180 95 140 110 90 115 C 40 110 10 100 30 90 Z" fill="rgba(0,0,0,0.7)" />
+            <path d="M 50 95 C 80 90 110 100 130 95 C 110 105 70 105 50 95 Z" fill="#e8b34a" opacity="0.2" filter="url(#soft-glow)" />
+            <path d="M 70 100 C 90 98 100 102 110 100" stroke="#f4e9d8" strokeWidth="1" opacity="0.3" fill="none" />
+          </g>
+          <g data-name="wharf">
+            <rect x="120" y="0" width="80" height="40" fill="rgba(0,0,0,0.6)" />
+            <rect x="130" y="40" width="10" height="80" fill="rgba(0,0,0,0.7)" />
+            <rect x="170" y="40" width="10" height="80" fill="rgba(0,0,0,0.8)" />
+            <path d="M 120 40 L 200 40 L 200 45 L 120 45 Z" fill="rgba(0,0,0,0.5)" />
+            <line x1="120" y1="40" x2="200" y2="40" stroke="#f4e9d8" strokeWidth="1" opacity="0.3" />
+          </g>
+          <g data-name="welder">
+            <path d="M 150 40 L 150 25 C 150 20 160 20 160 25 L 160 40 Z" fill="rgba(0,0,0,0.9)" />
+            <rect x="148" y="15" width="14" height="12" rx="2" fill="rgba(0,0,0,0.95)" />
+            <path d="M 150 30 L 140 35 L 145 40" fill="none" stroke="rgba(0,0,0,0.9)" strokeWidth="3" />
+          </g>
+          <g data-name="welding-sparks">
+            <circle cx="140" cy="35" r="4" fill="#f4e9d8" filter="url(#soft-glow)" />
+            <path d="M 140 35 L 130 50 M 140 35 L 135 55 M 140 35 L 125 45 M 140 35 L 120 50 M 140 35 L 145 60 M 140 35 L 150 55" stroke="#e8b34a" strokeWidth="1" strokeDasharray="2 2" filter="url(#soft-glow)" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
+    case 'hughes-v-lord-advocate':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="street-lamp">
+            <rect x="30" y="20" width="4" height="100" fill="rgba(0,0,0,0.8)" />
+            <path d="M 25 15 L 39 15 L 37 5 L 27 5 Z" fill="rgba(0,0,0,0.9)" />
+            <circle cx="32" cy="10" r="10" fill="#f4e9d8" opacity="0.4" filter="url(#soft-glow)" />
+            <circle cx="32" cy="10" r="5" fill="#f4e9d8" opacity="0.8" filter="url(#soft-glow)" />
+            <polygon points="20,15 44,15 32,25" fill="rgba(0,0,0,0.9)" />
+          </g>
+          <g data-name="cobblestones">
+            <path d="M 0 90 L 200 90 M 0 100 L 200 100 M 0 110 L 200 110" stroke="rgba(0,0,0,0.3)" strokeWidth="1" />
+          </g>
+          <g data-name="manhole">
+            <ellipse cx="120" cy="105" rx="35" ry="10" fill="rgba(0,0,0,0.8)" />
+            <ellipse cx="120" cy="106" rx="33" ry="8" fill="rgba(0,0,0,0.95)" />
+            <path d="M 85 105 C 85 95 105 90 120 95 C 130 98 125 105 125 105 Z" fill="rgba(0,0,0,0.5)" />
+          </g>
+          <g data-name="paraffin-lamps">
+            <g transform="translate(70, 95)">
+              <rect x="-6" y="-15" width="12" height="15" fill="rgba(0,0,0,0.7)" />
+              <path d="M -8 0 L 8 0 L 6 -5 L -6 -5 Z" fill="rgba(0,0,0,0.8)" />
+              <circle cx="0" cy="-10" r="4" fill="#e8b34a" opacity="0.9" filter="url(#soft-glow)" />
+              <path d="M -4 -15 C -8 -25 8 -25 4 -15" fill="none" stroke="rgba(0,0,0,0.6)" strokeWidth="1" />
+            </g>
+            <g transform="translate(165, 100)">
+              <rect x="-6" y="-15" width="12" height="15" fill="rgba(0,0,0,0.7)" />
+              <path d="M -8 0 L 8 0 L 6 -5 L -6 -5 Z" fill="rgba(0,0,0,0.8)" />
+              <circle cx="0" cy="-10" r="4" fill="#e8b34a" opacity="0.9" filter="url(#soft-glow)" />
+              <path d="M -4 -15 C -8 -25 8 -25 4 -15" fill="none" stroke="rgba(0,0,0,0.6)" strokeWidth="1" />
+            </g>
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+
     default:
       return (
         <svg {...commonProps}>

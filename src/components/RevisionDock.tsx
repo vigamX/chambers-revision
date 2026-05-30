@@ -1,27 +1,44 @@
 import { useMemo, useState } from "react";
-import type { Progress, LawCase } from "../types";
+import type { Progress, LawCase, Term } from "../types";
 import { CASES, CASES_BY_ID } from "../data/cases";
 import {
-  chapterForCase,
+  chapterForCaseAnyTerm,
   CHAPTER_LABELS,
   CHAPTERS_ORDERED,
+  TORT_CHAPTERS_ORDERED,
 } from "../data/syllabus";
 import { CaseCard } from "./CaseCard";
 import { CaseDetails } from "./CaseDetails";
 
 interface Props {
   progress: Progress;
+  term: Term;
   onBack: () => void;
   onStartClash: () => void;
 }
 
 type SortMode = "weakest" | "chapter" | "az";
 
-export function RevisionDock({ progress, onBack, onStartClash }: Props) {
+const AREA_FOR_TERM: Record<Term, "criminal" | "tort" | null> = {
+  1: "criminal",
+  2: "tort",
+  3: null,
+  4: null,
+};
+
+export function RevisionDock({ progress, term, onBack, onStartClash }: Props) {
   const [flipped, setFlipped] = useState<Record<string, boolean>>({});
   const [allRevealed, setAllRevealed] = useState(false);
   const [sortMode, setSortMode] = useState<SortMode>("weakest");
   const [detailsId, setDetailsId] = useState<string | null>(null);
+
+  const area = AREA_FOR_TERM[term];
+  const scopedCases = useMemo(
+    () => (area ? CASES.filter((c) => c.area === area) : []),
+    [area],
+  );
+
+  const chapterOrder = term === 1 ? CHAPTERS_ORDERED : TORT_CHAPTERS_ORDERED;
 
   function toggle(id: string) {
     setFlipped((f) => ({ ...f, [id]: !f[id] }));
@@ -29,7 +46,7 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
 
   const weakestSorted = useMemo(
     () =>
-      [...CASES].sort((a, b) => {
+      [...scopedCases].sort((a, b) => {
         const am = progress.cards[a.id]?.mastery ?? 0;
         const bm = progress.cards[b.id]?.mastery ?? 0;
         if (am !== bm) return am - bm;
@@ -38,19 +55,19 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
           (progress.cards[b.id]?.dueAt ?? 0)
         );
       }),
-    [progress.cards],
+    [progress.cards, scopedCases],
   );
 
   const azSorted = useMemo(
-    () => [...CASES].sort((a, b) => a.name.localeCompare(b.name)),
-    [],
+    () => [...scopedCases].sort((a, b) => a.name.localeCompare(b.name)),
+    [scopedCases],
   );
 
   const byChapter = useMemo(() => {
     const groups: Record<number, LawCase[]> = {};
     const unmapped: LawCase[] = [];
-    for (const c of CASES) {
-      const ch = chapterForCase(c.id);
+    for (const c of scopedCases) {
+      const ch = chapterForCaseAnyTerm(c.id);
       if (ch === null) {
         unmapped.push(c);
       } else {
@@ -62,7 +79,7 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
     }
     unmapped.sort((a, b) => a.name.localeCompare(b.name));
     return { groups, unmapped };
-  }, []);
+  }, [scopedCases]);
 
   const openDetails = (id: string) => setDetailsId(id);
 
@@ -109,13 +126,14 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
         >
           A–Z
         </button>
-        <span className="dock-sortbar-count">{CASES.length} cases</span>
+        <span className="dock-sortbar-count">{scopedCases.length} cases</span>
       </div>
 
       {sortMode === "chapter" ? (
         <>
-          {CHAPTERS_ORDERED.filter((ch) => byChapter.groups[ch]?.length).map(
-            (ch) => (
+          {chapterOrder
+            .filter((ch) => byChapter.groups[ch]?.length)
+            .map((ch) => (
               <ChapterGroup
                 key={ch}
                 heading={CHAPTER_LABELS[ch]}
@@ -126,8 +144,7 @@ export function RevisionDock({ progress, onBack, onStartClash }: Props) {
                 onToggle={toggle}
                 onInfo={openDetails}
               />
-            ),
-          )}
+            ))}
           {byChapter.unmapped.length > 0 && (
             <ChapterGroup
               heading="Other"

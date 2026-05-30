@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import type { Progress } from "../types";
+import type { Progress, Term, LegalArea } from "../types";
 import { CASES_BY_ID } from "../data/cases";
 import { buildSession, requeue, type ClashSession } from "../clash";
 import { applyReview } from "../store";
@@ -8,14 +8,25 @@ import { CaseScene } from "./CaseScene";
 
 interface Props {
   progress: Progress;
+  term: Term;
   onProgressChange: (p: Progress) => void;
   onExit: () => void;
 }
 
 type Phase = "answering" | "wrong-nudge" | "revealed";
 
-export function CaseClash({ progress, onProgressChange, onExit }: Props) {
-  const [session, setSession] = useState<ClashSession>(() => buildSession(progress.cards));
+const AREA_FOR_TERM: Record<Term, LegalArea> = {
+  1: "criminal",
+  2: "tort",
+  3: "contract",
+  4: "human-rights",
+};
+
+export function CaseClash({ progress, term, onProgressChange, onExit }: Props) {
+  const area = AREA_FOR_TERM[term];
+  const [session, setSession] = useState<ClashSession>(() =>
+    buildSession(progress.cards, area),
+  );
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
   const [phase, setPhase] = useState<Phase>("answering");
   const [attempts, setAttempts] = useState(0);
@@ -43,14 +54,16 @@ export function CaseClash({ progress, onProgressChange, onExit }: Props) {
         </div>
         <div className="brief-body">
           <p className="pupil-quote">
-            — Ms Hale KC: "Memory is a muscle. Come back tomorrow."
+            {term === 2
+              ? '— Mr Atkin KC: "The neighbour principle is a habit of mind. Drill it."'
+              : '— Ms Hale KC: "Memory is a muscle. Come back tomorrow."'}
           </p>
           <div className="controls">
             <button onClick={onExit}>Back to chambers</button>
             <button
               className="btn-primary"
               onClick={() => {
-                setSession(buildSession(progress.cards));
+                setSession(buildSession(progress.cards, area));
                 setSelectedIdx(null);
                 setPhase("answering");
                 setAttempts(0);
@@ -91,7 +104,7 @@ export function CaseClash({ progress, onProgressChange, onExit }: Props) {
         { caseId: q.caseId, correct: wasCorrect, firstTry: wasFirstTry },
       ],
     };
-    if (grade === "again") next = requeue(next, next.index);
+    if (grade === "again") next = requeue(next, next.index, area);
     next = { ...next, index: next.index + 1 };
     setSession(next);
 

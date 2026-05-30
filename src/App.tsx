@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import type { Progress } from "./types";
+import type { Progress, Term } from "./types";
 import { BRIEFS, BRIEFS_BY_ID } from "./data/briefs";
 import { TERM_1_BOSS } from "./data/boss";
-import { loadProgress, resetProgress, saveProgress } from "./store";
+import { loadProgress, resetProgress, saveProgress, setTerm } from "./store";
+import { TermPicker } from "./components/TermPicker";
 import { Chambers } from "./components/Chambers";
 import { BriefPlayer } from "./components/BriefPlayer";
 import { RevisionDock } from "./components/RevisionDock";
@@ -11,6 +12,7 @@ import { TopicChecklist } from "./components/TopicChecklist";
 import { BossFightPlayer } from "./components/BossFightPlayer";
 
 type View =
+  | { name: "picker" }
   | { name: "chambers" }
   | { name: "brief"; id: string }
   | { name: "dock" }
@@ -18,9 +20,16 @@ type View =
   | { name: "checklist" }
   | { name: "boss" };
 
+const TERM_SHORT_LABEL: Record<Term, string> = {
+  1: "Term 1 · Criminal",
+  2: "Term 2 · Tort",
+  3: "Term 3 · Contract",
+  4: "Term 4 · Human Rights",
+};
+
 export default function App() {
   const [progress, setProgress] = useState<Progress>(() => loadProgress());
-  const [view, setView] = useState<View>({ name: "chambers" });
+  const [view, setView] = useState<View>({ name: "picker" });
 
   useEffect(() => {
     saveProgress(progress);
@@ -29,9 +38,22 @@ export default function App() {
   function reset() {
     if (confirm("Reset all progress?")) {
       setProgress(resetProgress());
-      setView({ name: "chambers" });
+      setView({ name: "picker" });
     }
   }
+
+  function pickTerm(t: Term) {
+    setProgress((p) => setTerm(p, t));
+    setView({ name: "chambers" });
+  }
+
+  function returnToPicker() {
+    setView({ name: "picker" });
+  }
+
+  const currentTerm = progress.currentTerm;
+  const briefsForTerm = BRIEFS.filter((b) => b.term === currentTerm);
+  const bossForTerm = currentTerm === 1 ? TERM_1_BOSS : null;
 
   return (
     <div className="app">
@@ -41,18 +63,32 @@ export default function App() {
           <div className="subtitle">OCR A-Level Law · pupillage in progress</div>
         </div>
         <nav>
-          {view.name !== "chambers" && (
+          {view.name !== "picker" && (
+            <button
+              className="term-pill"
+              onClick={returnToPicker}
+              title="Switch term"
+            >
+              {TERM_SHORT_LABEL[currentTerm]} ⇄
+            </button>
+          )}
+          {view.name !== "chambers" && view.name !== "picker" && (
             <button onClick={() => setView({ name: "chambers" })}>Home</button>
           )}
           <button onClick={reset}>Reset</button>
         </nav>
       </header>
 
+      {view.name === "picker" && (
+        <TermPicker progress={progress} onPickTerm={pickTerm} />
+      )}
+
       {view.name === "chambers" && (
         <Chambers
-          briefs={BRIEFS}
+          term={currentTerm}
+          briefs={briefsForTerm}
           progress={progress}
-          boss={TERM_1_BOSS}
+          boss={bossForTerm}
           onPick={(id) => setView({ name: "brief", id })}
           onOpenDock={() => setView({ name: "dock" })}
           onStartClash={() => setView({ name: "clash" })}
@@ -73,6 +109,7 @@ export default function App() {
       {view.name === "dock" && (
         <RevisionDock
           progress={progress}
+          term={currentTerm}
           onBack={() => setView({ name: "chambers" })}
           onStartClash={() => setView({ name: "clash" })}
         />
@@ -81,6 +118,7 @@ export default function App() {
       {view.name === "clash" && (
         <CaseClash
           progress={progress}
+          term={currentTerm}
           onProgressChange={setProgress}
           onExit={() => setView({ name: "chambers" })}
         />
@@ -89,13 +127,14 @@ export default function App() {
       {view.name === "checklist" && (
         <TopicChecklist
           progress={progress}
+          term={currentTerm}
           onBack={() => setView({ name: "chambers" })}
         />
       )}
 
-      {view.name === "boss" && (
+      {view.name === "boss" && bossForTerm && (
         <BossFightPlayer
-          boss={TERM_1_BOSS}
+          boss={bossForTerm}
           progress={progress}
           onProgressChange={setProgress}
           onExit={() => setView({ name: "chambers" })}

@@ -2194,6 +2194,235 @@ export const CASES: LawCase[] = [
     },
     importance: 3,
   },
+
+  // ─────────────────────────────────────────────────────────────────────
+  // Term 2 — Law of Tort
+  // Chapter 21 — Liability in negligence (foundation set)
+  // All citations verified against Wortley/Price/Briggs OCR A Level Law
+  // 2nd ed (Hodder, 2021), Table of Cases pp. xi–xiii.
+  // ─────────────────────────────────────────────────────────────────────
+
+  {
+    id: "donoghue-v-stevenson",
+    name: "Donoghue v Stevenson",
+    year: 1932,
+    area: "tort",
+    topics: ["duty-of-care"],
+    facts:
+      "Mrs Donoghue drank ginger beer from an opaque bottle bought for her by a friend in a Paisley café; the dregs contained the decomposed remains of a snail. She suffered gastroenteritis and shock and sued the manufacturer directly, despite having no contract with him.",
+    principle:
+      "A manufacturer owes a duty of care to the ultimate consumer. The wider 'neighbour principle' (Lord Atkin): you must take reasonable care to avoid acts or omissions you can reasonably foresee would injure your neighbour — anyone so closely and directly affected by your conduct that you ought reasonably to have them in contemplation.",
+    visual: {
+      emoji: "🍺",
+      scene: "An opaque ginger beer bottle on a café table, a snail silhouette beside it",
+      palette: "linear-gradient(135deg,#1c2a1c,#3a5a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "caparo-v-dickman",
+    name: "Caparo Industries v Dickman",
+    year: 1990,
+    area: "tort",
+    topics: ["duty-of-care"],
+    facts:
+      "Caparo bought shares in Fidelity plc relying on audited accounts prepared by Dickman that overstated profits. They sued the auditors for negligent misstatement after the shares lost value.",
+    principle:
+      "The three-stage test for a novel duty of care: (1) damage must be reasonably foreseeable; (2) there must be a relationship of proximity between claimant and defendant; (3) it must be fair, just and reasonable to impose a duty. Auditors owed no duty to potential investors.",
+    visual: {
+      emoji: "📊",
+      scene: "An auditor's ledger casting a long shadow across a boardroom table",
+      palette: "linear-gradient(135deg,#1a1a2a,#33335a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "robinson-v-ccwy",
+    name: "Robinson v Chief Constable of West Yorkshire",
+    year: 2018,
+    area: "tort",
+    topics: ["duty-of-care"],
+    facts:
+      "Officers attempting to arrest a suspected drug dealer in a busy street knocked over Mrs Robinson, an elderly pedestrian, during the struggle. She sued the police for negligence.",
+    principle:
+      "The Caparo three-stage test is reserved for novel categories of duty. Where an established category applies — here, the duty not to cause direct physical injury through positive acts — precedent governs and the duty is simply applied. Police are not categorically immune.",
+    visual: {
+      emoji: "🚔",
+      scene: "A silhouette of an elderly figure falling backwards as two officers grapple a third",
+      palette: "linear-gradient(135deg,#1a2a3a,#3a5a7a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "hill-v-cc-west-yorkshire",
+    name: "Hill v Chief Constable of West Yorkshire",
+    year: 1989,
+    area: "tort",
+    topics: ["duty-of-care"],
+    facts:
+      "The mother of Jacqueline Hill, the final victim of the Yorkshire Ripper, sued the police, arguing that earlier mistakes in the investigation allowed Peter Sutcliffe to remain at large and kill her daughter.",
+    principle:
+      "The police owe no general duty of care to individual members of the public in the investigation and suppression of crime. Imposing such a duty would risk defensive policing and divert resources from operational work. (Distinguished where police assume responsibility for a specific individual.)",
+    visual: {
+      emoji: "🕯️",
+      scene: "A solitary candle on a windowsill, a folded missing-person poster beside it",
+      palette: "linear-gradient(135deg,#1a1a1a,#3a2a2a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "kent-v-griffiths",
+    name: "Kent v Griffiths",
+    year: 2001,
+    area: "tort",
+    topics: ["duty-of-care"],
+    facts:
+      "A GP called an ambulance for a patient suffering a severe asthma attack. The London Ambulance Service accepted the call and confirmed it was on its way, but took 40 minutes without explanation. The patient suffered respiratory arrest and brain damage.",
+    principle:
+      "Once an ambulance service accepts a 999 call for a named patient, it assumes a duty of care to that patient. This is closer to a hospital's duty than to the public-protection role of the police or fire service.",
+    visual: {
+      emoji: "🚑",
+      scene: "An inhaler on a kitchen floor beside a telephone handset off its cradle",
+      palette: "linear-gradient(135deg,#3a1c1c,#7a3a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "bolam-v-friern-barnet",
+    name: "Bolam v Friern Barnet Hospital Management Committee",
+    year: 1957,
+    area: "tort",
+    topics: ["breach-of-duty"],
+    facts:
+      "Mr Bolam consented to electro-convulsive therapy for depression. He was given neither muscle relaxants nor physical restraint and suffered fractures during the convulsion. Both approaches were practised by responsible bodies of medical opinion at the time.",
+    principle:
+      "A professional is not negligent if they have acted in accordance with a practice accepted as proper by a responsible body of skilled opinion in that field. The court does not choose between competing bodies of competent opinion.",
+    visual: {
+      emoji: "⚕️",
+      scene: "A 1950s hospital gurney with leather straps unfastened, an ECT cap beside it",
+      palette: "linear-gradient(135deg,#1a2a2a,#3a5a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "bolitho-v-city-and-hackney",
+    name: "Bolitho v City and Hackney Health Authority",
+    year: 1997,
+    area: "tort",
+    topics: ["breach-of-duty"],
+    facts:
+      "A two-year-old admitted with breathing difficulties suffered cardiac arrest and severe brain damage after a doctor failed to attend. The doctor said that, even if she had attended, she would not have intubated; expert evidence on both sides supported that view.",
+    principle:
+      "The Bolam test is qualified: a court may reject a body of professional opinion if it is not 'logically defensible' — that is, if the experts have not weighed the risks and benefits and reached a defensible conclusion. Pure deference to professional practice ends here.",
+    visual: {
+      emoji: "🩺",
+      scene: "An empty paediatric ward bed, a stethoscope hung from the rail",
+      palette: "linear-gradient(135deg,#1a2a3a,#3a5a7a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "nettleship-v-weston",
+    name: "Nettleship v Weston",
+    year: 1971,
+    area: "tort",
+    topics: ["breach-of-duty"],
+    facts:
+      "Mrs Weston, a learner driver, was being taught by Mr Nettleship, a family friend. On her third lesson she panicked, mounted the kerb and crashed into a lamp post, breaking his kneecap.",
+    principle:
+      "A learner driver is judged by the objective standard of the reasonably competent qualified driver. The defendant's inexperience or best efforts are no defence — the standard is impersonal and external.",
+    visual: {
+      emoji: "🚙",
+      scene: "An 'L' plate detached on the pavement beside a buckled lamp post",
+      palette: "linear-gradient(135deg,#2a1a1a,#5a3a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "bolton-v-stone",
+    name: "Bolton v Stone",
+    year: 1951,
+    area: "tort",
+    topics: ["breach-of-duty"],
+    facts:
+      "A cricket ball was hit out of a club ground, over a seven-foot fence seventeen feet above the pitch, and struck Miss Stone standing on a quiet residential road. In the club's 90-year history balls had been hit out only about six times; no-one had ever been injured.",
+    principle:
+      "In assessing breach, the magnitude of the risk (likelihood × seriousness) is weighed against the cost and practicability of precautions. Where the risk is small and the precautions would be substantial, a reasonable defendant need not guard against it.",
+    visual: {
+      emoji: "🏏",
+      scene: "A cricket ball arcing over a tall fence toward a tree-lined road",
+      palette: "linear-gradient(135deg,#1c2a1c,#3a5a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "latimer-v-aec",
+    name: "Latimer v AEC",
+    year: 1953,
+    area: "tort",
+    topics: ["breach-of-duty"],
+    facts:
+      "An unprecedented flood left the floor of a factory covered in a mixture of water and oil. Sawdust was spread over most — but not all — of the surface. The claimant slipped on an untreated strip and was injured. He argued the factory should have been closed.",
+    principle:
+      "Precautions must be proportionate to the risk. A reasonable employer takes reasonable practical steps; closing the entire factory was disproportionate to a slipping hazard largely mitigated by sawdust.",
+    visual: {
+      emoji: "🏭",
+      scene: "A factory floor with patches of sawdust covering oil-slicked concrete",
+      palette: "linear-gradient(135deg,#2a2a1a,#5a5a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "barnett-v-chelsea",
+    name: "Barnett v Chelsea and Kensington Hospital Management Committee",
+    year: 1969,
+    area: "tort",
+    topics: ["causation-tort"],
+    facts:
+      "Three night-watchmen presented at hospital A&E complaining of vomiting after drinking tea. The casualty doctor refused to examine them and told them to see their own GPs. One died hours later; the cause was arsenic poisoning.",
+    principle:
+      "Factual causation uses the 'but for' test: would the harm have occurred but for the defendant's breach? Here, even with prompt treatment the man would have died — the breach did not cause the death, and the claim failed.",
+    visual: {
+      emoji: "🏥",
+      scene: "Three empty teacups on a hospital bench beneath a flickering A&E sign",
+      palette: "linear-gradient(135deg,#1a2a2a,#3a5a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "wagon-mound-no-1",
+    name: "Overseas Tankship (UK) v Morts Dock (Wagon Mound No. 1)",
+    year: 1961,
+    area: "tort",
+    topics: ["remoteness"],
+    facts:
+      "Furnace oil leaked from a ship into Sydney Harbour, drifting under a wharf where welding was in progress. Sparks ignited cotton waste floating in the oil, setting the wharf alight. Engineering opinion at the time was that furnace oil on water would not ignite.",
+    principle:
+      "Damage is too remote unless it is of a kind that was reasonably foreseeable. The Re Polemis 'direct consequences' rule is rejected; foreseeability of the type of harm is the test.",
+    visual: {
+      emoji: "🛢️",
+      scene: "An oil slick spreading under a harbour wharf, a welder's silhouette above",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "hughes-v-lord-advocate",
+    name: "Hughes v Lord Advocate",
+    year: 1963,
+    area: "tort",
+    topics: ["remoteness"],
+    facts:
+      "Post Office workers left an open manhole on an Edinburgh street guarded by paraffin warning lamps when they went off duty. Two boys climbed in; one knocked a lamp into the hole. The paraffin vaporised and exploded, badly burning the boy.",
+    principle:
+      "Provided the type of damage (burns) was reasonably foreseeable, it does not matter that the precise manner of its occurrence (vapour explosion rather than spilled paraffin) was unforeseeable. The 'manner' need not be foreseen.",
+    visual: {
+      emoji: "🕳️",
+      scene: "An open manhole flanked by paraffin lamps under a Victorian street lamp",
+      palette: "linear-gradient(135deg,#1a1a1a,#3a3a1a)",
+    },
+    importance: 3,
+  },
 ];
 
 export const CASES_BY_ID: Record<string, LawCase> = Object.fromEntries(

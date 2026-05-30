@@ -1,5 +1,21 @@
 export type LegalArea = "criminal" | "tort" | "contract" | "human-rights";
 
+export type Term = 1 | 2 | 3 | 4;
+
+export const AREA_FOR_TERM: Record<Term, LegalArea> = {
+  1: "criminal",
+  2: "tort",
+  3: "contract",
+  4: "human-rights",
+};
+
+export const TERM_FOR_AREA: Record<LegalArea, Term> = {
+  criminal: 1,
+  tort: 2,
+  contract: 3,
+  "human-rights": 4,
+};
+
 export type CriminalTopic =
   | "actus-reus"
   | "mens-rea"
@@ -10,12 +26,26 @@ export type CriminalTopic =
   | "defences"
   | "attempts";
 
+export type TortTopic =
+  | "duty-of-care"
+  | "breach-of-duty"
+  | "causation-tort"
+  | "remoteness"
+  | "occupiers-liability"
+  | "nuisance"
+  | "rylands-fletcher"
+  | "vicarious-liability"
+  | "tort-defences"
+  | "tort-remedies";
+
+export type CaseTopic = CriminalTopic | TortTopic;
+
 export interface LawCase {
   id: string;
   name: string;
   year: number;
   area: LegalArea;
-  topics: CriminalTopic[];
+  topics: CaseTopic[];
   facts: string;
   principle: string;
   visual: {
@@ -45,7 +75,7 @@ export interface BriefStep {
 export interface Brief {
   id: string;
   title: string;
-  term: 1 | 2 | 3 | 4;
+  term: Term;
   scenario: string;
   scene: { emoji: string; palette: string };
   steps: BriefStep[];
@@ -73,7 +103,7 @@ export interface BossResult {
 export interface Progress {
   cards: Record<string, CardState>;
   completedBriefs: string[];
-  currentTerm: 1 | 2 | 3 | 4;
+  currentTerm: Term;
   totalAnswered: number;
   totalCorrect: number;
   bossResults: Record<string, BossResult>;

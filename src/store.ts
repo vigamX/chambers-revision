@@ -1,4 +1,4 @@
-import type { Progress, CardState } from "./types";
+import type { Progress, CardState, Term } from "./types";
 import { CASES } from "./data/cases";
 import { newCard, review, type Grade } from "./srs";
 
@@ -26,6 +26,7 @@ export function loadProgress(): Progress {
       if (!parsed.cards[c.id]) parsed.cards[c.id] = newCard(c.id);
     }
     if (!parsed.bossResults) parsed.bossResults = {};
+    if (!parsed.currentTerm) parsed.currentTerm = 1;
     return parsed;
   } catch {
     return defaultProgress();
@@ -40,6 +41,10 @@ export function resetProgress(): Progress {
   const fresh = defaultProgress();
   saveProgress(fresh);
   return fresh;
+}
+
+export function setTerm(progress: Progress, term: Term): Progress {
+  return { ...progress, currentTerm: term };
 }
 
 export function applyReview(

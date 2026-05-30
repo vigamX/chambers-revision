@@ -1,4 +1,4 @@
-import type { LawCase, CardState, CriminalTopic } from "./types";
+import type { LawCase, CardState, CaseTopic, LegalArea } from "./types";
 import { CASES } from "./data/cases";
 
 export type RoundType = "name-the-case" | "recall-principle" | "spot-the-topic";
@@ -33,7 +33,7 @@ function pickDistractors<T>(pool: T[], correct: T, n: number, key: (t: T) => str
   return shuffle(filtered).slice(0, n);
 }
 
-const TOPIC_LABEL: Record<CriminalTopic, string> = {
+const TOPIC_LABEL: Record<CaseTopic, string> = {
   "actus-reus": "Actus reus",
   "mens-rea": "Mens rea",
   "causation": "Causation",
@@ -42,15 +42,54 @@ const TOPIC_LABEL: Record<CriminalTopic, string> = {
   "property-offences": "Property offences",
   "defences": "Defences",
   "attempts": "Attempts",
+  "duty-of-care": "Duty of care",
+  "breach-of-duty": "Breach of duty",
+  "causation-tort": "Causation (tort)",
+  "remoteness": "Remoteness",
+  "occupiers-liability": "Occupiers' liability",
+  "nuisance": "Nuisance",
+  "rylands-fletcher": "Rylands v Fletcher",
+  "vicarious-liability": "Vicarious liability",
+  "tort-defences": "Tort defences",
+  "tort-remedies": "Remedies",
 };
 
-export function topicLabel(t: CriminalTopic): string {
+const CRIMINAL_TOPICS: CaseTopic[] = [
+  "actus-reus",
+  "mens-rea",
+  "causation",
+  "non-fatal-offences",
+  "fatal-offences",
+  "property-offences",
+  "defences",
+  "attempts",
+];
+
+const TORT_TOPICS: CaseTopic[] = [
+  "duty-of-care",
+  "breach-of-duty",
+  "causation-tort",
+  "remoteness",
+  "occupiers-liability",
+  "nuisance",
+  "rylands-fletcher",
+  "vicarious-liability",
+  "tort-defences",
+  "tort-remedies",
+];
+
+function topicPoolForArea(area: LegalArea): CaseTopic[] {
+  if (area === "tort") return TORT_TOPICS;
+  return CRIMINAL_TOPICS;
+}
+
+export function topicLabel(t: CaseTopic): string {
   return TOPIC_LABEL[t];
 }
 
-function buildQuestion(target: LawCase, round: RoundType): ClashQuestion {
+function buildQuestion(target: LawCase, round: RoundType, pool: LawCase[]): ClashQuestion {
   if (round === "name-the-case") {
-    const distractors = pickDistractors(CASES, target, 3, (c) => c.id);
+    const distractors = pickDistractors(pool, target, 3, (c) => c.id);
     const options = shuffle([target, ...distractors]);
     return {
       caseId: target.id,
@@ -62,7 +101,7 @@ function buildQuestion(target: LawCase, round: RoundType): ClashQuestion {
   }
 
   if (round === "recall-principle") {
-    const distractors = pickDistractors(CASES, target, 3, (c) => c.id);
+    const distractors = pickDistractors(pool, target, 3, (c) => c.id);
     const options = shuffle([target, ...distractors]);
     return {
       caseId: target.id,
@@ -74,9 +113,8 @@ function buildQuestion(target: LawCase, round: RoundType): ClashQuestion {
   }
 
   const targetTopic = target.topics[0];
-  const otherTopics = (Object.keys(TOPIC_LABEL) as CriminalTopic[]).filter(
-    (t) => t !== targetTopic,
-  );
+  const topicPool = topicPoolForArea(target.area);
+  const otherTopics = topicPool.filter((t) => t !== targetTopic);
   const distractorTopics = shuffle(otherTopics).slice(0, 3);
   const options = shuffle([targetTopic, ...distractorTopics]);
   return {
@@ -90,10 +128,12 @@ function buildQuestion(target: LawCase, round: RoundType): ClashQuestion {
 
 export function buildSession(
   cards: Record<string, CardState>,
+  area: LegalArea,
   size = 10,
 ): ClashSession {
   const now = Date.now();
-  const candidates = CASES.slice().sort((a, b) => {
+  const scoped = CASES.filter((c) => c.area === area);
+  const candidates = scoped.slice().sort((a, b) => {
     const ca = cards[a.id];
     const cb = cards[b.id];
     const aMaster = ca?.mastery ?? 0;
@@ -112,19 +152,25 @@ export function buildSession(
 
   const questions: ClashQuestion[] = chosen.map((c, i) => {
     const round = ROUNDS[i % ROUNDS.length];
-    return buildQuestion(c, round);
+    return buildQuestion(c, round, scoped);
   });
 
   return { questions: shuffle(questions), index: 0, answers: [] };
 }
 
-export function requeue(session: ClashSession, fromIndex: number): ClashSession {
+export function requeue(
+  session: ClashSession,
+  fromIndex: number,
+  area: LegalArea,
+): ClashSession {
   const failed = session.questions[fromIndex];
   if (!failed) return session;
   const next = [...session.questions];
+  const scoped = CASES.filter((c) => c.area === area);
   const requeued = buildQuestion(
     CASES.find((c) => c.id === failed.caseId)!,
     failed.round,
+    scoped,
   );
   next.push(requeued);
   return { ...session, questions: next };
