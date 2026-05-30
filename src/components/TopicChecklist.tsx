@@ -1,6 +1,8 @@
+import { useState } from "react";
 import type { Progress } from "../types";
 import { SYLLABUS } from "../data/syllabus";
 import { CASES_BY_ID } from "../data/cases";
+import { CaseDetails } from "./CaseDetails";
 
 interface Props {
   progress: Progress;
@@ -10,6 +12,8 @@ interface Props {
 const MASTERY_THRESHOLD = 4;
 
 export function TopicChecklist({ progress, onBack }: Props) {
+  const [detailsId, setDetailsId] = useState<string | null>(null);
+
   const sectionStats = SYLLABUS.map((section) => {
     const topicStats = section.topics.map((topic) => {
       const total = topic.caseIds.length;
@@ -39,7 +43,9 @@ export function TopicChecklist({ progress, onBack }: Props) {
 
       <h2>Syllabus checklist</h2>
       <p style={{ color: "var(--muted)" }}>
-        OCR H418 Component 2 — Criminal Law. A case is "mastered" once its SRS level reaches {MASTERY_THRESHOLD}/5.
+        OCR H418 Component 2 — Criminal Law. A case is "mastered" once its SRS
+        level reaches {MASTERY_THRESHOLD}/5. Tap any case name to read its
+        facts and point of law.
       </p>
 
       <div className="syllabus-overall">
@@ -89,14 +95,16 @@ export function TopicChecklist({ progress, onBack }: Props) {
                         const m = progress.cards[id]?.mastery ?? 0;
                         const caseDone = m >= MASTERY_THRESHOLD;
                         return (
-                          <span
+                          <button
                             key={id}
+                            type="button"
                             className={`case-chip ${caseDone ? "done" : ""}`}
-                            title={`${c.name} — mastery ${m}/5`}
+                            title={`${c.name} (${c.year}) — mastery ${m}/5 · tap for facts`}
+                            onClick={() => setDetailsId(id)}
                           >
                             {c.name}
                             <span className="case-chip-pip" data-mastery={m} />
-                          </span>
+                          </button>
                         );
                       })}
                     </div>
@@ -107,6 +115,11 @@ export function TopicChecklist({ progress, onBack }: Props) {
           </section>
         );
       })}
+
+      <CaseDetails
+        c={detailsId ? CASES_BY_ID[detailsId] ?? null : null}
+        onClose={() => setDetailsId(null)}
+      />
     </div>
   );
 }
