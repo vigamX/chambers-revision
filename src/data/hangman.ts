@@ -72,6 +72,16 @@ export const HANGMAN_PUZZLES: HangmanPuzzle[] = [
   { id: "h-tomlinson", answer: "TOMLINSON", hint: "2003 — diver in shallow lake; no duty under 1984 Act for obvious self-inflicted risks.", category: "case", area: "tort" },
   { id: "h-ratcliff", answer: "RATCLIFF", hint: "1999 — student dived into shallow college pool at night; trespasser, obvious risk.", category: "case", area: "tort" },
   { id: "h-keown", answer: "KEOWN", hint: "2006 — boy climbed hospital fire escape; injury from trespasser's own activity, not premises.", category: "case", area: "tort" },
+  { id: "h-sturges", answer: "STURGES", hint: "1879 — doctor's consulting room beside a sweet factory; locality + coming-to-nuisance rule.", category: "case", area: "tort" },
+  { id: "h-miller-jackson", answer: "MILLER", hint: "1977 — village cricket club vs new housing estate; nuisance but no injunction.", category: "case", area: "tort" },
+  { id: "h-coventry-lawrence", answer: "COVENTRY", hint: "2014 — speedway noise; modern Supreme Court restatement of nuisance, planning permission & remedies.", category: "case", area: "tort" },
+  { id: "h-christie", answer: "CHRISTIE", hint: "1893 — neighbour banged trays through party wall to spite music teacher; malice in nuisance.", category: "case", area: "tort" },
+  { id: "h-robinson-kilvert", answer: "ROBINSON", hint: "1889 — heat damaged unusually sensitive brown paper; abnormal sensitivity defence.", category: "case", area: "tort" },
+  { id: "h-network-rail", answer: "NETWORK RAIL", hint: "2004 — track signals interfered with recording studio guitars; modern sensitivity case.", category: "case", area: "tort" },
+  { id: "h-hunter-canary", answer: "HUNTER", hint: "1997 — Canary Wharf blocked TV reception; nuisance standing requires proprietary interest.", category: "case", area: "tort" },
+  { id: "h-rylands", answer: "RYLANDS", hint: "1868 — reservoir flooded neighbour's mine; founding case of strict liability for escapes.", category: "case", area: "tort" },
+  { id: "h-cambridge-water", answer: "CAMBRIDGE WATER", hint: "1994 — tannery solvent polluted aquifer 1.3 miles away; foreseeability ingredient added to Rylands.", category: "case", area: "tort" },
+  { id: "h-transco", answer: "TRANSCO", hint: "2003 — burst council water main exposed gas pipe; modern restatement of Rylands non-natural use.", category: "case", area: "tort" },
 
   // Term 2 — Tort · legal terms
   { id: "h-duty-of-care", answer: "DUTY OF CARE", hint: "The first ingredient of negligence; established by neighbour principle or Caparo.", category: "term", area: "tort" },
@@ -87,6 +97,10 @@ export const HANGMAN_PUZZLES: HangmanPuzzle[] = [
   { id: "h-occupier", answer: "OCCUPIER", hint: "Person with sufficient control of premises under Wheat v Lacon; key term in 1957 & 1984 Acts.", category: "term", area: "tort" },
   { id: "h-trespasser", answer: "TRESPASSER", hint: "Person on premises without permission; lesser duty under Occupiers' Liability Act 1984.", category: "term", area: "tort" },
   { id: "h-allurement", answer: "ALLUREMENT", hint: "Object attractive to children concealing a hidden danger; raises the standard of care.", category: "term", area: "tort" },
+  { id: "h-private-nuisance", answer: "PRIVATE NUISANCE", hint: "Unlawful interference with a person's use or enjoyment of their land.", category: "term", area: "tort" },
+  { id: "h-injunction", answer: "INJUNCTION", hint: "Equitable remedy ordering someone to stop (or do) something; central remedy in nuisance.", category: "term", area: "tort" },
+  { id: "h-non-natural-use", answer: "NON NATURAL USE", hint: "Rylands v Fletcher ingredient: extraordinary and unusual use creating exceptional risk.", category: "term", area: "tort" },
+  { id: "h-strict-liability", answer: "STRICT LIABILITY", hint: "Liability without proof of fault — applies to Rylands v Fletcher escapes.", category: "term", area: "tort" },
 
   // Shared — across all terms
   { id: "h-precedent", answer: "PRECEDENT", hint: "Doctrine that decisions of higher courts bind lower courts on the same point.", category: "term", area: "shared" },

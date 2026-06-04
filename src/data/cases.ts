@@ -2566,6 +2566,183 @@ export const CASES: LawCase[] = [
     },
     importance: 2,
   },
+
+  // ─────────────────────────────────────────────────────────────────────
+  // Chapter 23 — Torts connected to land: private nuisance & Rylands v Fletcher
+  // All citations verified against Wortley/Price/Briggs OCR A Level Law
+  // 2nd ed (Hodder, 2021), Ch 23 pp. 258–272.
+  // ─────────────────────────────────────────────────────────────────────
+
+  {
+    id: "sturges-v-bridgman",
+    name: "Sturges v Bridgman",
+    year: 1879,
+    area: "tort",
+    topics: ["nuisance-locality"],
+    facts:
+      "A confectioner had used noisy mortars and pestles in his Wigmore Street kitchen for over 20 years without complaint. A doctor then built a consulting room on the boundary of his own garden and only then began to hear the vibrations. He sued in nuisance.",
+    principle:
+      "Locality matters: 'what would be a nuisance in Belgrave Square would not necessarily be so in Bermondsey'. 'Coming to the nuisance' is no defence; the prescription period only starts running once the activity becomes an actionable nuisance to the claimant.",
+    visual: {
+      emoji: "⚕️",
+      scene: "A Victorian doctor's consulting-room window beside a smoking confectioner's kitchen",
+      palette: "linear-gradient(135deg,#2a1a3a,#5a3a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "miller-v-jackson",
+    name: "Miller v Jackson",
+    year: 1977,
+    area: "tort",
+    topics: ["nuisance-locality"],
+    facts:
+      "A village cricket club had played on the same ground since 1905. A new housing estate was built on adjoining land in 1972; cricket balls regularly landed in the Millers' garden. They sued in nuisance and negligence, seeking an injunction.",
+    principle:
+      "Cricket was held to be a nuisance, but the Court of Appeal refused an injunction and awarded damages only — the social utility of the activity and the fact that the claimants had 'come to the nuisance' weighed against injunctive relief.",
+    visual: {
+      emoji: "🏏",
+      scene: "A village cricket pavilion beside a row of new-build houses with cricket ball mid-air",
+      palette: "linear-gradient(135deg,#1a3a1a,#4a5a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "coventry-v-lawrence",
+    name: "Coventry v Lawrence",
+    year: 2014,
+    area: "tort",
+    topics: ["nuisance-locality"],
+    facts:
+      "The claimants bought a bungalow 850m from a speedway and motocross stadium that had operated since 1975 with planning permission. They complained of noise. The Supreme Court reviewed the law on locality, planning permission and remedies.",
+    principle:
+      "Planning permission does not authorise a nuisance, though it may be evidence of the character of the locality. 'Coming to the nuisance' is no defence. Courts retain discretion to award damages in lieu of an injunction; each remedy is fact-sensitive.",
+    visual: {
+      emoji: "🏁",
+      scene: "A speedway oval with floodlights and a small bungalow silhouette in the distance",
+      palette: "linear-gradient(135deg,#1a1a3a,#4a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "christie-v-davey",
+    name: "Christie v Davey",
+    year: 1893,
+    area: "tort",
+    topics: ["nuisance-malice"],
+    facts:
+      "Two semi-detached neighbours fell out. The Christies gave music lessons; the Daveys, in retaliation, deliberately banged on the party wall, blew whistles and beat trays during the lessons to disrupt them.",
+    principle:
+      "Malice is a powerful factor in establishing a nuisance. An act done deliberately to annoy a neighbour — that would not otherwise be unreasonable — becomes an actionable nuisance because of the malicious intent behind it.",
+    visual: {
+      emoji: "🥁",
+      scene: "A party wall between two terraced houses, music notes one side, banging trays the other",
+      palette: "linear-gradient(135deg,#3a1a1a,#5a3a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "robinson-v-kilvert",
+    name: "Robinson v Kilvert",
+    year: 1889,
+    area: "tort",
+    topics: ["nuisance-sensitivity"],
+    facts:
+      "The defendant heated the cellar of a building to manufacture paper boxes. The heat rose into the floor above where the claimant stored unusually heat-sensitive brown paper, which was damaged. Ordinary paper would have been unaffected.",
+    principle:
+      "There is no liability in nuisance if the damage is caused only because of the claimant's abnormally sensitive use of land. The interference must be such as would affect an ordinary user.",
+    visual: {
+      emoji: "📄",
+      scene: "Warehouse floors stacked with paper; heat lines rising from cellar below",
+      palette: "linear-gradient(135deg,#2a1a1a,#5a3a1a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "network-rail-v-morris",
+    name: "Network Rail Infrastructure v Morris",
+    year: 2004,
+    area: "tort",
+    topics: ["nuisance-sensitivity"],
+    facts:
+      "Morris ran a recording studio near the London-to-Brighton railway. Network Rail installed new signalling track circuits 80 metres away; the electromagnetic emissions interfered with amplification of electric guitars. Morris sued in nuisance.",
+    principle:
+      "The Robinson v Kilvert sensitivity principle survives as part of the modern foreseeability test: it was not reasonably foreseeable that signalling equipment would interfere with electric guitars 80m away — a use abnormally sensitive to electromagnetic fields.",
+    visual: {
+      emoji: "🎸",
+      scene: "A trackside railway signal beside a recording studio window with a guitar silhouette",
+      palette: "linear-gradient(135deg,#1a2a2a,#3a4a4a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "hunter-v-canary-wharf",
+    name: "Hunter v Canary Wharf",
+    year: 1997,
+    area: "tort",
+    topics: ["nuisance-standing"],
+    facts:
+      "Hundreds of residents in East London complained that the newly-built 250m Canary Wharf tower blocked their television reception. The action included family members and lodgers without any property right in the affected dwellings.",
+    principle:
+      "Only a person with a proprietary or possessory interest in the land affected (owner, tenant, exclusive licensee) can sue in private nuisance. Family members, lodgers and other occupiers without such an interest have no standing.",
+    visual: {
+      emoji: "📺",
+      scene: "A row of tower-block windows with TV silhouettes and a giant skyscraper looming behind",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a3a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "rylands-v-fletcher",
+    name: "Rylands v Fletcher",
+    year: 1868,
+    area: "tort",
+    topics: ["rylands"],
+    facts:
+      "Rylands, a mill owner, hired contractors to build a reservoir on his land. They negligently failed to seal disused mine shafts beneath the site. When filled, the reservoir burst through the shafts and flooded Fletcher's adjoining colliery.",
+    principle:
+      "Strict liability arises where a person, for their own purposes, brings onto their land and keeps there anything likely to do mischief if it escapes, makes a 'non-natural' use of the land, and the thing escapes and causes foreseeable damage.",
+    visual: {
+      emoji: "💧",
+      scene: "A Victorian mill reservoir bursting through the ground into mine shafts below",
+      palette: "linear-gradient(135deg,#1a2a3a,#3a4a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "cambridge-water-v-ecl",
+    name: "Cambridge Water Co v Eastern Counties Leather",
+    year: 1994,
+    area: "tort",
+    topics: ["rylands"],
+    facts:
+      "Eastern Counties Leather had for decades used a chlorinated solvent at its Sawston tannery. Small spillages over the years percolated through the floor and contaminated the chalk aquifer 1.3 miles away, polluting Cambridge Water's borehole.",
+    principle:
+      "The damage suffered must be a reasonably foreseeable consequence of the escape; foreseeability of the type of damage is now an essential ingredient of liability under Rylands v Fletcher, aligning the rule with the law of nuisance.",
+    visual: {
+      emoji: "🧪",
+      scene: "A tannery vat with droplets seeping down through layers of chalk to a borehole",
+      palette: "linear-gradient(135deg,#1a3a2a,#3a5a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "transco-v-stockport",
+    name: "Transco plc v Stockport MBC",
+    year: 2003,
+    area: "tort",
+    topics: ["rylands"],
+    facts:
+      "A high-pressure water pipe serving a Council tower block leaked undetected. The water saturated an embankment which collapsed, exposing and threatening a high-pressure gas main owned by Transco. Transco recovered the cost of repair under Rylands.",
+    principle:
+      "Rylands v Fletcher is a sub-tort of private nuisance, confined to escapes causing damage to land or proprietary interests. 'Non-natural use' requires an extraordinary and unusual use creating exceptional risk; routine piped water does not qualify, but the test is restated in those terms.",
+    visual: {
+      emoji: "🚰",
+      scene: "A cracked municipal water main beneath a tower block with a gas pipe exposed in eroded soil",
+      palette: "linear-gradient(135deg,#2a2a3a,#4a4a5a)",
+    },
+    importance: 3,
+  },
 ];
 
 export const CASES_BY_ID: Record<string, LawCase> = Object.fromEntries(

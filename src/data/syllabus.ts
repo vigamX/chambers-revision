@@ -417,6 +417,38 @@ export const TORT_SYLLABUS: SyllabusSection[] = [
       },
     ],
   },
+  {
+    id: "tort-land",
+    label: "Torts connected to land",
+    chapter: 23,
+    topics: [
+      {
+        id: "nuisance-locality",
+        label: "Private nuisance: locality & 'coming to the nuisance'",
+        caseIds: ["sturges-v-bridgman", "miller-v-jackson", "coventry-v-lawrence"],
+      },
+      {
+        id: "nuisance-malice",
+        label: "Private nuisance: malice",
+        caseIds: ["christie-v-davey"],
+      },
+      {
+        id: "nuisance-sensitivity",
+        label: "Private nuisance: abnormal sensitivity",
+        caseIds: ["robinson-v-kilvert", "network-rail-v-morris"],
+      },
+      {
+        id: "nuisance-standing",
+        label: "Private nuisance: standing (proprietary interest)",
+        caseIds: ["hunter-v-canary-wharf"],
+      },
+      {
+        id: "rylands",
+        label: "Rylands v Fletcher (strict liability for escapes)",
+        caseIds: ["rylands-v-fletcher", "cambridge-water-v-ecl", "transco-v-stockport"],
+      },
+    ],
+  },
 ];
 
 const TORT_CHAPTER_BY_CASE: Record<string, number> = (() => {

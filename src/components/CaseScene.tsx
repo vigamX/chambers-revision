@@ -3926,6 +3926,281 @@ export const CaseScene: React.FC<CaseSceneProps> = ({ caseId, className }) => {
           {vignetteLayer}
         </svg>
       );
+    case 'sturges-v-bridgman':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="consulting-room-window">
+            <rect x="20" y="20" width="50" height="80" fill="rgba(255,255,255,0.05)" />
+            <path d="M 30 20 L 30 100 M 45 20 L 45 100 M 60 20 L 60 100" stroke="rgba(0,0,0,0.5)" strokeWidth="2" />
+            <path d="M 20 60 L 70 60 M 20 40 L 70 40 M 20 80 L 70 80" stroke="rgba(0,0,0,0.5)" strokeWidth="2" />
+            <path d="M 40 40 L 40 80" stroke="#000" strokeWidth="2" />
+            <circle cx="40" cy="35" r="4" fill="#000" />
+            <path d="M 35 75 Q 40 85 45 75" stroke="#000" strokeWidth="2" fill="none" />
+            <circle cx="35" cy="73" r="2" fill="#000" />
+            <circle cx="45" cy="73" r="2" fill="#000" />
+          </g>
+          <g data-name="confectioners-kitchen">
+            <rect x="90" y="40" width="90" height="80" fill="rgba(0,0,0,0.7)" />
+            <rect x="130" y="10" width="10" height="30" fill="rgba(0,0,0,0.8)" />
+            <path d="M 130 10 L 140 10" stroke="#e8b34a" strokeWidth="2" />
+            <path d="M 135 5 Q 130 -5 135 -15" stroke="rgba(255,255,255,0.4)" strokeWidth="2" fill="none" />
+            <path d="M 140 0 Q 145 -10 140 -20" stroke="rgba(255,255,255,0.3)" strokeWidth="2" fill="none" />
+            <path d="M 110 80 L 140 80 L 135 100 L 115 100 Z" fill="rgba(0,0,0,0.9)" />
+            <path d="M 130 60 L 125 90" stroke="rgba(0,0,0,0.9)" strokeWidth="4" />
+            <path d="M 85 50 Q 80 55 85 60" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" fill="none" />
+            <path d="M 80 65 Q 75 70 80 75" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" fill="none" />
+            <path d="M 85 80 Q 80 85 85 90" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" fill="none" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'miller-v-jackson':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="cricket-pavilion">
+            <polygon points="10,100 10,70 40,55 70,70 70,100" fill="rgba(0,0,0,0.8)" />
+            <rect x="25" y="75" width="30" height="25" fill="rgba(255,255,255,0.1)" />
+            <path d="M 40 55 L 40 35" stroke="rgba(0,0,0,0.8)" strokeWidth="2" />
+            <polygon points="40,35 50,40 40,45" fill="#e8b34a" />
+          </g>
+          <g data-name="new-build-houses">
+            <polygon points="130,100 130,60 160,40 190,60 190,100" fill="rgba(0,0,0,0.7)" />
+            <rect x="145" y="65" width="10" height="10" fill="rgba(255,255,255,0.1)" />
+            <rect x="165" y="65" width="10" height="10" fill="rgba(255,255,255,0.1)" />
+            <rect x="155" y="80" width="10" height="20" fill="rgba(0,0,0,0.9)" />
+          </g>
+          <g data-name="cricket-ball">
+            <path d="M 60 70 Q 100 20 140 60" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" strokeDasharray="3 3" fill="none" />
+            <circle cx="100" cy="35" r="3" fill="#e8b34a" />
+            <path d="M 95 38 L 92 41" stroke="#e8b34a" strokeWidth="1" />
+            <path d="M 94 34 L 90 35" stroke="#e8b34a" strokeWidth="1" />
+          </g>
+          <g data-name="ground">
+            <path d="M 0 100 L 200 100" stroke="rgba(0,0,0,0.8)" strokeWidth="4" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'coventry-v-lawrence':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="speedway-oval">
+            <ellipse cx="70" cy="80" rx="50" ry="20" fill="none" stroke="rgba(0,0,0,0.7)" strokeWidth="4" />
+            <ellipse cx="70" cy="80" rx="40" ry="12" fill="none" stroke="rgba(0,0,0,0.5)" strokeWidth="2" />
+            <path d="M 30 70 L 30 30" stroke="rgba(0,0,0,0.8)" strokeWidth="2" />
+            <polygon points="25,30 35,30 30,25" fill="#e8b34a" />
+            <path d="M 25 30 L 20 40 L 40 40 L 35 30 Z" fill="rgba(255,255,255,0.2)" />
+            <path d="M 110 70 L 110 40" stroke="rgba(0,0,0,0.8)" strokeWidth="2" />
+            <polygon points="105,40 115,40 110,35" fill="#e8b34a" />
+            <path d="M 105 40 L 100 50 L 120 50 L 115 40 Z" fill="rgba(255,255,255,0.2)" />
+            <path d="M 50 95 L 80 95" stroke="rgba(255,255,255,0.6)" strokeWidth="2" strokeDasharray="4 2" />
+            <circle cx="90" cy="95" r="4" fill="rgba(0,0,0,0.9)" />
+            <circle cx="100" cy="95" r="4" fill="rgba(0,0,0,0.9)" />
+            <path d="M 90 95 L 100 90 L 95 85 Z" fill="rgba(0,0,0,0.9)" />
+          </g>
+          <g data-name="distant-bungalow">
+            <polygon points="150,80 150,70 165,60 180,70 180,80" fill="rgba(0,0,0,0.8)" />
+            <rect x="160" y="72" width="10" height="8" fill="rgba(0,0,0,0.9)" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'christie-v-davey':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="party-wall">
+            <rect x="95" y="10" width="10" height="100" fill="rgba(0,0,0,0.8)" />
+            <path d="M 95 30 L 105 30 M 95 50 L 105 50 M 95 70 L 105 70 M 95 90 L 105 90" stroke="rgba(0,0,0,0.9)" strokeWidth="1" />
+          </g>
+          <g data-name="musical-side">
+            <rect x="20" y="80" width="60" height="15" fill="rgba(0,0,0,0.7)" />
+            <path d="M 30 80 L 30 88 M 40 80 L 40 88 M 50 80 L 50 88 M 60 80 L 60 88 M 70 80 L 70 88" stroke="rgba(0,0,0,0.9)" strokeWidth="2" />
+            <path d="M 40 60 L 40 40 L 50 45 L 50 42 L 40 37" stroke="rgba(255,255,255,0.6)" strokeWidth="2" fill="none" />
+            <circle cx="38" cy="60" r="3" fill="rgba(255,255,255,0.6)" />
+            <circle cx="48" cy="62" r="3" fill="rgba(255,255,255,0.6)" />
+            <path d="M 60 50 L 60 30" stroke="rgba(255,255,255,0.6)" strokeWidth="2" />
+            <circle cx="58" cy="50" r="3" fill="rgba(255,255,255,0.6)" />
+          </g>
+          <g data-name="banging-side">
+            <path d="M 170 50 C 160 50 150 40 145 45 C 140 50 145 60 150 65 L 170 70 Z" fill="rgba(0,0,0,0.9)" />
+            <rect x="170" y="45" width="20" height="25" fill="rgba(0,0,0,0.9)" />
+            <path d="M 120 70 L 160 30" stroke="rgba(0,0,0,0.8)" strokeWidth="4" />
+            <path d="M 115 50 Q 110 60 115 70" stroke="#e8b34a" strokeWidth="2" fill="none" />
+            <path d="M 125 40 Q 115 55 125 70" stroke="#e8b34a" strokeWidth="2" fill="none" />
+            <path d="M 135 30 Q 120 50 135 70" stroke="#e8b34a" strokeWidth="2" fill="none" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'robinson-v-kilvert':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="warehouse-structure">
+            <rect x="30" y="10" width="140" height="100" fill="none" stroke="rgba(0,0,0,0.8)" strokeWidth="4" />
+            <path d="M 30 60 L 170 60" stroke="rgba(0,0,0,0.8)" strokeWidth="4" />
+            <path d="M 100 10 L 100 110" stroke="rgba(0,0,0,0.4)" strokeWidth="2" strokeDasharray="5 5" />
+          </g>
+          <g data-name="upper-floor">
+            <rect x="40" y="40" width="40" height="20" fill="rgba(255,255,255,0.4)" />
+            <path d="M 40 45 L 80 45 M 40 50 L 80 50 M 40 55 L 80 55" stroke="rgba(0,0,0,0.5)" strokeWidth="1" />
+            <circle cx="120" cy="50" r="10" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2" />
+            <circle cx="120" cy="50" r="5" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1" />
+            <path d="M 130 50 L 160 50" stroke="rgba(255,255,255,0.5)" strokeWidth="2" />
+            <path d="M 130 60 L 160 60" stroke="rgba(255,255,255,0.5)" strokeWidth="2" />
+            <circle cx="140" cy="40" r="8" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="2" />
+          </g>
+          <g data-name="lower-floor">
+            <rect x="80" y="80" width="40" height="30" fill="rgba(0,0,0,0.9)" />
+            <rect x="90" y="90" width="20" height="10" fill="#e8b34a" />
+            <path d="M 100 80 L 100 60" stroke="rgba(0,0,0,0.9)" strokeWidth="6" />
+            <path d="M 85 75 Q 80 70 85 65" stroke="#e8b34a" strokeWidth="1.5" fill="none" />
+            <path d="M 90 70 Q 85 65 90 60" stroke="#e8b34a" strokeWidth="1.5" fill="none" />
+            <path d="M 115 75 Q 120 70 115 65" stroke="#e8b34a" strokeWidth="1.5" fill="none" />
+            <path d="M 110 70 Q 115 65 110 60" stroke="#e8b34a" strokeWidth="1.5" fill="none" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'network-rail-v-morris':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="railway-signal">
+            <rect x="20" y="20" width="20" height="90" fill="rgba(0,0,0,0.8)" />
+            <rect x="15" y="25" width="30" height="60" fill="rgba(0,0,0,0.9)" rx="5" />
+            <circle cx="30" cy="35" r="6" fill="#e8b34a" />
+            <circle cx="30" cy="55" r="6" fill="rgba(255,255,255,0.2)" />
+            <circle cx="30" cy="75" r="6" fill="rgba(255,255,255,0.2)" />
+          </g>
+          <g data-name="recording-studio">
+            <rect x="120" y="20" width="60" height="90" fill="rgba(255,255,255,0.05)" stroke="rgba(0,0,0,0.8)" strokeWidth="4" />
+            <rect x="125" y="25" width="50" height="80" fill="rgba(255,255,255,0.1)" />
+            <ellipse cx="150" cy="65" rx="10" ry="15" fill="rgba(0,0,0,0.8)" />
+            <ellipse cx="150" cy="80" rx="14" ry="18" fill="rgba(0,0,0,0.8)" />
+            <path d="M 148 25 L 152 25 L 152 55 L 148 55 Z" fill="rgba(0,0,0,0.8)" />
+            <path d="M 130 50 L 170 50 M 130 55 L 170 55 M 130 60 L 170 60" stroke="rgba(0,0,0,0.4)" strokeWidth="1" />
+          </g>
+          <g data-name="interference">
+            <path d="M 50 55 L 60 30 L 75 70 L 90 40 L 105 65 L 115 55" stroke="#e8b34a" strokeWidth="2" fill="none" />
+            <path d="M 50 45 L 65 20 L 80 60 L 95 30 L 110 55 L 115 45" stroke="rgba(255,255,255,0.5)" strokeWidth="1" fill="none" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'hunter-v-canary-wharf':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="canary-wharf-tower">
+            <polygon points="120,10 180,10 180,120 120,120" fill="rgba(0,0,0,0.9)" />
+            <polygon points="120,10 150,-10 180,10" fill="rgba(0,0,0,0.9)" />
+            <path d="M 130 10 L 130 120 M 140 10 L 140 120 M 150 10 L 150 120 M 160 10 L 160 120 M 170 10 L 170 120" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+            <path d="M 120 20 L 180 20 M 120 40 L 180 40 M 120 60 L 180 60 M 120 80 L 180 80 M 120 100 L 180 100" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+          </g>
+          <g data-name="apartment-windows">
+            <rect x="20" y="40" width="70" height="80" fill="rgba(0,0,0,0.7)" />
+            <rect x="25" y="45" width="25" height="30" fill="rgba(255,255,255,0.1)" />
+            <rect x="60" y="45" width="25" height="30" fill="rgba(255,255,255,0.1)" />
+            <rect x="25" y="85" width="25" height="30" fill="rgba(255,255,255,0.1)" />
+            <rect x="60" y="85" width="25" height="30" fill="rgba(255,255,255,0.1)" />
+            <rect x="65" y="95" width="15" height="10" fill="rgba(255,255,255,0.3)" />
+            <path d="M 65 95 L 80 105 M 65 100 L 80 100 M 65 105 L 80 95" stroke="rgba(0,0,0,0.5)" strokeWidth="0.5" />
+            <path d="M 110 50 L 95 60 L 105 70" stroke="#e8b34a" strokeWidth="1.5" fill="none" />
+            <path d="M 105 60 L 95 65 L 100 70" stroke="rgba(255,255,255,0.5)" strokeWidth="1" fill="none" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'rylands-v-fletcher':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="landscape">
+            <path d="M 0 50 Q 50 50 80 40 Q 120 30 160 50 Q 180 60 200 60 L 200 120 L 0 120 Z" fill="rgba(0,0,0,0.7)" />
+          </g>
+          <g data-name="reservoir">
+            <rect x="60" y="20" width="80" height="20" fill="rgba(255,255,255,0.1)" />
+            <path d="M 60 20 L 60 40 M 140 20 L 140 35" stroke="rgba(0,0,0,0.9)" strokeWidth="4" />
+            <path d="M 140 35 L 145 38 L 138 42 L 142 45" stroke="rgba(0,0,0,0.9)" strokeWidth="2" fill="none" />
+            <path d="M 140 35 Q 160 35 160 60 Q 160 80 170 90" stroke="rgba(255,255,255,0.6)" strokeWidth="3" fill="none" />
+            <path d="M 142 38 Q 158 38 158 60 Q 158 80 166 90" stroke="#e8b34a" strokeWidth="2" fill="none" />
+          </g>
+          <g data-name="victorian-mill">
+            <rect x="20" y="10" width="30" height="40" fill="rgba(0,0,0,0.8)" />
+            <polygon points="15,10 35,-5 55,10" fill="rgba(0,0,0,0.8)" />
+            <rect x="40" y="-10" width="6" height="30" fill="rgba(0,0,0,0.9)" />
+            <path d="M 43 -10 Q 50 -20 60 -15" stroke="rgba(255,255,255,0.3)" strokeWidth="2" fill="none" />
+          </g>
+          <g data-name="mine-shaft">
+            <rect x="150" y="80" width="30" height="40" fill="rgba(0,0,0,0.9)" />
+            <path d="M 150 80 L 180 80 L 180 90 L 150 90 Z" fill="rgba(255,255,255,0.1)" />
+            <path d="M 155 90 L 155 120 M 175 90 L 175 120" stroke="rgba(0,0,0,0.5)" strokeWidth="2" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'cambridge-water-v-ecl':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="tannery-vat">
+            <rect x="40" y="0" width="40" height="30" fill="rgba(0,0,0,0.8)" />
+            <path d="M 35 0 L 85 0" stroke="rgba(0,0,0,0.9)" strokeWidth="4" />
+            <path d="M 40 30 L 60 40 L 80 30" fill="rgba(0,0,0,0.8)" />
+            <circle cx="60" cy="45" r="3" fill="#e8b34a" />
+            <circle cx="60" cy="55" r="2.5" fill="#e8b34a" />
+            <circle cx="60" cy="65" r="2" fill="#e8b34a" />
+            <path d="M 60 70 L 60 100" stroke="#e8b34a" strokeWidth="1" strokeDasharray="2 4" />
+          </g>
+          <g data-name="chalk-strata">
+            <path d="M 0 35 Q 100 45 200 35 L 200 65 Q 100 75 0 65 Z" fill="rgba(255,255,255,0.05)" />
+            <path d="M 0 65 Q 100 75 200 65 L 200 95 Q 100 105 0 95 Z" fill="rgba(255,255,255,0.1)" />
+            <path d="M 0 95 Q 100 105 200 95 L 200 120 L 0 120 Z" fill="rgba(255,255,255,0.15)" />
+            <path d="M 60 45 Q 65 55 55 65" stroke="rgba(0,0,0,0.5)" strokeWidth="1.5" fill="none" />
+            <path d="M 55 65 Q 45 75 65 85" stroke="rgba(0,0,0,0.5)" strokeWidth="1.5" fill="none" />
+            <path d="M 65 85 Q 75 95 60 105" stroke="rgba(0,0,0,0.5)" strokeWidth="1.5" fill="none" />
+          </g>
+          <g data-name="borehole">
+            <rect x="140" y="20" width="10" height="100" fill="rgba(0,0,0,0.7)" />
+            <rect x="130" y="10" width="30" height="10" fill="rgba(0,0,0,0.9)" />
+            <path d="M 145 100 Q 100 110 60 105" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeDasharray="3 3" fill="none" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'transco-v-stockport':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="ground-cross-section">
+            <rect x="0" y="50" width="200" height="70" fill="rgba(0,0,0,0.7)" />
+            <rect x="120" y="10" width="40" height="40" fill="rgba(0,0,0,0.8)" />
+            <rect x="125" y="15" width="8" height="8" fill="rgba(255,255,255,0.1)" />
+            <rect x="145" y="15" width="8" height="8" fill="rgba(255,255,255,0.1)" />
+            <rect x="125" y="30" width="8" height="8" fill="rgba(255,255,255,0.1)" />
+            <rect x="145" y="30" width="8" height="8" fill="rgba(255,255,255,0.1)" />
+          </g>
+          <g data-name="eroded-embankment">
+            <path d="M 20 50 Q 50 60 70 80 Q 50 100 20 120 L 0 120 L 0 50 Z" fill="rgba(0,0,0,0.9)" />
+            <path d="M 20 50 L 50 60 L 70 80 L 50 100 L 20 120" stroke="rgba(255,255,255,0.2)" strokeWidth="2" fill="none" />
+          </g>
+          <g data-name="pipes">
+            <rect x="0" y="70" width="80" height="15" fill="rgba(255,255,255,0.2)" />
+            <path d="M 30 70 L 35 75 L 30 80 L 35 85" stroke="rgba(0,0,0,0.9)" strokeWidth="2" fill="none" />
+            <path d="M 35 75 Q 50 60 60 90" stroke="rgba(255,255,255,0.5)" strokeWidth="2" fill="none" />
+            <path d="M 35 80 Q 40 90 50 110" stroke="rgba(255,255,255,0.5)" strokeWidth="2" fill="none" />
+            <rect x="0" y="95" width="60" height="8" fill="#e8b34a" />
+            <path d="M 0 95 L 60 95" stroke="rgba(0,0,0,0.5)" strokeWidth="1" />
+            <path d="M 0 103 L 60 103" stroke="rgba(0,0,0,0.5)" strokeWidth="1" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
     default:
       return (
         <svg {...commonProps}>
