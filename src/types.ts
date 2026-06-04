@@ -40,6 +40,9 @@ export type TortTopic =
   | "nuisance"
   | "rylands-fletcher"
   | "vicarious-liability"
+  | "vicarious-status"
+  | "vicarious-course"
+  | "vicarious-connection"
   | "tort-defences"
   | "tort-remedies";
 

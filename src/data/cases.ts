@@ -2743,6 +2743,182 @@ export const CASES: LawCase[] = [
     },
     importance: 3,
   },
+
+  // ─────────────────────────────────────────────────────────────────────
+  // Chapter 24 — Vicarious liability
+  // Wortley/Price/Briggs OCR A Level Law 2nd ed (Hodder, 2021) pp. 272–280.
+  // ─────────────────────────────────────────────────────────────────────
+
+  {
+    id: "carmichael-v-national-power",
+    name: "Carmichael v National Power",
+    year: 1999,
+    area: "tort",
+    topics: ["vicarious-status"],
+    facts:
+      "Tour guides at a power station worked 'on a casual as required basis'. They were free to accept or refuse work; the employer was not bound to offer it. They claimed employee status to obtain written terms.",
+    principle:
+      "Mutuality of obligation is a necessary ingredient of a contract of employment. Without an obligation on the employer to provide work and on the worker to accept it, there is no employment relationship — and therefore no vicarious liability.",
+    visual: {
+      emoji: "🏭",
+      scene: "Cooling-tower silhouette with a clipboard and a question mark over a roster of names",
+      palette: "linear-gradient(135deg,#2a2a3a,#4a4a5a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "ferguson-v-dawson",
+    name: "Ferguson v Dawson",
+    year: 1976,
+    area: "tort",
+    topics: ["vicarious-status"],
+    facts:
+      "A builder labelled his workers 'self-employed labour only' subcontractors. Ferguson fell from a roof. The label was treated as decisive by the employer; in substance he worked exclusively for Dawson, used their tools and took their orders.",
+    principle:
+      "The multiple / economic-reality test looks past the label to the substance: control, integration, who provides equipment, who bears financial risk and chance of profit. The court will treat the worker as an employee where economic reality demands it.",
+    visual: {
+      emoji: "🏗️",
+      scene: "Scaffold and a falling figure silhouette beside a torn 'self-employed' contract",
+      palette: "linear-gradient(135deg,#2a1a1a,#5a3a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "cox-v-moj",
+    name: "Cox v Ministry of Justice",
+    year: 2016,
+    area: "tort",
+    topics: ["vicarious-status"],
+    facts:
+      "Mrs Cox, the catering manager at HMP Swansea, was injured when a prisoner working in the kitchen negligently dropped a sack of rice on her back. Prisoners are not employees and are not paid market wages.",
+    principle:
+      "Vicarious liability extends to relationships 'akin to employment' where the tortfeasor's activity is integral to the defendant's enterprise and creates the risk of the tort. The Ministry was vicariously liable for the prisoner's negligence.",
+    visual: {
+      emoji: "🍚",
+      scene: "Prison kitchen silhouette with a sack falling and a uniformed figure behind bars",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a3a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "century-insurance-v-ni-road-transport",
+    name: "Century Insurance v Northern Ireland Road Transport Board",
+    year: 1942,
+    area: "tort",
+    topics: ["vicarious-course"],
+    facts:
+      "A petrol tanker driver, while delivering petrol to an underground tank at a garage, lit a cigarette and threw the match on the ground. The resulting explosion destroyed the garage and several vehicles.",
+    principle:
+      "A negligent or even prohibited mode of doing an authorised act can still be in the course of employment. Smoking while unloading petrol was a careless way of doing what he was paid to do; the employer was vicariously liable.",
+    visual: {
+      emoji: "🚒",
+      scene: "Petrol tanker beside a forecourt with a lit match falling and explosion arcs",
+      palette: "linear-gradient(135deg,#3a1a1a,#5a3a1a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "limpus-v-london-general",
+    name: "Limpus v London General Omnibus",
+    year: 1862,
+    area: "tort",
+    topics: ["vicarious-course"],
+    facts:
+      "An omnibus driver, expressly forbidden by his employer from racing or obstructing rival buses, did exactly that and caused a collision with Limpus's bus. The employer relied on the written prohibition as a defence.",
+    principle:
+      "An express prohibition does not automatically take an act outside the course of employment. The driver was still doing what he was paid to do — driving the bus — just in a forbidden way. The employer was vicariously liable.",
+    visual: {
+      emoji: "🚌",
+      scene: "Two horse-drawn omnibuses racing wheel-to-wheel with a collision burst",
+      palette: "linear-gradient(135deg,#2a1a2a,#4a3a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "rose-v-plenty",
+    name: "Rose v Plenty",
+    year: 1976,
+    area: "tort",
+    topics: ["vicarious-course"],
+    facts:
+      "A milkman, contrary to express instructions, paid a 13-year-old boy to help him on his rounds. The boy was injured by the milkman's negligent driving of the milk float.",
+    principle:
+      "Where the prohibited act is done to further the employer's business, it remains within the course of employment. The employer benefited from a faster round, so was vicariously liable despite the express prohibition on helpers.",
+    visual: {
+      emoji: "🥛",
+      scene: "Electric milk float with a small figure clinging to the back and bottles toppling",
+      palette: "linear-gradient(135deg,#1a2a2a,#3a4a4a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "twine-v-beans-express",
+    name: "Twine v Bean's Express",
+    year: 1946,
+    area: "tort",
+    topics: ["vicarious-course"],
+    facts:
+      "A van driver was expressly instructed not to give lifts. He gave a lift to Twine, who was killed when the driver crashed. The notice in the cab confirmed unauthorised passengers travelled at their own risk.",
+    principle:
+      "Where the prohibited act is done purely for the benefit of the third party (a forbidden hitch-hiker, not a helper), the employee is on a frolic of his own and the employer is not vicariously liable.",
+    visual: {
+      emoji: "🚐",
+      scene: "Delivery van interior with two silhouettes and a 'no passengers' sign hanging in the cab",
+      palette: "linear-gradient(135deg,#2a2a1a,#4a4a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "hilton-v-thomas-burton",
+    name: "Hilton v Thomas Burton (Rhodes) Ltd",
+    year: 1961,
+    area: "tort",
+    topics: ["vicarious-course"],
+    facts:
+      "Demolition workers took the firm's van on an unauthorised seven-mile detour for tea at a café. On the return journey one was killed by the negligent driving of another. His widow sued the employer.",
+    principle:
+      "Employees on an unauthorised detour purely for their own purposes — a classic 'frolic of their own' — fall outside the course of employment. The employer was not vicariously liable.",
+    visual: {
+      emoji: "☕",
+      scene: "Works van parked outside a roadside café with steaming mugs and a long detour arrow",
+      palette: "linear-gradient(135deg,#2a1a1a,#4a3a2a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "lister-v-hesley-hall",
+    name: "Lister v Hesley Hall",
+    year: 2001,
+    area: "tort",
+    topics: ["vicarious-connection"],
+    facts:
+      "The warden of a residential school for boys with behavioural difficulties systematically sexually abused pupils in his care. The boys sued the school as vicariously liable. Abuse is plainly never an 'authorised mode' of caring.",
+    principle:
+      "The House of Lords replaced the Salmond 'authorised mode' test with the close connection test: an employer is vicariously liable for an employee's intentional wrong where it is so closely connected with the employment that it is fair and just to impose liability.",
+    visual: {
+      emoji: "🏫",
+      scene: "Dormitory door silhouette with a single warden key and an outline of a child's bunk",
+      palette: "linear-gradient(135deg,#1a1a2a,#3a2a3a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "mohamud-v-morrisons",
+    name: "Mohamud v Morrisons Supermarkets",
+    year: 2016,
+    area: "tort",
+    topics: ["vicarious-connection"],
+    facts:
+      "A petrol-station kiosk attendant followed a customer onto the forecourt after a verbal exchange and subjected him to a brutal racist assault. The Supreme Court asked whether the assault was closely connected to his employment.",
+    principle:
+      "The close-connection test has two stages: (1) what 'field of activities' was entrusted to the employee, and (2) was there a sufficient connection between that field and the wrongful conduct. Serving customers was his job; the assault was an unbroken continuation, so Morrisons was liable.",
+    visual: {
+      emoji: "⛽",
+      scene: "Petrol-station forecourt with a kiosk window silhouette and two figures in confrontation",
+      palette: "linear-gradient(135deg,#1a2a1a,#3a4a2a)",
+    },
+    importance: 3,
+  },
 ];
 
 export const CASES_BY_ID: Record<string, LawCase> = Object.fromEntries(

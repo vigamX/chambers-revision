@@ -449,6 +449,34 @@ export const TORT_SYLLABUS: SyllabusSection[] = [
       },
     ],
   },
+  {
+    id: "tort-vicarious",
+    label: "Vicarious liability",
+    chapter: 24,
+    topics: [
+      {
+        id: "vicarious-status",
+        label: "Employment status: who is an employee?",
+        caseIds: ["carmichael-v-national-power", "ferguson-v-dawson", "cox-v-moj"],
+      },
+      {
+        id: "vicarious-course",
+        label: "Course of employment: authorised acts, prohibitions, frolics",
+        caseIds: [
+          "century-insurance-v-ni-road-transport",
+          "limpus-v-london-general",
+          "rose-v-plenty",
+          "twine-v-beans-express",
+          "hilton-v-thomas-burton",
+        ],
+      },
+      {
+        id: "vicarious-connection",
+        label: "Close-connection test for intentional wrongs",
+        caseIds: ["lister-v-hesley-hall", "mohamud-v-morrisons"],
+      },
+    ],
+  },
 ];
 
 const TORT_CHAPTER_BY_CASE: Record<string, number> = (() => {

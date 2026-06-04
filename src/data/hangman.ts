@@ -82,6 +82,16 @@ export const HANGMAN_PUZZLES: HangmanPuzzle[] = [
   { id: "h-rylands", answer: "RYLANDS", hint: "1868 — reservoir flooded neighbour's mine; founding case of strict liability for escapes.", category: "case", area: "tort" },
   { id: "h-cambridge-water", answer: "CAMBRIDGE WATER", hint: "1994 — tannery solvent polluted aquifer 1.3 miles away; foreseeability ingredient added to Rylands.", category: "case", area: "tort" },
   { id: "h-transco", answer: "TRANSCO", hint: "2003 — burst council water main exposed gas pipe; modern restatement of Rylands non-natural use.", category: "case", area: "tort" },
+  { id: "h-carmichael", answer: "CARMICHAEL", hint: "1999 — power station tour guides 'as required'; mutuality of obligation needed for employment.", category: "case", area: "tort" },
+  { id: "h-ferguson-dawson", answer: "FERGUSON", hint: "1976 — labourer fell from roof labelled 'self-employed'; economic-reality test pierces the label.", category: "case", area: "tort" },
+  { id: "h-cox-moj", answer: "COX", hint: "2016 — prison kitchen sack injury; vicarious liability extends to 'akin to employment' relationships.", category: "case", area: "tort" },
+  { id: "h-century-insurance", answer: "CENTURY INSURANCE", hint: "1942 — petrol tanker driver lit a cigarette; careless mode of an authorised act.", category: "case", area: "tort" },
+  { id: "h-limpus", answer: "LIMPUS", hint: "1862 — racing omnibus drivers ignored prohibition; still in the course of employment.", category: "case", area: "tort" },
+  { id: "h-rose-plenty", answer: "ROSE", hint: "1976 — milkman's 13-year-old helper injured; prohibited act done to benefit employer.", category: "case", area: "tort" },
+  { id: "h-twine", answer: "TWINE", hint: "1946 — forbidden lift in delivery van; frolic of his own, employer not liable.", category: "case", area: "tort" },
+  { id: "h-hilton-burton", answer: "HILTON", hint: "1961 — demolition workers' tea-break detour; classic frolic outside course of employment.", category: "case", area: "tort" },
+  { id: "h-lister", answer: "LISTER", hint: "2001 — school warden abuse; House of Lords introduced the close-connection test.", category: "case", area: "tort" },
+  { id: "h-mohamud", answer: "MOHAMUD", hint: "2016 — petrol-station attendant attacked customer; close-connection test reaffirmed.", category: "case", area: "tort" },
 
   // Term 2 — Tort · legal terms
   { id: "h-duty-of-care", answer: "DUTY OF CARE", hint: "The first ingredient of negligence; established by neighbour principle or Caparo.", category: "term", area: "tort" },
@@ -101,6 +111,10 @@ export const HANGMAN_PUZZLES: HangmanPuzzle[] = [
   { id: "h-injunction", answer: "INJUNCTION", hint: "Equitable remedy ordering someone to stop (or do) something; central remedy in nuisance.", category: "term", area: "tort" },
   { id: "h-non-natural-use", answer: "NON NATURAL USE", hint: "Rylands v Fletcher ingredient: extraordinary and unusual use creating exceptional risk.", category: "term", area: "tort" },
   { id: "h-strict-liability", answer: "STRICT LIABILITY", hint: "Liability without proof of fault — applies to Rylands v Fletcher escapes.", category: "term", area: "tort" },
+  { id: "h-vicarious", answer: "VICARIOUS", hint: "Liability of one person for the tort of another, usually employer for employee.", category: "term", area: "tort" },
+  { id: "h-mutuality", answer: "MUTUALITY", hint: "Mutuality of ___: essential ingredient of an employment contract per Carmichael.", category: "term", area: "tort" },
+  { id: "h-frolic", answer: "FROLIC", hint: "Going off on a ___ of one's own — outside the course of employment.", category: "term", area: "tort" },
+  { id: "h-close-connection", answer: "CLOSE CONNECTION", hint: "Lister/Mohamud test for whether an intentional wrong is within employment.", category: "term", area: "tort" },
 
   // Shared — across all terms
   { id: "h-precedent", answer: "PRECEDENT", hint: "Doctrine that decisions of higher courts bind lower courts on the same point.", category: "term", area: "shared" },

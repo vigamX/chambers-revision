@@ -55,6 +55,9 @@ const TOPIC_LABEL: Record<CaseTopic, string> = {
   "nuisance": "Nuisance",
   "rylands-fletcher": "Rylands v Fletcher",
   "vicarious-liability": "Vicarious liability",
+  "vicarious-status": "Vicarious (Status)",
+  "vicarious-course": "Vicarious (Course of employment)",
+  "vicarious-connection": "Vicarious (Close connection)",
   "tort-defences": "Tort defences",
   "tort-remedies": "Remedies",
 };
@@ -84,6 +87,9 @@ const TORT_TOPICS: CaseTopic[] = [
   "nuisance",
   "rylands-fletcher",
   "vicarious-liability",
+  "vicarious-status",
+  "vicarious-course",
+  "vicarious-connection",
   "tort-defences",
   "tort-remedies",
 ];
