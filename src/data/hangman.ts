@@ -64,6 +64,14 @@ export const HANGMAN_PUZZLES: HangmanPuzzle[] = [
   { id: "h-barnett", answer: "BARNETT", hint: "1969 — arsenic poisoning, hospital sent man home; no factual causation (but-for test).", category: "case", area: "tort" },
   { id: "h-hughes", answer: "HUGHES", hint: "1963 — paraffin lamp explosion; type of harm foreseeable even if precise sequence not.", category: "case", area: "tort" },
   { id: "h-wagon-mound", answer: "WAGON MOUND", hint: "1961 — Sydney harbour oil spill; remoteness test became reasonable foreseeability.", category: "case", area: "tort" },
+  { id: "h-wheat", answer: "WHEAT", hint: "1966 — pub guest fell down back stairs; 'control' test for who is an occupier.", category: "case", area: "tort" },
+  { id: "h-roles", answer: "ROLES", hint: "1963 — chimney sweeps killed by fumes; specialists guard their own trade risks.", category: "case", area: "tort" },
+  { id: "h-phipps", answer: "PHIPPS", hint: "1955 — 5-year-old in trench on building site; parents assumed to supervise very young children.", category: "case", area: "tort" },
+  { id: "h-glasgow-corp", answer: "GLASGOW CORPORATION", hint: "1922 — poisonous berries in a public park; allurements to children.", category: "case", area: "tort" },
+  { id: "h-jolley", answer: "JOLLEY", hint: "2000 — abandoned boat fell on teenager; child-visitor foreseeability under 1957 Act.", category: "case", area: "tort" },
+  { id: "h-tomlinson", answer: "TOMLINSON", hint: "2003 — diver in shallow lake; no duty under 1984 Act for obvious self-inflicted risks.", category: "case", area: "tort" },
+  { id: "h-ratcliff", answer: "RATCLIFF", hint: "1999 — student dived into shallow college pool at night; trespasser, obvious risk.", category: "case", area: "tort" },
+  { id: "h-keown", answer: "KEOWN", hint: "2006 — boy climbed hospital fire escape; injury from trespasser's own activity, not premises.", category: "case", area: "tort" },
 
   // Term 2 — Tort · legal terms
   { id: "h-duty-of-care", answer: "DUTY OF CARE", hint: "The first ingredient of negligence; established by neighbour principle or Caparo.", category: "term", area: "tort" },
@@ -76,6 +84,9 @@ export const HANGMAN_PUZZLES: HangmanPuzzle[] = [
   { id: "h-damages", answer: "DAMAGES", hint: "Monetary remedy in tort; compensatory, aggravated, exemplary or nominal.", category: "term", area: "tort" },
   { id: "h-volenti", answer: "VOLENTI", hint: "Latin defence: to one who consents, no injury is done (full form volenti non fit injuria).", category: "latin", area: "tort" },
   { id: "h-res-ipsa", answer: "RES IPSA LOQUITUR", hint: "Latin: the thing speaks for itself. Breach inferred from the facts.", category: "latin", area: "tort" },
+  { id: "h-occupier", answer: "OCCUPIER", hint: "Person with sufficient control of premises under Wheat v Lacon; key term in 1957 & 1984 Acts.", category: "term", area: "tort" },
+  { id: "h-trespasser", answer: "TRESPASSER", hint: "Person on premises without permission; lesser duty under Occupiers' Liability Act 1984.", category: "term", area: "tort" },
+  { id: "h-allurement", answer: "ALLUREMENT", hint: "Object attractive to children concealing a hidden danger; raises the standard of care.", category: "term", area: "tort" },
 
   // Shared — across all terms
   { id: "h-precedent", answer: "PRECEDENT", hint: "Doctrine that decisions of higher courts bind lower courts on the same point.", category: "term", area: "shared" },

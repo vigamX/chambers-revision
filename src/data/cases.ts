@@ -2423,6 +2423,149 @@ export const CASES: LawCase[] = [
     },
     importance: 3,
   },
+
+  // ─────────────────────────────────────────────────────────────────────
+  // Chapter 22 — Occupiers' liability (1957 & 1984 Acts)
+  // All citations verified against Wortley/Price/Briggs OCR A Level Law
+  // 2nd ed (Hodder, 2021), Table of Cases pp. xi–xiii and chapter text.
+  // ─────────────────────────────────────────────────────────────────────
+
+  {
+    id: "wheat-v-lacon",
+    name: "Wheat v E Lacon & Co",
+    year: 1966,
+    area: "tort",
+    topics: ["occupiers-liability"],
+    facts:
+      "A paying guest at a pub fell down an unlit back staircase and was killed. The pub was owned by the brewery (Lacon) but managed by a publican who lived upstairs and took in guests. The widow sued the brewery as occupier.",
+    principle:
+      "Anyone with a sufficient degree of control over premises is an 'occupier' under the Occupiers' Liability Act 1957. There can be more than one occupier of the same premises; control, not ownership or exclusive possession, is the test.",
+    visual: {
+      emoji: "🍺",
+      scene: "An unlit pub back staircase with a brewery sign above the door",
+      palette: "linear-gradient(135deg,#2a1a10,#5a3a20)",
+    },
+    importance: 3,
+  },
+  {
+    id: "roles-v-nathan",
+    name: "Roles v Nathan",
+    year: 1963,
+    area: "tort",
+    topics: ["occupiers-liability"],
+    facts:
+      "Two chimney sweeps were warned by a heating engineer not to work on a coke-fired boiler while it was alight because of carbon monoxide fumes. They ignored the warning, continued sealing the flue with the fire lit, and were killed.",
+    principle:
+      "Under s.2(3)(b) of the 1957 Act an occupier may expect a person exercising a calling to appreciate and guard against risks ordinarily incidental to that calling. Specialists take their trade risks with them.",
+    visual: {
+      emoji: "🧹",
+      scene: "A chimney sweep silhouette beside a lit coke boiler with fumes",
+      palette: "linear-gradient(135deg,#1a1a1a,#4a3020)",
+    },
+    importance: 3,
+  },
+  {
+    id: "phipps-v-rochester",
+    name: "Phipps v Rochester Corporation",
+    year: 1955,
+    area: "tort",
+    topics: ["occupiers-liability"],
+    facts:
+      "A five-year-old boy walking with his seven-year-old sister across a building site fell into a deep trench dug by the Corporation and broke his leg. The children were unaccompanied by an adult.",
+    principle:
+      "An occupier is entitled to assume that prudent parents will not allow very young children to go unaccompanied into places of obvious danger. The duty to a child visitor is not absolute; the occupier may share responsibility with the parents.",
+    visual: {
+      emoji: "🚧",
+      scene: "A deep building-site trench with two small child silhouettes on the edge",
+      palette: "linear-gradient(135deg,#3a2a1a,#6a5030)",
+    },
+    importance: 2,
+  },
+  {
+    id: "glasgow-corp-v-taylor",
+    name: "Glasgow Corporation v Taylor",
+    year: 1922,
+    area: "tort",
+    topics: ["occupiers-liability"],
+    facts:
+      "A seven-year-old boy ate poisonous berries from a shrub in a public park maintained by the Corporation. The berries looked like cherries; there was no warning and no fence around the shrub. The child died.",
+    principle:
+      "An occupier must be prepared for children to be less careful than adults (s.2(3)(a) 1957 Act). Items attractive to children which conceal a hidden danger ('allurements') give rise to a higher standard of care.",
+    visual: {
+      emoji: "🍒",
+      scene: "A park shrub with bright berries and a small child silhouette reaching",
+      palette: "linear-gradient(135deg,#1a2a1a,#4a1a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "jolley-v-sutton",
+    name: "Jolley v London Borough of Sutton",
+    year: 2000,
+    area: "tort",
+    topics: ["occupiers-liability"],
+    facts:
+      "An abandoned boat had lain on Council land for two years. Children regularly played on it. Two 14-year-olds jacked it up to repair it; the boat fell on one of them, causing paraplegia.",
+    principle:
+      "The occupier is liable where the type of harm to a child visitor is reasonably foreseeable, even if the precise manner is not. Foreseeability is judged broadly when children are known to play on the danger.",
+    visual: {
+      emoji: "⛵",
+      scene: "An abandoned upturned boat on rough ground with a child silhouette beneath",
+      palette: "linear-gradient(135deg,#1a2a3a,#3a4a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "tomlinson-v-congleton",
+    name: "Tomlinson v Congleton Borough Council",
+    year: 2003,
+    area: "tort",
+    topics: ["occupiers-liability"],
+    facts:
+      "Tomlinson, aged 18, ignored prominent 'No Swimming — Dangerous Water' signs at a lake in a Council country park, ran in and dived into shallow water, breaking his neck. As a swimmer he was a trespasser under the 1984 Act.",
+    principle:
+      "No duty is owed under the 1984 Act in respect of risks willingly accepted, especially obvious risks arising from a person's own activity rather than the state of the premises. Social utility and personal autonomy weigh against imposing liability.",
+    visual: {
+      emoji: "🏊",
+      scene: "A lake with a 'no swimming' sign and a diver silhouette mid-air",
+      palette: "linear-gradient(135deg,#1a3a4a,#3a5a6a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "ratcliff-v-mcconnell",
+    name: "Ratcliff v McConnell",
+    year: 1999,
+    area: "tort",
+    topics: ["occupiers-liability"],
+    facts:
+      "A 19-year-old student climbed over a locked gate at night and dived into the shallow end of his college swimming pool. He struck the bottom and was paralysed. He was a trespasser; warning signs were posted.",
+    principle:
+      "Under the 1984 Act an adult trespasser is taken to appreciate obvious risks (such as diving into a pool of unknown depth). No duty arises where the danger was self-evident and the trespasser chose to take the risk.",
+    visual: {
+      emoji: "🏊‍♂️",
+      scene: "A locked pool gate at night with a swimmer silhouette mid-dive",
+      palette: "linear-gradient(135deg,#0a1a3a,#2a3a5a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "keown-v-coventry",
+    name: "Keown v Coventry Healthcare NHS Trust",
+    year: 2006,
+    area: "tort",
+    topics: ["occupiers-liability"],
+    facts:
+      "An 11-year-old boy climbed the underside of an external metal fire escape on hospital grounds, fell from height and suffered brain injury. The fire escape itself was sound; the danger came from his climbing it.",
+    principle:
+      "Under the 1984 Act the duty is owed in respect of dangers due to the state of the premises, not dangers created by the trespasser's own activity. A safe structure misused does not generate a duty.",
+    visual: {
+      emoji: "🪜",
+      scene: "An external metal hospital fire escape with a small climber silhouette",
+      palette: "linear-gradient(135deg,#2a2a2a,#4a4a5a)",
+    },
+    importance: 2,
+  },
 ];
 
 export const CASES_BY_ID: Record<string, LawCase> = Object.fromEntries(

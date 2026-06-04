@@ -390,6 +390,33 @@ export const TORT_SYLLABUS: SyllabusSection[] = [
       },
     ],
   },
+  {
+    id: "tort-occupiers",
+    label: "Occupiers' liability (1957 & 1984 Acts)",
+    chapter: 22,
+    topics: [
+      {
+        id: "occupiers-who",
+        label: "Who is an 'occupier'?",
+        caseIds: ["wheat-v-lacon"],
+      },
+      {
+        id: "occupiers-lawful",
+        label: "Duty to lawful visitors (1957 Act)",
+        caseIds: ["roles-v-nathan"],
+      },
+      {
+        id: "occupiers-children",
+        label: "Child visitors & allurements",
+        caseIds: ["phipps-v-rochester", "glasgow-corp-v-taylor", "jolley-v-sutton"],
+      },
+      {
+        id: "occupiers-trespassers",
+        label: "Duty to trespassers (1984 Act)",
+        caseIds: ["tomlinson-v-congleton", "ratcliff-v-mcconnell", "keown-v-coventry"],
+      },
+    ],
+  },
 ];
 
 const TORT_CHAPTER_BY_CASE: Record<string, number> = (() => {
