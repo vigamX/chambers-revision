@@ -12,6 +12,7 @@ interface Props {
   onStartClash: () => void;
   onOpenChecklist: () => void;
   onStartBoss: () => void;
+  onOpenGames: () => void;
 }
 
 const BOSS_UNLOCK_BRIEFS = 6;
@@ -65,6 +66,7 @@ export function Chambers({
   onStartClash,
   onOpenChecklist,
   onStartBoss,
+  onOpenGames,
 }: Props) {
   const copy = TERM_COPY[term];
   const completed = briefs.filter((b) => progress.completedBriefs.includes(b.id)).length;
@@ -109,6 +111,7 @@ export function Chambers({
           <button className="btn-primary" onClick={onStartClash}>⚔️ Start Case Clash</button>
           <button onClick={onOpenChecklist}>📋 Syllabus checklist</button>
           <button onClick={onOpenDock}>📚 Open revision dock</button>
+          <button onClick={onOpenGames}>🎲 Games room</button>
         </div>
       </section>
 

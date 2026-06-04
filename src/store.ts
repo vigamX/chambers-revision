@@ -70,3 +70,23 @@ export function markBriefComplete(progress: Progress, briefId: string): Progress
     completedBriefs: [...progress.completedBriefs, briefId],
   };
 }
+
+export function recordHangmanResult(progress: Progress, won: boolean): Progress {
+  const prev = progress.gameStats?.hangman ?? {
+    played: 0,
+    won: 0,
+    currentStreak: 0,
+    longestStreak: 0,
+  };
+  const currentStreak = won ? prev.currentStreak + 1 : 0;
+  const next = {
+    played: prev.played + 1,
+    won: prev.won + (won ? 1 : 0),
+    currentStreak,
+    longestStreak: Math.max(prev.longestStreak, currentStreak),
+  };
+  return {
+    ...progress,
+    gameStats: { ...(progress.gameStats ?? {}), hangman: next },
+  };
+}

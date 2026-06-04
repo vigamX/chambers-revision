@@ -107,4 +107,16 @@ export interface Progress {
   totalAnswered: number;
   totalCorrect: number;
   bossResults: Record<string, BossResult>;
+  gameStats?: GameStats;
+}
+
+export interface GameStats {
+  hangman?: HangmanStats;
+}
+
+export interface HangmanStats {
+  played: number;
+  won: number;
+  currentStreak: number;
+  longestStreak: number;
 }

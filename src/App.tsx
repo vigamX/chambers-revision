@@ -10,6 +10,8 @@ import { RevisionDock } from "./components/RevisionDock";
 import { CaseClash } from "./components/CaseClash";
 import { TopicChecklist } from "./components/TopicChecklist";
 import { BossFightPlayer } from "./components/BossFightPlayer";
+import { GamesRoom } from "./components/GamesRoom";
+import { Hangman } from "./components/Hangman";
 
 type View =
   | { name: "picker" }
@@ -18,7 +20,9 @@ type View =
   | { name: "dock" }
   | { name: "clash" }
   | { name: "checklist" }
-  | { name: "boss" };
+  | { name: "boss" }
+  | { name: "games" }
+  | { name: "hangman" };
 
 const TERM_SHORT_LABEL: Record<Term, string> = {
   1: "Term 1 · Criminal",
@@ -94,6 +98,7 @@ export default function App() {
           onStartClash={() => setView({ name: "clash" })}
           onOpenChecklist={() => setView({ name: "checklist" })}
           onStartBoss={() => setView({ name: "boss" })}
+          onOpenGames={() => setView({ name: "games" })}
         />
       )}
 
@@ -138,6 +143,24 @@ export default function App() {
           progress={progress}
           onProgressChange={setProgress}
           onExit={() => setView({ name: "chambers" })}
+        />
+      )}
+
+      {view.name === "games" && (
+        <GamesRoom
+          term={currentTerm}
+          progress={progress}
+          onBack={() => setView({ name: "chambers" })}
+          onOpenHangman={() => setView({ name: "hangman" })}
+        />
+      )}
+
+      {view.name === "hangman" && (
+        <Hangman
+          term={currentTerm}
+          progress={progress}
+          onProgressChange={setProgress}
+          onExit={() => setView({ name: "games" })}
         />
       )}
     </div>
