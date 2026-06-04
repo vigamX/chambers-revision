@@ -44,6 +44,8 @@ export type TortTopic =
   | "vicarious-course"
   | "vicarious-connection"
   | "tort-defences"
+  | "contributory-negligence"
+  | "volenti"
   | "tort-remedies";
 
 export type CaseTopic = CriminalTopic | TortTopic;

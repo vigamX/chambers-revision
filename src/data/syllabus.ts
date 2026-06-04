@@ -477,6 +477,28 @@ export const TORT_SYLLABUS: SyllabusSection[] = [
       },
     ],
   },
+  {
+    id: "tort-defences",
+    label: "Defences in tort",
+    chapter: 25,
+    topics: [
+      {
+        id: "contributory-negligence",
+        label: "Contributory negligence (part defence)",
+        caseIds: [
+          "oconnell-v-jackson",
+          "froom-v-butcher",
+          "sayers-v-harlow",
+          "jayes-v-imi-kynoch",
+        ],
+      },
+      {
+        id: "volenti",
+        label: "Volenti non fit injuria (full defence)",
+        caseIds: ["smith-v-baker", "haynes-v-harwood"],
+      },
+    ],
+  },
 ];
 
 const TORT_CHAPTER_BY_CASE: Record<string, number> = (() => {

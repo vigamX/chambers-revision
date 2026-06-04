@@ -92,6 +92,12 @@ export const HANGMAN_PUZZLES: HangmanPuzzle[] = [
   { id: "h-hilton-burton", answer: "HILTON", hint: "1961 — demolition workers' tea-break detour; classic frolic outside course of employment.", category: "case", area: "tort" },
   { id: "h-lister", answer: "LISTER", hint: "2001 — school warden abuse; House of Lords introduced the close-connection test.", category: "case", area: "tort" },
   { id: "h-mohamud", answer: "MOHAMUD", hint: "2016 — petrol-station attendant attacked customer; close-connection test reaffirmed.", category: "case", area: "tort" },
+  { id: "h-oconnell", answer: "OCONNELL", hint: "1972 — motorcyclist not wearing a helmet; 15% reduction for contributory negligence.", category: "case", area: "tort" },
+  { id: "h-froom", answer: "FROOM", hint: "1976 — seatbelt case; Lord Denning's 25/15/0 sliding scale of contributory reduction.", category: "case", area: "tort" },
+  { id: "h-sayers", answer: "SAYERS", hint: "1958 — trapped in council toilet; 25% reduction for risky escape attempt.", category: "case", area: "tort" },
+  { id: "h-jayes", answer: "JAYES", hint: "1985 — factory worker removed machine guard, lost finger; 100% contributorily negligent.", category: "case", area: "tort" },
+  { id: "h-smith-baker", answer: "SMITH BAKER", hint: "1891 — workman injured by stone falling from overhead crane; knowledge is not consent for volenti.", category: "case", area: "tort" },
+  { id: "h-haynes", answer: "HAYNES", hint: "1935 — policeman injured stopping bolting horses; rescuer principle defeats volenti.", category: "case", area: "tort" },
 
   // Term 2 — Tort · legal terms
   { id: "h-duty-of-care", answer: "DUTY OF CARE", hint: "The first ingredient of negligence; established by neighbour principle or Caparo.", category: "term", area: "tort" },
@@ -115,6 +121,9 @@ export const HANGMAN_PUZZLES: HangmanPuzzle[] = [
   { id: "h-mutuality", answer: "MUTUALITY", hint: "Mutuality of ___: essential ingredient of an employment contract per Carmichael.", category: "term", area: "tort" },
   { id: "h-frolic", answer: "FROLIC", hint: "Going off on a ___ of one's own — outside the course of employment.", category: "term", area: "tort" },
   { id: "h-close-connection", answer: "CLOSE CONNECTION", hint: "Lister/Mohamud test for whether an intentional wrong is within employment.", category: "term", area: "tort" },
+  { id: "h-volenti", answer: "VOLENTI", hint: "___ non fit injuria — no injury is done to one who consents to the risk.", category: "term", area: "tort" },
+  { id: "h-contributory", answer: "CONTRIBUTORY", hint: "___ negligence — part defence that reduces damages by the claimant's share of fault.", category: "term", area: "tort" },
+  { id: "h-rescuer", answer: "RESCUER", hint: "The ___ principle: someone acting under a duty to help is not voluntarily accepting risk.", category: "term", area: "tort" },
 
   // Shared — across all terms
   { id: "h-precedent", answer: "PRECEDENT", hint: "Doctrine that decisions of higher courts bind lower courts on the same point.", category: "term", area: "shared" },

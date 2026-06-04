@@ -2919,6 +2919,114 @@ export const CASES: LawCase[] = [
     },
     importance: 3,
   },
+
+  // ─────────────────────────────────────────────────────────────────────
+  // Chapter 25 — Defences in tort
+  // Wortley/Price/Briggs OCR A Level Law 2nd ed (Hodder, 2021) pp. 281–284.
+  // ─────────────────────────────────────────────────────────────────────
+
+  {
+    id: "oconnell-v-jackson",
+    name: "O'Connell v Jackson",
+    year: 1972,
+    area: "tort",
+    topics: ["contributory-negligence"],
+    facts:
+      "A motorcyclist who was not wearing a crash helmet was injured by Jackson's negligent driving. Liability was admitted; the question was whether the failure to wear a helmet reduced his damages.",
+    principle:
+      "Failure to take reasonable care for one's own safety (here, not wearing a helmet) is contributory negligence under the Law Reform (Contributory Negligence) Act 1945. Damages were reduced by 15%.",
+    visual: {
+      emoji: "🏍️",
+      scene: "Motorcycle leaning beside a kerb with an unworn helmet on the ground and a car silhouette",
+      palette: "linear-gradient(135deg,#2a1a2a,#4a2a3a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "froom-v-butcher",
+    name: "Froom v Butcher",
+    year: 1976,
+    area: "tort",
+    topics: ["contributory-negligence"],
+    facts:
+      "Froom was injured in a head-on collision caused by Butcher's negligent driving. Froom was not wearing a seatbelt, contrary to his usual habit. He argued seatbelts were a matter of personal choice.",
+    principle:
+      "Lord Denning set out a sliding scale of contributory-negligence reductions for seatbelt failure: 25% if the belt would have prevented the injury entirely, 15% if it would have reduced its severity, nil if it would have made no difference.",
+    visual: {
+      emoji: "🚗",
+      scene: "Front of a car with a windscreen impact star, an empty driver seat with the seatbelt visibly unclipped",
+      palette: "linear-gradient(135deg,#2a1a1a,#4a2a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "sayers-v-harlow",
+    name: "Sayers v Harlow Urban District Council",
+    year: 1958,
+    area: "tort",
+    topics: ["contributory-negligence"],
+    facts:
+      "Mrs Sayers became trapped in a public toilet cubicle with a faulty lock. While trying to climb out, she stood on the toilet-roll holder, which gave way; she fell and was injured.",
+    principle:
+      "Damages were reduced by 25% for contributory negligence — the Council was liable for the defective lock, but the manner of her escape attempt fell below the standard of care she owed to herself.",
+    visual: {
+      emoji: "🚪",
+      scene: "Public toilet cubicle door with a faulty lock and a small figure mid-fall from a roll holder",
+      palette: "linear-gradient(135deg,#1a2a2a,#3a4a4a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "jayes-v-imi-kynoch",
+    name: "Jayes v IMI (Kynoch) Ltd",
+    year: 1985,
+    area: "tort",
+    topics: ["contributory-negligence"],
+    facts:
+      "Jayes, an experienced factory worker, removed the safety guard from a machine to clear a blockage and lost a finger. He sued his employer for breach of statutory duty.",
+    principle:
+      "A claimant can be held 100% contributorily negligent where they are solely the cause of their own injury. Removing the guard on a machine he knew was dangerous left him entirely at fault.",
+    visual: {
+      emoji: "⚙️",
+      scene: "Industrial machine with a detached safety guard tipped to one side and a glove on the floor",
+      palette: "linear-gradient(135deg,#2a2a1a,#4a4a2a)",
+    },
+    importance: 2,
+  },
+  {
+    id: "smith-v-baker",
+    name: "Smith v Baker & Sons",
+    year: 1891,
+    area: "tort",
+    topics: ["volenti"],
+    facts:
+      "Smith worked drilling rock; overhead a crane repeatedly swung heavy stones over his head. He knew of the danger and had complained. One day a stone fell and injured him. His employer pleaded volenti.",
+    principle:
+      "Mere knowledge of a risk is not consent. The claimant knew of the danger but did not freely accept the lack of care by the crane operators. Volenti requires full understanding of the risk AND a free and voluntary acceptance of it.",
+    visual: {
+      emoji: "🪨",
+      scene: "Industrial yard with a crane jib overhead and a falling stone above a workman's silhouette",
+      palette: "linear-gradient(135deg,#2a1a1a,#5a3a2a)",
+    },
+    importance: 3,
+  },
+  {
+    id: "haynes-v-harwood",
+    name: "Haynes v Harwood",
+    year: 1935,
+    area: "tort",
+    topics: ["volenti"],
+    facts:
+      "Harwood's servant left a two-horse van unattended in a busy street. The horses bolted when a boy threw a stone. PC Haynes, on duty, ran out and stopped them but was seriously injured in doing so.",
+    principle:
+      "The rescuer principle: volenti does not apply to a person acting under a legal or moral duty to intervene. Because PC Haynes was a policeman bound to protect the public, his act was not truly voluntary.",
+    visual: {
+      emoji: "🐎",
+      scene: "Two bolting horses with reins flailing and a uniformed figure stepping in to grasp the bridle",
+      palette: "linear-gradient(135deg,#1a2a2a,#3a4a5a)",
+    },
+    importance: 3,
+  },
 ];
 
 export const CASES_BY_ID: Record<string, LawCase> = Object.fromEntries(

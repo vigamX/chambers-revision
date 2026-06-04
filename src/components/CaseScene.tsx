@@ -4465,6 +4465,167 @@ export const CaseScene: React.FC<CaseSceneProps> = ({ caseId, className }) => {
           {vignetteLayer}
         </svg>
       );
+    case 'oconnell-v-jackson':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="background-car">
+            <path d="M 20 60 C 40 60 50 45 70 45 L 110 45 C 130 45 140 60 160 60 L 160 70 L 20 70 Z" fill="rgba(0,0,0,0.3)" />
+            <circle cx="50" cy="70" r="10" fill="rgba(0,0,0,0.4)" />
+            <circle cx="130" cy="70" r="10" fill="rgba(0,0,0,0.4)" />
+          </g>
+          <g data-name="kerb">
+            <rect x="0" y="100" width="200" height="20" fill="rgba(0,0,0,0.8)" />
+            <path d="M 0 100 L 200 100" stroke="#f4e9d8" strokeWidth="2" opacity="0.3" />
+            <path d="M 20 100 L 10 120 M 80 100 L 70 120 M 140 100 L 130 120" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
+          </g>
+          <g data-name="motorcycle-leaning">
+            <path d="M 120 75 C 130 75 140 70 145 65 L 155 85 L 110 95 Z" fill="rgba(0,0,0,0.8)" />
+            <circle cx="160" cy="85" r="15" fill="rgba(0,0,0,0.9)" />
+            <circle cx="95" cy="90" r="15" fill="rgba(0,0,0,0.9)" />
+            <circle cx="160" cy="85" r="8" fill="rgba(255,255,255,0.1)" />
+            <circle cx="95" cy="90" r="8" fill="rgba(255,255,255,0.1)" />
+            <path d="M 130 65 L 140 50 L 150 52" stroke="rgba(0,0,0,0.9)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d="M 115 95 L 110 110" stroke="#e8b34a" strokeWidth="3" strokeLinecap="round" />
+            <rect x="110" y="70" width="25" height="15" rx="4" fill="rgba(0,0,0,0.9)" />
+          </g>
+          <g data-name="unworn-helmet">
+            <path d="M 40 115 C 30 115 30 100 45 100 C 60 100 60 115 50 115 Z" fill="#e8b34a" opacity="0.9" />
+            <path d="M 35 105 Q 45 105 50 115" stroke="rgba(0,0,0,0.8)" strokeWidth="2" fill="none" />
+            <path d="M 40 115 Q 45 125 55 110" stroke="rgba(0,0,0,0.6)" strokeWidth="1" fill="none" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'froom-v-butcher':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="car-body">
+            <path d="M 20 100 C 20 80 40 70 60 60 L 140 60 C 160 70 180 80 180 100 L 180 120 L 20 120 Z" fill="rgba(0,0,0,0.8)" />
+            <rect x="30" y="105" width="30" height="10" rx="3" fill="rgba(255,255,255,0.1)" />
+            <rect x="140" y="105" width="30" height="10" rx="3" fill="rgba(255,255,255,0.1)" />
+            <rect x="70" y="105" width="60" height="10" rx="2" fill="rgba(0,0,0,0.9)" />
+          </g>
+          <g data-name="windscreen-and-interior">
+            <path d="M 45 60 C 55 40 70 30 100 30 C 130 30 145 40 155 60 Z" fill="rgba(255,255,255,0.1)" />
+            <path d="M 45 60 C 55 40 70 30 100 30 C 130 30 145 40 155 60 Z" stroke="rgba(0,0,0,0.9)" strokeWidth="4" fill="none" />
+            <path d="M 120 60 C 120 45 130 40 140 60 Z" fill="rgba(0,0,0,0.7)" />
+            <path d="M 60 60 C 60 45 70 40 80 60 Z" fill="rgba(0,0,0,0.6)" />
+          </g>
+          <g data-name="windscreen-star-crack">
+            <path d="M 80 45 L 85 40 M 80 45 L 75 42 M 80 45 L 78 52 M 80 45 L 88 47 M 80 45 L 72 48" stroke="#f4e9d8" strokeWidth="1.5" strokeLinecap="round" opacity="0.8" />
+            <circle cx="80" cy="45" r="2" fill="#f4e9d8" opacity="0.9" />
+          </g>
+          <g data-name="unclipped-seatbelt">
+            <path d="M 140 40 C 130 45 125 50 120 60" stroke="#e8b34a" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.9" />
+            <rect x="117" y="58" width="6" height="8" fill="rgba(255,255,255,0.4)" rx="1" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'sayers-v-harlow':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="cubicle-walls">
+            <rect x="20" y="10" width="80" height="110" fill="rgba(0,0,0,0.8)" />
+            <rect x="140" y="10" width="40" height="110" fill="rgba(0,0,0,0.7)" />
+            <rect x="100" y="10" width="40" height="110" fill="rgba(0,0,0,0.9)" />
+            <path d="M 100 10 L 100 120 M 140 10 L 140 120" stroke="rgba(255,255,255,0.1)" strokeWidth="2" />
+          </g>
+          <g data-name="faulty-lock">
+            <rect x="85" y="60" width="10" height="20" rx="1" fill="rgba(255,255,255,0.2)" />
+            <path d="M 90 65 L 80 75" stroke="#e8b34a" strokeWidth="4" strokeLinecap="round" />
+            <circle cx="90" cy="65" r="3" fill="rgba(0,0,0,0.8)" />
+          </g>
+          <g data-name="broken-roll-holder">
+            <rect x="140" y="70" width="15" height="10" fill="rgba(255,255,255,0.1)" transform="rotate(20, 140, 70)" />
+            <path d="M 140 75 Q 130 85 130 100" stroke="#f4e9d8" strokeWidth="2" fill="none" opacity="0.6" strokeDasharray="2 2" />
+            <path d="M 140 70 L 145 60 L 150 70" stroke="rgba(0,0,0,0.9)" strokeWidth="2" fill="none" />
+          </g>
+          <g data-name="falling-figure">
+            <circle cx="120" cy="50" r="8" fill="rgba(0,0,0,0.9)" />
+            <path d="M 120 58 L 115 80 M 115 80 L 105 100 M 115 80 L 135 90 M 120 65 L 100 55 M 120 65 L 135 45" stroke="rgba(0,0,0,0.9)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d="M 120 58 L 115 80" stroke="#e8b34a" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'jayes-v-imi-kynoch':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="industrial-machine">
+            <rect x="40" y="40" width="80" height="80" rx="4" fill="rgba(0,0,0,0.8)" />
+            <rect x="50" y="30" width="60" height="10" rx="2" fill="rgba(0,0,0,0.9)" />
+            <circle cx="80" cy="70" r="25" fill="rgba(0,0,0,0.9)" />
+            <circle cx="80" cy="70" r="15" fill="rgba(255,255,255,0.1)" />
+            <path d="M 80 45 L 80 95 M 55 70 L 105 70" stroke="rgba(0,0,0,0.6)" strokeWidth="2" />
+            <rect x="45" y="50" width="10" height="40" fill="rgba(255,255,255,0.05)" />
+            <rect x="105" y="50" width="10" height="40" fill="rgba(255,255,255,0.05)" />
+          </g>
+          <g data-name="detached-guard">
+            <rect x="130" y="80" width="40" height="30" rx="2" fill="rgba(0,0,0,0.7)" transform="rotate(-15, 150, 95)" />
+            <rect x="135" y="85" width="30" height="20" fill="rgba(255,255,255,0.1)" transform="rotate(-15, 150, 95)" />
+            <circle cx="135" cy="85" r="2" fill="#e8b34a" transform="rotate(-15, 150, 95)" />
+            <circle cx="165" cy="85" r="2" fill="#e8b34a" transform="rotate(-15, 150, 95)" />
+            <circle cx="135" cy="105" r="2" fill="#e8b34a" transform="rotate(-15, 150, 95)" />
+            <circle cx="165" cy="105" r="2" fill="#e8b34a" transform="rotate(-15, 150, 95)" />
+          </g>
+          <g data-name="discarded-glove">
+            <path d="M 120 110 C 115 110 115 105 120 105 L 125 105 C 130 105 130 110 125 110 Z" fill="#e8b34a" opacity="0.8" />
+            <path d="M 125 105 L 128 103 M 125 106 L 129 106 M 125 108 L 128 109" stroke="#e8b34a" strokeWidth="1" strokeLinecap="round" opacity="0.8" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'smith-v-baker':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="industrial-yard-crane">
+            <path d="M 0 120 L 200 120 L 200 100 L 0 100 Z" fill="rgba(0,0,0,0.6)" />
+            <path d="M 20 100 L 40 20 L 50 20 L 40 100 Z" fill="rgba(0,0,0,0.8)" />
+            <path d="M 45 20 L 160 0 L 160 5 L 45 25 Z" fill="rgba(0,0,0,0.9)" />
+            <path d="M 45 40 L 100 10 L 105 15 L 45 50 Z" fill="rgba(0,0,0,0.7)" />
+          </g>
+          <g data-name="falling-stone-and-chain">
+            <path d="M 130 0 L 130 40" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeDasharray="3 2" />
+            <path d="M 120 45 L 140 40 L 145 60 L 125 65 Z" fill="#e8b34a" opacity="0.9" />
+            <path d="M 120 45 L 125 55 L 145 60 L 135 50 Z" fill="rgba(0,0,0,0.4)" />
+            <path d="M 130 65 L 130 75" stroke="#f4e9d8" strokeWidth="1" opacity="0.5" strokeDasharray="2 2" />
+          </g>
+          <g data-name="crouched-workman-and-drill">
+            <circle cx="130" cy="85" r="7" fill="rgba(0,0,0,0.9)" />
+            <path d="M 130 92 L 125 105 M 125 105 L 115 115 M 125 105 L 135 115 M 130 95 L 115 100 M 130 95 L 140 100" stroke="rgba(0,0,0,0.9)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <rect x="140" y="105" width="10" height="15" fill="rgba(0,0,0,0.8)" />
+            <path d="M 145 120 L 145 130" stroke="rgba(0,0,0,0.8)" strokeWidth="2" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
+    case 'haynes-v-harwood':
+      return (
+        <svg {...commonProps}>
+          {defs}
+          <g data-name="bolting-horses">
+            <path d="M 30 70 C 40 50 60 50 70 70 C 60 80 40 80 30 70 Z" fill="rgba(0,0,0,0.9)" />
+            <path d="M 65 60 C 75 40 85 45 90 60 C 85 70 70 70 65 60 Z" fill="rgba(0,0,0,0.8)" />
+            <path d="M 65 40 C 70 30 80 25 90 35" stroke="rgba(0,0,0,0.9)" strokeWidth="4" strokeLinecap="round" fill="none" />
+            <path d="M 85 30 C 95 20 105 15 115 25" stroke="rgba(0,0,0,0.8)" strokeWidth="4" strokeLinecap="round" fill="none" />
+            <path d="M 40 80 L 30 110 M 50 80 L 45 105 M 75 75 L 65 115 M 85 75 L 80 110" stroke="rgba(0,0,0,0.9)" strokeWidth="5" strokeLinecap="round" />
+            <path d="M 85 40 Q 50 30 20 40 M 105 30 Q 70 20 30 30" stroke="rgba(255,255,255,0.3)" strokeWidth="2" fill="none" />
+          </g>
+          <g data-name="policeman-rescuer">
+            <path d="M 145 40 C 145 30 155 30 155 40 L 155 45 L 145 45 Z" fill="rgba(0,0,0,0.9)" />
+            <circle cx="150" cy="52" r="6" fill="rgba(0,0,0,0.9)" />
+            <path d="M 150 58 L 150 90 M 150 90 L 135 115 M 150 90 L 165 115 M 150 65 L 120 50 M 150 65 L 160 85" stroke="rgba(0,0,0,0.9)" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+            <path d="M 120 50 Q 110 45 100 40" stroke="#e8b34a" strokeWidth="3" strokeLinecap="round" fill="none" />
+          </g>
+          {vignetteLayer}
+        </svg>
+      );
     default:
       return (
         <svg {...commonProps}>
