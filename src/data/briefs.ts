@@ -1150,6 +1150,273 @@ export const BRIEFS: Brief[] = [
       },
     ],
   },
+
+  // ─────────────────────────────────────────────────────────────────────
+  // Term 2 — Tort briefs (cases from Ch 21 negligence + Ch 22 occupiers')
+  // ─────────────────────────────────────────────────────────────────────
+
+  {
+    id: "brief-tort-1-the-unseen-patient",
+    title: "Brief 1 — The Unseen Patient",
+    term: 2,
+    scenario:
+      "Mrs Hadley arrives at A&E at 3am vomiting violently. The triage nurse bleeps Dr Mehta, the on-call casualty officer, who tells her over the phone to send Mrs Hadley home and 'see her GP in the morning'. He never examines her. Mrs Hadley dies five hours later. Post-mortem confirms arsenic poisoning at a dose that was lethal from the moment she ingested it; no antidote, fluid resuscitation, or transfer to ITU would have saved her. Her widower sues the hospital trust in negligence.",
+    scene: { emoji: "🏥", palette: "linear-gradient(135deg,#1a2a3a,#3a4a5a)" },
+    caseIds: ["kent-v-griffiths", "bolam-v-friern-barnet", "barnett-v-chelsea"],
+    steps: [
+      {
+        kind: "issue",
+        prompt: "Duty and breach both look established. What is the live legal issue?",
+        choices: [
+          {
+            id: "a",
+            label: "Factual causation — would Mrs Hadley have died anyway?",
+            correct: true,
+            feedback:
+              "Correct. Once the post-mortem says no treatment would have saved her, the negligence claim stands or falls on causation, not on whether the doctor was careless.",
+          },
+          {
+            id: "b",
+            label: "Whether an A&E doctor owes a duty of care",
+            correct: false,
+            feedback:
+              "Settled by Kent v Griffiths — once the NHS accepts the patient, a duty arises. Not the live issue here.",
+          },
+          {
+            id: "c",
+            label: "Whether the doctor fell below the Bolam standard",
+            correct: false,
+            feedback:
+              "Refusing to examine a vomiting patient is clearly outside any responsible body of opinion. Breach is not really in dispute.",
+          },
+        ],
+        explanation:
+          "Duty (Kent) and breach (Bolam) are both straightforward. The case turns on whether the doctor's failure caused the death — the 'but for' test from Barnett.",
+      },
+      {
+        kind: "authorities",
+        prompt: "Select the authorities you would cite in your skeleton argument.",
+        authorityPool: [
+          "kent-v-griffiths",
+          "bolam-v-friern-barnet",
+          "barnett-v-chelsea",
+          "hill-v-cc-west-yorkshire",
+          "bolton-v-stone",
+          "wagon-mound-no-1",
+        ],
+        correctAuthorities: [
+          "kent-v-griffiths",
+          "bolam-v-friern-barnet",
+          "barnett-v-chelsea",
+        ],
+        explanation:
+          "Kent v Griffiths supplies the duty (NHS owes a duty once it accepts the call). Bolam fixes the standard of care for the doctor. Barnett delivers the killer point — factual causation fails on identical facts.",
+      },
+      {
+        kind: "application",
+        prompt: "Applying Barnett v Chelsea, what is the likely outcome?",
+        choices: [
+          {
+            id: "a",
+            label:
+              "Claim fails — duty and breach are made out, but 'but for' Dr Mehta's negligence the death would still have occurred",
+            correct: true,
+            feedback:
+              "Correct. The widower wins on duty and breach but the chain breaks at causation, exactly as in Barnett.",
+          },
+          {
+            id: "b",
+            label: "Claim succeeds — the doctor's negligence was a contributory factor",
+            correct: false,
+            feedback:
+              "There is no contribution if the death would have happened anyway. The 'but for' test is binary on these facts.",
+          },
+          {
+            id: "c",
+            label: "Claim succeeds — res ipsa loquitur",
+            correct: false,
+            feedback:
+              "Res ipsa might help prove breach, but it cannot bridge the causation gap when the cause of death is known and unavoidable.",
+          },
+        ],
+        explanation:
+          "A perfect storm of negligent practice still cannot found liability without causation. Barnett is the doctrinal trap: don't be dazzled by obvious carelessness.",
+      },
+    ],
+  },
+  {
+    id: "brief-tort-2-the-cricket-boundary",
+    title: "Brief 2 — The Cricket Boundary",
+    term: 2,
+    scenario:
+      "Your client, the Wenlock Cricket Club, has played on the same ground since 1948. The boundary is enclosed by a 17-foot fence, raised twice over the decades after complaints. In 76 years, balls have cleared the fence on eight occasions; nobody has ever been hit. Last Saturday, a six was struck from the middle stump and the ball cleared the fence, striking Mrs Patel on the head as she walked her dog along Beech Road. She has serious head injuries and is suing the club in negligence.",
+    scene: { emoji: "🏏", palette: "linear-gradient(135deg,#1a3a1a,#4a6a3a)" },
+    caseIds: ["bolton-v-stone", "latimer-v-aec"],
+    steps: [
+      {
+        kind: "issue",
+        prompt: "Duty is conceded. What is the central question?",
+        choices: [
+          {
+            id: "a",
+            label: "Whether the club breached the standard of the reasonable occupier given the magnitude of the risk",
+            correct: true,
+            feedback:
+              "Correct. The fight is over breach: did a small probability of serious harm require more than a 17-foot fence?",
+          },
+          {
+            id: "b",
+            label: "Whether the type of harm was too remote",
+            correct: false,
+            feedback:
+              "Head injury from a cricket ball is the obvious type of harm — remoteness is not a live point here.",
+          },
+          {
+            id: "c",
+            label: "Whether Mrs Patel is a lawful visitor to the club",
+            correct: false,
+            feedback:
+              "She is on the public highway, not on the cricket ground. Occupiers' Liability is not engaged.",
+          },
+        ],
+        explanation:
+          "Breach in negligence weighs the probability of harm against the cost and practicality of further precautions — the classic Bolton v Stone calculus.",
+      },
+      {
+        kind: "authorities",
+        prompt: "Select the authorities you would put before the judge.",
+        authorityPool: [
+          "bolton-v-stone",
+          "latimer-v-aec",
+          "nettleship-v-weston",
+          "bolam-v-friern-barnet",
+          "wagon-mound-no-1",
+          "wheat-v-lacon",
+        ],
+        correctAuthorities: ["bolton-v-stone", "latimer-v-aec"],
+        explanation:
+          "Bolton v Stone is on near-identical facts: small probability of serious harm did not require closure of the ground. Latimer v AEC confirms that reasonable precautions — not perfection — satisfy the standard. Bolam is for professionals; Nettleship is driving; Wagon Mound is remoteness; Wheat is occupiers' control.",
+      },
+      {
+        kind: "application",
+        prompt: "Applying Bolton v Stone and Latimer v AEC, what should you advise?",
+        choices: [
+          {
+            id: "a",
+            label:
+              "Defend — the risk was small, serious injury foreseeable but improbable, and the 17-foot fence was a reasonable precaution",
+            correct: true,
+            feedback:
+              "Correct. Reasonable care is not the elimination of all risk. The club is not an insurer of every passer-by.",
+          },
+          {
+            id: "b",
+            label: "Settle — strict liability applies to dangerous activities",
+            correct: false,
+            feedback:
+              "Strict liability for escapes is Rylands v Fletcher (Ch 23) and does not catch ordinary cricket. Negligence requires breach.",
+          },
+          {
+            id: "c",
+            label: "Settle — the club is the occupier and Mrs Patel is a visitor",
+            correct: false,
+            feedback:
+              "She is not on the club's premises. Occupiers' Liability does not apply to people on the public highway.",
+          },
+        ],
+        explanation:
+          "Bolton v Stone is the textbook 'small risk' case: when the chance of injury is low and reasonable precautions have been taken, there is no breach even though injury was foreseeable.",
+      },
+    ],
+  },
+  {
+    id: "brief-tort-3-the-midnight-diver",
+    title: "Brief 3 — The Midnight Diver",
+    term: 2,
+    scenario:
+      "Your client, the Greenfields College Trust, runs a small open-air swimming pool inside its campus. The pool closes at dusk; the gate is padlocked and four illuminated signs warn 'POOL CLOSED — NO DIVING — SHALLOW END 0.9m'. At 2am Mr Croft (19), a student, climbed the perimeter fence after a party, ran across the deck and dived headfirst into the shallow end. He is now tetraplegic and is suing the Trust under the Occupiers' Liability Act 1984.",
+    scene: { emoji: "🌙", palette: "linear-gradient(135deg,#0a1a3a,#2a3a5a)" },
+    caseIds: ["ratcliff-v-mcconnell", "tomlinson-v-congleton", "keown-v-coventry"],
+    steps: [
+      {
+        kind: "issue",
+        prompt: "Mr Croft was undoubtedly a trespasser. What is the legal question?",
+        choices: [
+          {
+            id: "a",
+            label: "Whether the Trust owed Mr Croft any duty under the 1984 Act in respect of an obvious self-inflicted risk",
+            correct: true,
+            feedback:
+              "Correct. The 1984 Act duty arises only on stringent conditions, and turns on whether the risk was the kind against which the occupier was bound to offer protection.",
+          },
+          {
+            id: "b",
+            label: "Whether Mr Croft was a 'visitor' under the 1957 Act",
+            correct: false,
+            feedback:
+              "He climbed a fence after closing. He is a trespasser; the 1957 Act does not apply.",
+          },
+          {
+            id: "c",
+            label: "Whether the Trust is the occupier",
+            correct: false,
+            feedback:
+              "Trust runs the pool under Wheat v Lacon control — undisputed. The real fight is about the trespasser duty.",
+          },
+        ],
+        explanation:
+          "Under s.1(3) of the 1984 Act the occupier must know of the danger, know the trespasser may come into its vicinity, and consider it reasonable to offer protection. Even if those are met, obvious risks willingly accepted typically defeat the duty.",
+      },
+      {
+        kind: "authorities",
+        prompt: "Select the authorities you would cite for the defence.",
+        authorityPool: [
+          "ratcliff-v-mcconnell",
+          "tomlinson-v-congleton",
+          "keown-v-coventry",
+          "glasgow-corp-v-taylor",
+          "phipps-v-rochester",
+          "donoghue-v-stevenson",
+        ],
+        correctAuthorities: [
+          "ratcliff-v-mcconnell",
+          "tomlinson-v-congleton",
+          "keown-v-coventry",
+        ],
+        explanation:
+          "Ratcliff v McConnell is on near-identical facts. Tomlinson v Congleton supplies the principle: no duty for obvious risks willingly accepted, especially where harm flows from the claimant's own activity. Keown reinforces that injury from a trespasser's own activity (not the state of premises) defeats the claim. The child-visitor cases and Donoghue are not in point.",
+      },
+      {
+        kind: "application",
+        prompt: "Applying these authorities, what is the likely result?",
+        choices: [
+          {
+            id: "a",
+            label: "Claim fails — obvious risk, voluntarily accepted by an adult trespasser; no 1984 Act duty",
+            correct: true,
+            feedback:
+              "Correct. Ratcliff defeats this claim. The Trust took reasonable steps (lock, signs); the danger was patent; the harm came from Mr Croft's own activity.",
+          },
+          {
+            id: "b",
+            label: "Claim succeeds — pool depth was a hidden danger",
+            correct: false,
+            feedback:
+              "Four illuminated signs and the visible markings make the depth obvious, not hidden.",
+          },
+          {
+            id: "c",
+            label: "Claim succeeds — pool is an allurement to students",
+            correct: false,
+            feedback:
+              "Allurement (Glasgow v Taylor) is about children. Mr Croft is 19 and judged as an adult under the 1984 Act.",
+          },
+        ],
+        explanation:
+          "The 1984 Act is deliberately narrow. Adult trespassers carry their own risks where dangers are obvious — autonomy and the social cost of fencing off every hazard weigh decisively against liability.",
+      },
+    ],
+  },
 ];
 
 export const BRIEFS_BY_ID: Record<string, Brief> = Object.fromEntries(
