@@ -13,6 +13,7 @@ import { BossFightPlayer } from "./components/BossFightPlayer";
 import { GamesRoom } from "./components/GamesRoom";
 import { Hangman } from "./components/Hangman";
 import { CitationSprint } from "./components/CitationSprint";
+import { Connections } from "./components/Connections";
 
 type View =
   | { name: "picker" }
@@ -24,7 +25,8 @@ type View =
   | { name: "boss" }
   | { name: "games" }
   | { name: "hangman" }
-  | { name: "citation" };
+  | { name: "citation" }
+  | { name: "connections" };
 
 const TERM_SHORT_LABEL: Record<Term, string> = {
   1: "Term 1 · Criminal",
@@ -155,6 +157,7 @@ export default function App() {
           onBack={() => setView({ name: "chambers" })}
           onOpenHangman={() => setView({ name: "hangman" })}
           onOpenCitation={() => setView({ name: "citation" })}
+          onOpenConnections={() => setView({ name: "connections" })}
         />
       )}
 
@@ -169,6 +172,15 @@ export default function App() {
 
       {view.name === "citation" && (
         <CitationSprint
+          term={currentTerm}
+          progress={progress}
+          onProgressChange={setProgress}
+          onExit={() => setView({ name: "games" })}
+        />
+      )}
+
+      {view.name === "connections" && (
+        <Connections
           term={currentTerm}
           progress={progress}
           onProgressChange={setProgress}

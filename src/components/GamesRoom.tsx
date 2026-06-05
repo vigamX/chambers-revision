@@ -2,6 +2,7 @@ import type { Progress, Term } from "../types";
 import { AREA_FOR_TERM } from "../types";
 import { puzzlesForTerm } from "../data/hangman";
 import { promptsForArea } from "../data/citations";
+import { puzzlesForArea as connectionsPuzzlesForArea } from "../data/connections";
 
 interface Props {
   term: Term;
@@ -9,6 +10,7 @@ interface Props {
   onBack: () => void;
   onOpenHangman: () => void;
   onOpenCitation: () => void;
+  onOpenConnections: () => void;
 }
 
 const TERM_LABEL: Record<Term, string> = {
@@ -18,7 +20,14 @@ const TERM_LABEL: Record<Term, string> = {
   4: "Term 4 · Human Rights",
 };
 
-export function GamesRoom({ term, progress, onBack, onOpenHangman, onOpenCitation }: Props) {
+export function GamesRoom({
+  term,
+  progress,
+  onBack,
+  onOpenHangman,
+  onOpenCitation,
+  onOpenConnections,
+}: Props) {
   const area = AREA_FOR_TERM[term];
   const hangmanPool =
     area === "criminal" || area === "tort" ? puzzlesForTerm(area).length : 0;
@@ -29,6 +38,13 @@ export function GamesRoom({ term, progress, onBack, onOpenHangman, onOpenCitatio
     area === "criminal" || area === "tort" ? promptsForArea(area).length : 0;
   const citationStats = progress.gameStats?.citation;
   const citationReady = citationPool > 0;
+
+  const connectionsPool =
+    area === "criminal" || area === "tort"
+      ? connectionsPuzzlesForArea(area).length
+      : 0;
+  const connectionsStats = progress.gameStats?.connections;
+  const connectionsReady = connectionsPool > 0;
 
   return (
     <div>
@@ -86,9 +102,13 @@ export function GamesRoom({ term, progress, onBack, onOpenHangman, onOpenCitatio
           )}
         </button>
 
-        <div className="game-card disabled" aria-disabled>
+        <button
+          className={`game-card ${connectionsReady ? "" : "disabled"}`}
+          onClick={connectionsReady ? onOpenConnections : undefined}
+          disabled={!connectionsReady}
+        >
           <div className="game-card-header">
-            <span className="game-card-label">Coming soon</span>
+            <span className="game-card-label">Grid puzzle</span>
             <span className="game-card-tag">Connections</span>
           </div>
           <h3 className="game-card-title">Chambers Connections</h3>
@@ -97,9 +117,32 @@ export function GamesRoom({ term, progress, onBack, onOpenHangman, onOpenCitatio
             lines of authority before you run out of lives.
           </p>
           <div className="game-card-stats">
-            <span>Planned for a future update</span>
+            {connectionsReady ? (
+              <>
+                <span>
+                  <strong>{connectionsPool}</strong> puzzle
+                  {connectionsPool === 1 ? "" : "s"}
+                </span>
+                {connectionsStats && connectionsStats.played > 0 && (
+                  <>
+                    <span>
+                      <strong>{connectionsStats.solved}</strong>/
+                      {connectionsStats.played} solved
+                    </span>
+                    {connectionsStats.perfectSolves > 0 && (
+                      <span>
+                        <strong>{connectionsStats.perfectSolves}</strong> perfect
+                      </span>
+                    )}
+                  </>
+                )}
+              </>
+            ) : (
+              <span>No puzzles for this term yet</span>
+            )}
           </div>
-        </div>
+          {connectionsReady && <div className="game-card-cta">Play →</div>}
+        </button>
 
         <button
           className={`game-card ${citationReady ? "" : "disabled"}`}

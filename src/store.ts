@@ -113,3 +113,26 @@ export function recordCitationResult(
     gameStats: { ...(progress.gameStats ?? {}), citation: next },
   };
 }
+
+export function recordConnectionsResult(
+  progress: Progress,
+  solved: boolean,
+  livesRemaining: number,
+): Progress {
+  const prev = progress.gameStats?.connections ?? {
+    played: 0,
+    solved: 0,
+    perfectSolves: 0,
+    bestLivesRemaining: 0,
+  };
+  const next = {
+    played: prev.played + 1,
+    solved: prev.solved + (solved ? 1 : 0),
+    perfectSolves: prev.perfectSolves + (solved && livesRemaining === 4 ? 1 : 0),
+    bestLivesRemaining: Math.max(prev.bestLivesRemaining, solved ? livesRemaining : 0),
+  };
+  return {
+    ...progress,
+    gameStats: { ...(progress.gameStats ?? {}), connections: next },
+  };
+}
