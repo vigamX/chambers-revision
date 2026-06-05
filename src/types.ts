@@ -122,6 +122,7 @@ export interface Progress {
 
 export interface GameStats {
   hangman?: HangmanStats;
+  citation?: CitationStats;
 }
 
 export interface HangmanStats {
@@ -129,4 +130,11 @@ export interface HangmanStats {
   won: number;
   currentStreak: number;
   longestStreak: number;
+}
+
+export interface CitationStats {
+  rounds: number;
+  bestScore: number;
+  totalCorrect: number;
+  totalAttempted: number;
 }

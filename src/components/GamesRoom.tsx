@@ -1,12 +1,14 @@
 import type { Progress, Term } from "../types";
 import { AREA_FOR_TERM } from "../types";
 import { puzzlesForTerm } from "../data/hangman";
+import { promptsForArea } from "../data/citations";
 
 interface Props {
   term: Term;
   progress: Progress;
   onBack: () => void;
   onOpenHangman: () => void;
+  onOpenCitation: () => void;
 }
 
 const TERM_LABEL: Record<Term, string> = {
@@ -16,12 +18,17 @@ const TERM_LABEL: Record<Term, string> = {
   4: "Term 4 · Human Rights",
 };
 
-export function GamesRoom({ term, progress, onBack, onOpenHangman }: Props) {
+export function GamesRoom({ term, progress, onBack, onOpenHangman, onOpenCitation }: Props) {
   const area = AREA_FOR_TERM[term];
   const hangmanPool =
     area === "criminal" || area === "tort" ? puzzlesForTerm(area).length : 0;
   const stats = progress.gameStats?.hangman;
   const hangmanReady = hangmanPool > 0;
+
+  const citationPool =
+    area === "criminal" || area === "tort" ? promptsForArea(area).length : 0;
+  const citationStats = progress.gameStats?.citation;
+  const citationReady = citationPool > 0;
 
   return (
     <div>
@@ -94,20 +101,44 @@ export function GamesRoom({ term, progress, onBack, onOpenHangman }: Props) {
           </div>
         </div>
 
-        <div className="game-card disabled" aria-disabled>
+        <button
+          className={`game-card ${citationReady ? "" : "disabled"}`}
+          onClick={citationReady ? onOpenCitation : undefined}
+          disabled={!citationReady}
+        >
           <div className="game-card-header">
-            <span className="game-card-label">Coming soon</span>
-            <span className="game-card-tag">Speed round</span>
+            <span className="game-card-label">Speed round</span>
+            <span className="game-card-tag">Citation</span>
           </div>
           <h3 className="game-card-title">Citation Sprint</h3>
           <p className="game-card-flavour">
-            Sixty seconds. The app shows ___ v Stevenson, 1932. Type the
-            missing party. How many can you nail before the bell?
+            Sixty seconds. The board shows <em>___ v Stevenson, 1932</em>. Type
+            the missing party. How many can you nail before the bell?
           </p>
           <div className="game-card-stats">
-            <span>Planned for a future update</span>
+            {citationReady ? (
+              <>
+                <span>
+                  <strong>{citationPool}</strong> prompts
+                </span>
+                {citationStats && citationStats.rounds > 0 && (
+                  <>
+                    <span>
+                      best <strong>{citationStats.bestScore}</strong>
+                    </span>
+                    <span>
+                      <strong>{citationStats.rounds}</strong> round
+                      {citationStats.rounds === 1 ? "" : "s"} played
+                    </span>
+                  </>
+                )}
+              </>
+            ) : (
+              <span>No prompts for this term yet</span>
+            )}
           </div>
-        </div>
+          {citationReady && <div className="game-card-cta">Play →</div>}
+        </button>
       </section>
     </div>
   );

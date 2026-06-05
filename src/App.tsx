@@ -12,6 +12,7 @@ import { TopicChecklist } from "./components/TopicChecklist";
 import { BossFightPlayer } from "./components/BossFightPlayer";
 import { GamesRoom } from "./components/GamesRoom";
 import { Hangman } from "./components/Hangman";
+import { CitationSprint } from "./components/CitationSprint";
 
 type View =
   | { name: "picker" }
@@ -22,7 +23,8 @@ type View =
   | { name: "checklist" }
   | { name: "boss" }
   | { name: "games" }
-  | { name: "hangman" };
+  | { name: "hangman" }
+  | { name: "citation" };
 
 const TERM_SHORT_LABEL: Record<Term, string> = {
   1: "Term 1 · Criminal",
@@ -152,11 +154,21 @@ export default function App() {
           progress={progress}
           onBack={() => setView({ name: "chambers" })}
           onOpenHangman={() => setView({ name: "hangman" })}
+          onOpenCitation={() => setView({ name: "citation" })}
         />
       )}
 
       {view.name === "hangman" && (
         <Hangman
+          term={currentTerm}
+          progress={progress}
+          onProgressChange={setProgress}
+          onExit={() => setView({ name: "games" })}
+        />
+      )}
+
+      {view.name === "citation" && (
+        <CitationSprint
           term={currentTerm}
           progress={progress}
           onProgressChange={setProgress}

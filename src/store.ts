@@ -90,3 +90,26 @@ export function recordHangmanResult(progress: Progress, won: boolean): Progress 
     gameStats: { ...(progress.gameStats ?? {}), hangman: next },
   };
 }
+
+export function recordCitationResult(
+  progress: Progress,
+  score: number,
+  attempted: number,
+): Progress {
+  const prev = progress.gameStats?.citation ?? {
+    rounds: 0,
+    bestScore: 0,
+    totalCorrect: 0,
+    totalAttempted: 0,
+  };
+  const next = {
+    rounds: prev.rounds + 1,
+    bestScore: Math.max(prev.bestScore, score),
+    totalCorrect: prev.totalCorrect + score,
+    totalAttempted: prev.totalAttempted + attempted,
+  };
+  return {
+    ...progress,
+    gameStats: { ...(progress.gameStats ?? {}), citation: next },
+  };
+}
