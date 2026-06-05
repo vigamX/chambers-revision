@@ -12,6 +12,7 @@ export interface CitationPrompt {
   visible: string;
   answer: string;
   acceptable: string[];
+  hint: string;
 }
 
 function normaliseAnswer(s: string): string {
@@ -40,12 +41,32 @@ function buildAcceptable(raw: string): string[] {
   return [...out];
 }
 
+function buildHint(facts: string, hiddenParty: string, otherParty: string): string {
+  const firstSentence = facts.split(/(?<=[.!?])\s+/)[0] ?? facts;
+  let s = firstSentence.length <= 180
+    ? firstSentence
+    : firstSentence.slice(0, 177).replace(/\s+\S*$/, "") + "…";
+  for (const party of [hiddenParty, otherParty]) {
+    const tokens = party
+      .replace(/\([^)]*\)/g, "")
+      .split(/[\s,&]+/)
+      .filter((w) => w.length >= 3 && !/^(the|and|of|for|ltd|plc|inc|co)$/i.test(w));
+    for (const tok of tokens) {
+      const escaped = tok.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      s = s.replace(new RegExp(`\\b${escaped}(?:'s)?\\b`, "gi"), "—");
+    }
+  }
+  return s.replace(/(?:—\s*){2,}/g, "— ");
+}
+
 export const CITATION_PROMPTS: CitationPrompt[] = (() => {
   const prompts: CitationPrompt[] = [];
   for (const c of CASES) {
     const match = c.name.match(/^(.+?)\s+v\s+(.+)$/);
     if (!match) continue;
     const [, left, right] = match;
+    const leftTrim = left.trim();
+    const rightTrim = right.trim();
     prompts.push({
       caseId: c.id,
       area: c.area,
@@ -53,8 +74,9 @@ export const CITATION_PROMPTS: CitationPrompt[] = (() => {
       fullName: c.name,
       side: "left",
       visible: `___ v ${right}`,
-      answer: left.trim(),
+      answer: leftTrim,
       acceptable: buildAcceptable(left),
+      hint: buildHint(c.facts, leftTrim, rightTrim),
     });
     prompts.push({
       caseId: c.id,
@@ -63,8 +85,9 @@ export const CITATION_PROMPTS: CitationPrompt[] = (() => {
       fullName: c.name,
       side: "right",
       visible: `${left} v ___`,
-      answer: right.trim(),
+      answer: rightTrim,
       acceptable: buildAcceptable(right),
+      hint: buildHint(c.facts, rightTrim, leftTrim),
     });
   }
   return prompts;

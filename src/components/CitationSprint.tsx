@@ -197,6 +197,10 @@ export function CitationSprint({ term, progress, onProgressChange, onExit }: Pro
               <span className="citation-prompt-year">({current.year})</span>
             </div>
 
+            <p className="citation-clue">
+              <span className="citation-clue-label">Clue:</span> {current.hint}
+            </p>
+
             <div className="citation-input-row">
               <input
                 ref={inputRef}
