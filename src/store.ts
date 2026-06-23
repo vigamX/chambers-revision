@@ -136,3 +136,30 @@ export function recordConnectionsResult(
     gameStats: { ...(progress.gameStats ?? {}), connections: next },
   };
 }
+
+export function recordConceptCardRun(
+  progress: Progress,
+  cardId: string,
+  gotIt: number,
+  needsPractice: number,
+): Progress {
+  const prev = progress.conceptStats?.[cardId] ?? {
+    cardId,
+    totalDrillsAttempted: 0,
+    totalDrillsGotIt: 0,
+  };
+  const next = {
+    cardId,
+    totalDrillsAttempted: prev.totalDrillsAttempted + gotIt + needsPractice,
+    totalDrillsGotIt: prev.totalDrillsGotIt + gotIt,
+    lastRun: {
+      gotIt,
+      needsPractice,
+      completedAt: Date.now(),
+    },
+  };
+  return {
+    ...progress,
+    conceptStats: { ...(progress.conceptStats ?? {}), [cardId]: next },
+  };
+}

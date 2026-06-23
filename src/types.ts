@@ -118,6 +118,18 @@ export interface Progress {
   totalCorrect: number;
   bossResults: Record<string, BossResult>;
   gameStats?: GameStats;
+  conceptStats?: Record<string, ConceptCardStats>;
+}
+
+export interface ConceptCardStats {
+  cardId: string;
+  totalDrillsAttempted: number;
+  totalDrillsGotIt: number;
+  lastRun?: {
+    gotIt: number;
+    needsPractice: number;
+    completedAt: number;
+  };
 }
 
 export interface GameStats {

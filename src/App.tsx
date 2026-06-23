@@ -14,6 +14,7 @@ import { GamesRoom } from "./components/GamesRoom";
 import { Hangman } from "./components/Hangman";
 import { CitationSprint } from "./components/CitationSprint";
 import { Connections } from "./components/Connections";
+import { ConceptCards } from "./components/ConceptCards";
 
 type View =
   | { name: "picker" }
@@ -26,7 +27,8 @@ type View =
   | { name: "games" }
   | { name: "hangman" }
   | { name: "citation" }
-  | { name: "connections" };
+  | { name: "connections" }
+  | { name: "concept-cards" };
 
 const TERM_SHORT_LABEL: Record<Term, string> = {
   1: "Term 1 · Criminal",
@@ -103,6 +105,7 @@ export default function App() {
           onOpenChecklist={() => setView({ name: "checklist" })}
           onStartBoss={() => setView({ name: "boss" })}
           onOpenGames={() => setView({ name: "games" })}
+          onOpenConceptCards={() => setView({ name: "concept-cards" })}
         />
       )}
 
@@ -185,6 +188,15 @@ export default function App() {
           progress={progress}
           onProgressChange={setProgress}
           onExit={() => setView({ name: "games" })}
+        />
+      )}
+
+      {view.name === "concept-cards" && (
+        <ConceptCards
+          term={currentTerm}
+          progress={progress}
+          onProgressChange={setProgress}
+          onExit={() => setView({ name: "chambers" })}
         />
       )}
     </div>

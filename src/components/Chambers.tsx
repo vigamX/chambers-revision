@@ -1,6 +1,7 @@
 import type { Brief, Progress, Term } from "../types";
 import type { BossFight } from "../data/boss";
 import { CASES_BY_ID } from "../data/cases";
+import { conceptCardsForArea } from "../data/conceptCards";
 
 interface Props {
   term: Term;
@@ -13,6 +14,7 @@ interface Props {
   onOpenChecklist: () => void;
   onStartBoss: () => void;
   onOpenGames: () => void;
+  onOpenConceptCards: () => void;
 }
 
 const BOSS_UNLOCK_BRIEFS = 6;
@@ -67,6 +69,7 @@ export function Chambers({
   onOpenChecklist,
   onStartBoss,
   onOpenGames,
+  onOpenConceptCards,
 }: Props) {
   const copy = TERM_COPY[term];
   const completed = briefs.filter((b) => progress.completedBriefs.includes(b.id)).length;
@@ -83,6 +86,8 @@ export function Chambers({
       if (card.mastery >= 4) scopedMastered += 1;
     }
   }
+
+  const conceptCardCount = area ? conceptCardsForArea(area).length : 0;
 
   return (
     <div>
@@ -109,6 +114,9 @@ export function Chambers({
         </div>
         <div className="controls" style={{ marginTop: "1.2rem", justifyContent: "flex-start" }}>
           <button className="btn-primary" onClick={onStartClash}>⚔️ Start Case Clash</button>
+          {conceptCardCount > 0 && (
+            <button onClick={onOpenConceptCards}>📘 Concept cards</button>
+          )}
           <button onClick={onOpenChecklist}>📋 Syllabus checklist</button>
           <button onClick={onOpenDock}>📚 Open revision dock</button>
           <button onClick={onOpenGames}>🎲 Games room</button>
